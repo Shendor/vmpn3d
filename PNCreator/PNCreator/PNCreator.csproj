@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F9A9DEEA-DCB1-4A9F-B2F1-C313C0244FBA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PNCreator</RootNamespace>
+    <AssemblyName>PNCreator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>BlueIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=4.0.0.5950, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.Expression.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Shell, Version=3.5.41019.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.Windows.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Tamir.sharpSsh, Version=1.0.3.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Tamir.sharpSsh.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Chart, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Charting, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.GridView, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Data, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Controls\OptionExpander.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PopupHelp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Progress\ProgressWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TextBox\TipTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\DeletePNObjectsCommand.cs" />
+    <Compile Include="Commands\MPNCommands.cs" />
+    <Compile Include="Commands\NewNetCommand.cs" />
+    <Compile Include="Commands\OpenNetCommand.cs" />
+    <Compile Include="Commands\SaveNetCommand.cs" />
+    <Compile Include="Commands\SetFormulaCommand.cs" />
+    <Compile Include="Commands\SetMeshCommand.cs" />
+    <Compile Include="Controls\BoundingBox.cs" />
+    <Compile Include="Controls\CarcassControl\Carcasses\CircleCarcass.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\HistoryDataAddedEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\MeshTransformChangedEventArgs.cs" />
+    <Compile Include="Modules\Help\HelpWindow.xaml.cs">
+      <DependentUpon>HelpWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\PNObjectProperties\Panels\MultipleObjectPositionPanel.xaml.cs">
+      <DependentUpon>MultipleObjectPositionPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Simulation\ChartData.cs" />
+    <Compile Include="Modules\Simulation\EditLiveChartWindow.xaml.cs">
+      <DependentUpon>EditLiveChartWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Simulation\History\ImportSimulationHistoryCommand.cs" />
+    <Compile Include="Modules\Simulation\History\ExportSimulationHistoryCommand.cs" />
+    <Compile Include="Modules\Simulation\LiveChartConfiguration.cs" />
+    <Compile Include="Modules\Simulation\LiveChartData.cs" />
+    <Compile Include="Modules\Simulation\LiveChartDataViewModel.cs" />
+    <Compile Include="Controls\ITranslationContent2D.cs" />
+    <Compile Include="Controls\OptionExpander.xaml.cs">
+      <DependentUpon>OptionExpander.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PNViewport.cs" />
+    <Compile Include="Controls\PopupHelp.xaml.cs">
+      <DependentUpon>PopupHelp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Positioniser\Grid3DParameters.cs" />
+    <Compile Include="Controls\Positioniser\PNObjectPositioniser.cs" />
+    <Compile Include="Controls\Progress\ProgressWindow.xaml.cs">
+      <DependentUpon>ProgressWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SectorControl\Sector.cs" />
+    <Compile Include="Controls\SectorControl\SectoredCircle.cs" />
+    <Compile Include="Controls\TextBox\TipTextBox.xaml.cs">
+      <DependentUpon>TipTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\DoubleConverter.cs" />
+    <Compile Include="Converters\Vector2DConverter.cs" />
+    <Compile Include="Converters\Vector3DConverter.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Modules\About\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Analizing\Chart\Chart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Analizing\Diagram\Diagram.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Analizing\Diagram\HistoryExport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Formula Builder\FormulaBuilder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Formula Builder\Geometry Formula Builder\GeometryFormulaBuilder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Help\HelpWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\Menu\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\PNObjectProperties\ArcPropertiesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\PNObjectProperties\CommonPropertiesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\PNObjectProperties\LocationPropertiesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\PNObjectProperties\MembranePropertiesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\PNObjectProperties\Panels\ArcPropertiesSetPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\PNObjectProperties\Panels\MultipleObjectPositionPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\PNObjectProperties\Panels\ShapePropertiesSetPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\PNObjectProperties\PNObjectPropertiesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\PNObjectProperties\TransformationProperties\PositionPropertiesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\PNObjectProperties\TransformationProperties\RotationPropertiesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\PNObjectProperties\TransformationProperties\SizePropertiesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\PNObjectProperties\TransitionPropertiesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\Toolbar\PNDocumentToolBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Main\Toolbar\PNObjectsToolBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\ModelConfiguration\ModelConfiguration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\ModelConfiguration\Tables\PNPropertiesTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\ModelInformation\ModelInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\NavigationMap\NavigationMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\ODL Editor\ODLEditorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Positioniser\PositioniserProperty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Positioniser\PositioniserSizePropertyPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Positioniser\PositioniserTranslationPropertyPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Positioniser\PositioniserVisualPropertyPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Properties\Properties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Searching\Searching.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\ServerConnection\ServerProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Simulation\AnimationSimulationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Simulation\EditLiveChartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Simulation\Simulation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Simulation\SimulationChooserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Simulation\SimulationPlayerToolbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Simulation\SimulationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Simulation\SimulationWindowManipulationToolbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\TempHelpWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ManagerClasses\Constructor\AbstractPNObjectBuilder.cs" />
+    <Compile Include="ManagerClasses\Constructor\AbstractShapeBuilder.cs" />
+    <Compile Include="ManagerClasses\Constructor\ArcBuilder.cs" />
+    <Compile Include="ManagerClasses\Constructor\ArcBuilderFactory.cs" />
+    <Compile Include="ManagerClasses\Constructor\LocationBuilder.cs" />
+    <Compile Include="ManagerClasses\Constructor\MembraneBuilder.cs" />
+    <Compile Include="ManagerClasses\Constructor\PNBuilderFactory.cs" />
+    <Compile Include="ManagerClasses\Constructor\ShapeBuilderFactory.cs" />
+    <Compile Include="ManagerClasses\Constructor\TransitionBuilder.cs" />
+    <Compile Include="ManagerClasses\ContentExporter.cs" />
+    <Compile Include="ManagerClasses\DialogBoxes.cs" />
+    <Compile Include="ManagerClasses\Enumerators\DocumentFormat.cs" />
+    <Compile Include="ManagerClasses\Enumerators\FormulaTypes.cs" />
+    <Compile Include="ManagerClasses\Enumerators\Player.cs" />
+    <Compile Include="ManagerClasses\Enumerators\TransformationType.cs" />
+    <Compile Include="ManagerClasses\EventManager\EventHandlers\ApplicationEventHandler.cs" />
+    <Compile Include="ManagerClasses\EventManager\EventPublisher.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\AbstractEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\AbstractSimulationEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\BooleanEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\EmptyEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\MeshesRemovedEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\SimulationFinishedEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\MeshAddedEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\NewNetEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\OpenNetEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\PNObjectChangedEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\PNObjectsDeletedEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\ProgressEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\SimulationProgressEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\SimulationStartedEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\InvalidParametersCountException.cs" />
+    <Compile Include="ManagerClasses\Exception\ExceptionHandler.cs" />
+    <Compile Include="ManagerClasses\Exception\IllegalPNObjectException.cs" />
+    <Compile Include="ManagerClasses\FormulaManager\FormulaManagerCalculator.cs" />
+    <Compile Include="ManagerClasses\FormulaManager\FormulaManager.cs" />
+    <Compile Include="ManagerClasses\FormulaManager\IFormulaManager.cs" />
+    <Compile Include="ManagerClasses\IdGenerator.cs" />
+    <Compile Include="ManagerClasses\MeshPicker\AbstactMeshPicker.cs" />
+    <Compile Include="ManagerClasses\MeshPicker\MeshPicker.cs" />
+    <Compile Include="ManagerClasses\MeshPicker\PNObjectPicker.cs" />
+    <Compile Include="ManagerClasses\MeshTransfromation\IMeshTransformation.cs" />
+    <Compile Include="ManagerClasses\MeshTransfromation\MeshTransformator.cs" />
+    <Compile Include="ManagerClasses\PNDocument.cs" />
+    <Compile Include="ManagerClasses\PNObjectDictionary.cs" />
+    <Compile Include="ManagerClasses\PNObjectManager.cs" />
+    <Compile Include="ManagerClasses\PNObjectMaterial.cs" />
+    <Compile Include="ManagerClasses\PNObjectMesh.cs" />
+    <Compile Include="ManagerClasses\PNObjectNameUtil.cs" />
+    <Compile Include="ManagerClasses\PNObjectRepository.cs" />
+    <Compile Include="ManagerClasses\PNProgramStorage.cs" />
+    <Compile Include="ManagerClasses\PNSimulator.cs" />
+    <Compile Include="ManagerClasses\ProgressEvent\IProgress.cs" />
+    <Compile Include="ManagerClasses\Simulation\AnimationSimulationController.cs" />
+    <Compile Include="ManagerClasses\Simulation\SimulationController.cs" />
+    <Compile Include="ManagerClasses\Simulation\AbstractSimulator.cs" />
+    <Compile Include="ManagerClasses\Simulation\AnimationSimulationArgs.cs" />
+    <Compile Include="ManagerClasses\Simulation\AnimationSimulator.cs" />
+    <Compile Include="ManagerClasses\Simulation\ISimulator.cs" />
+    <Compile Include="ManagerClasses\Simulation\SimulationArgs.cs" />
+    <Compile Include="ManagerClasses\Simulation\SimulationArgsChangedHandler.cs" />
+    <Compile Include="ManagerClasses\Simulation\Simulator.cs" />
+    <Compile Include="ManagerClasses\Visual\PNColors.cs" />
+    <Compile Include="ManagerClasses\Visual\SelectionRectangle.cs" />
+    <Compile Include="ManagerClasses\WindowsFactory.cs" />
+    <Compile Include="Controls\CarcassControl\AbstractMultiobjectCarcass.cs" />
+    <Compile Include="Controls\CarcassControl\Carcass Primitives\BoxPoint.cs" />
+    <Compile Include="Controls\CarcassControl\Carcass Primitives\CarcassPoint.cs" />
+    <Compile Include="Controls\CarcassControl\Carcass Primitives\CustomMesh.cs" />
+    <Compile Include="Controls\CarcassControl\Carcass Primitives\CustomPoint.cs" />
+    <Compile Include="Controls\CarcassControl\Carcass Primitives\SpherePoint.cs" />
+    <Compile Include="Controls\CarcassControl\Carcasses\AbstractCarcass.cs" />
+    <Compile Include="Controls\CarcassControl\Carcasses\CubeCarcass.cs" />
+    <Compile Include="Controls\CarcassControl\Carcasses\SphereCarcass.cs" />
+    <Compile Include="Controls\VectorControl\CustomVector.cs" />
+    <Compile Include="Modules\Formula Builder\Geometry Formula Builder\GeometryFormulaBuilder.xaml.cs">
+      <DependentUpon>GeometryFormulaBuilder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VectorControl\ICustomVectorManager.cs" />
+    <Compile Include="Controls\VectorControl\IVectorData.cs" />
+    <Compile Include="Controls\CarcassControl\MultiobjectCarcass.cs" />
+    <Compile Include="Controls\CarcassControl\VectorCarcass.cs" />
+    <Compile Include="Controls\CarcassControl\VectorProjectionCarcass.cs" />
+    <Compile Include="Modules\Main\BaseWindow.cs" />
+    <Compile Include="Modules\Main\Menu\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\PNObjectProperties\ArcPropertiesPanel.xaml.cs">
+      <DependentUpon>ArcPropertiesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\PNObjectProperties\CommonPropertiesPanel.xaml.cs">
+      <DependentUpon>CommonPropertiesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\PNObjectProperties\FormulaPropertiesPanel.cs" />
+    <Compile Include="Modules\Main\PNObjectProperties\IPNObjectProperties.cs" />
+    <Compile Include="Modules\Main\PNObjectProperties\LocationPropertiesPanel.xaml.cs">
+      <DependentUpon>LocationPropertiesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\PNObjectProperties\MembranePropertiesPanel.xaml.cs">
+      <DependentUpon>MembranePropertiesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\PNObjectProperties\Panels\ArcPropertiesSetPanel.xaml.cs">
+      <DependentUpon>ArcPropertiesSetPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\PNObjectProperties\Panels\LocationPropertiesSetPanel.cs" />
+    <Compile Include="Modules\Main\PNObjectProperties\Panels\MembranePropertiesSetPanel.cs" />
+    <Compile Include="Modules\Main\PNObjectProperties\Panels\ShapePropertiesSetPanel.xaml.cs">
+      <DependentUpon>ShapePropertiesSetPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\PNObjectProperties\Panels\TransitionPropertiesSetPanel.cs" />
+    <Compile Include="Modules\Main\PNObjectProperties\PNObjectPropertiesPanel.xaml.cs">
+      <DependentUpon>PNObjectPropertiesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\PNObjectProperties\TransformationProperties\PositionPropertiesPanel.xaml.cs">
+      <DependentUpon>PositionPropertiesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\PNObjectProperties\TransformationProperties\RotationPropertiesPanel.xaml.cs">
+      <DependentUpon>RotationPropertiesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\PNObjectProperties\TransformationProperties\SizePropertiesPanel.xaml.cs">
+      <DependentUpon>SizePropertiesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\PNObjectProperties\TransitionPropertiesPanel.xaml.cs">
+      <DependentUpon>TransitionPropertiesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\Toolbar\PNDocumentToolBar.xaml.cs">
+      <DependentUpon>PNDocumentToolBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\Toolbar\PNObjectsToolBar.xaml.cs">
+      <DependentUpon>PNObjectsToolBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ModelConfiguration\Tables\ArcsPropertiesTable.cs" />
+    <Compile Include="Modules\ModelConfiguration\Tables\ContinuousLocationsPropertiesTable.cs" />
+    <Compile Include="Modules\ModelConfiguration\Tables\ContinuousTransitionsPropertiesTable.cs" />
+    <Compile Include="Modules\ModelConfiguration\Tables\DiscreteTransitionsPropertiesTable.cs" />
+    <Compile Include="Modules\ModelConfiguration\Tables\DiscreteLocationsPropertiesTable.cs" />
+    <Compile Include="Modules\ModelConfiguration\Tables\FormulaPNObjectsPropertiesTable.cs" />
+    <Compile Include="Modules\ModelConfiguration\Tables\PNObjectsPropertiesTable.cs" />
+    <Compile Include="Modules\ModelConfiguration\Tables\PNPropertiesTable.xaml.cs">
+      <DependentUpon>PNPropertiesTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ModelConfiguration\Tables\StructuralMembranesPropertiesTable.cs" />
+    <Compile Include="Modules\ModelConfiguration\Tables\TransitionsPropertiesTable.cs" />
+    <Compile Include="Modules\ODL Editor\CompletionData.cs" />
+    <Compile Include="Modules\ODL Editor\CompletionDataFactory.cs" />
+    <Compile Include="Modules\ODL Editor\XMLFormater.cs" />
+    <Compile Include="Modules\ODL Editor\XMLSchemaDataFactory.cs" />
+    <Compile Include="Modules\Positioniser\IPositioniserProperty.cs" />
+    <Compile Include="Modules\Positioniser\PositioniserProperty.xaml.cs">
+      <DependentUpon>PositioniserProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Positioniser\PositioniserSizePropertyPanel.xaml.cs">
+      <DependentUpon>PositioniserSizePropertyPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Positioniser\PositioniserTranslationPropertyPanel.xaml.cs">
+      <DependentUpon>PositioniserTranslationPropertyPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Positioniser\PositioniserVisualPropertyPanel.xaml.cs">
+      <DependentUpon>PositioniserVisualPropertyPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Simulation\AnimationSimulationWindow.xaml.cs">
+      <DependentUpon>AnimationSimulationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Simulation\BaseSimulationWindow.cs" />
+    <Compile Include="Modules\Simulation\History\ISimulationHistoryDao.cs" />
+    <Compile Include="Modules\Simulation\History\SimulationHistoryDao.cs" />
+    <Compile Include="Modules\Simulation\SimulationChooserWindow.xaml.cs">
+      <DependentUpon>SimulationChooserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Simulation\SimulationPlayerToolbar.xaml.cs">
+      <DependentUpon>SimulationPlayerToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Simulation\SimulationWindow.xaml.cs">
+      <DependentUpon>SimulationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Simulation\SimulationWindowManipulationToolbar.xaml.cs">
+      <DependentUpon>SimulationWindowManipulationToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\TempHelpWindow.xaml.cs">
+      <DependentUpon>TempHelpWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PN Objects Ierarchy\Interfaces\IExtendedFormula.cs" />
+    <Compile Include="Properties\Messages.cs" />
+    <Compile Include="Properties\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Messages.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\About\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Analizing\Chart\Chart.xaml.cs">
+      <DependentUpon>Chart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Analizing\Diagram\Chart2D.cs" />
+    <Compile Include="Modules\Analizing\Diagram\ChartData.cs" />
+    <Compile Include="Modules\Analizing\Diagram\Diagram.xaml.cs">
+      <DependentUpon>Diagram.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Analizing\Diagram\HistoryExport.xaml.cs">
+      <DependentUpon>HistoryExport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Formula Builder\FormulaBuilder.xaml.cs">
+      <DependentUpon>FormulaBuilder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\FormulaConverter.cs" />
+    <Compile Include="Modules\ModelConfiguration\ModelConfiguration.xaml.cs">
+      <DependentUpon>ModelConfiguration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ModelInformation\ModelInfo.xaml.cs">
+      <DependentUpon>ModelInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\NavigationMap\DrawingCanvas.cs" />
+    <Compile Include="Modules\NavigationMap\NavigationMap.xaml.cs">
+      <DependentUpon>NavigationMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ODL Editor\ODLEditorWindow.xaml.cs">
+      <DependentUpon>ODLEditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Properties\PNProperties.cs" />
+    <Compile Include="Modules\Properties\Properties.xaml.cs">
+      <DependentUpon>Properties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Searching\Searching.xaml.cs">
+      <DependentUpon>Searching.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ServerConnection\ServerProperties.xaml.cs">
+      <DependentUpon>ServerProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Simulation\Simulation.xaml.cs">
+      <DependentUpon>Simulation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Simulation\SimulationType.cs" />
+    <Compile Include="PN Objects Ierarchy\PN Objects\StructuralMembrane.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Test\OverloadTest.cs" />
+    <Compile Include="Test\Timer.cs" />
+    <Compile Include="UIStyles\Glass Effect\DWMAPI.cs" />
+    <Compile Include="UIStyles\Glass Effect\VistaGlassHelper.cs" />
+    <Compile Include="PN Objects Ierarchy\Enumerators\PNObjectTypes.cs" />
+    <Compile Include="PN Objects Ierarchy\Interfaces\IFormula.cs" />
+    <Compile Include="PN Objects Ierarchy\PN Objects\Arc3D.cs" />
+    <Compile Include="PN Objects Ierarchy\PN Objects\ContinuousLocation.cs" />
+    <Compile Include="PN Objects Ierarchy\PN Objects\ContinuousTransition.cs" />
+    <Compile Include="PN Objects Ierarchy\PN Objects\DiscreteLocation.cs" />
+    <Compile Include="PN Objects Ierarchy\PN Objects\DiscreteTransition.cs" />
+    <Compile Include="PN Objects Ierarchy\PN Objects\Location.cs" />
+    <Compile Include="PN Objects Ierarchy\PN Objects\Membrane.cs" />
+    <Compile Include="PN Objects Ierarchy\PN Objects\PNObject.cs" />
+    <Compile Include="PN Objects Ierarchy\PN Objects\Shape3D.cs" />
+    <Compile Include="PN Objects Ierarchy\PN Objects\Token.cs" />
+    <Compile Include="PN Objects Ierarchy\PN Objects\Transition.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Modules\ODL Editor\Schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Modules\ODL Editor\XSD Files\Schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Messages.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\3DTools\3DTools.csproj">
+      <Project>{5F603892-DE40-4246-A969-1C6717AFE35D}</Project>
+      <Name>3DTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AnimatedGraph\AnimatedGraph.csproj">
+      <Project>{AEE74E23-7CF8-4F22-96BB-DEEAA8E7A721}</Project>
+      <Name>AnimatedGraph</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ChartControl\ChartControl\ChartControl.csproj">
+      <Project>{1280BA5D-C406-45C2-8450-3C463A9ADB92}</Project>
+      <Name>ChartControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FormulaCompiler\FormulaCompiler\FormulaCompiler.csproj">
+      <Project>{76FB7365-9D26-4754-B27F-46C188BDAADE}</Project>
+      <Name>FormulaCompiler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Meshes3D\Meshes3D.csproj">
+      <Project>{DB9FA2C0-7BB0-44BB-9616-33EAFB338A00}</Project>
+      <Name>Meshes3D</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MeshImporter\MeshImporter.csproj">
+      <Project>{1318445D-9B2E-4BB0-A0E0-6936FB92BFE5}</Project>
+      <Name>MeshImporter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NumericBox\NumericBox\NumericBox.csproj">
+      <Project>{2DFF3081-79ED-4276-AA40-D34FFA5C2957}</Project>
+      <Name>NumericBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ODLEditor\ODLEditor.csproj">
+      <Project>{CC94AE88-C572-4716-B840-680D65E7014A}</Project>
+      <Name>ODLEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Resources\Resources.csproj">
+      <Project>{BB93BE42-FB93-4CFF-ACB8-2F67204D7860}</Project>
+      <Name>Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WindowsControl\WindowsControl\WindowsControl.csproj">
+      <Project>{7546924A-5208-4B4C-83CD-8A759760B62E}</Project>
+      <Name>WindowsControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\StartScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\MeshesDB\Heart.xml" />
+    <Resource Include="Content\MeshesDB\Liver.xml" />
+    <Resource Include="Content\MeshesDB\Stomach.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\MeshesDB\Sphere.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\Messages.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\LogoDesktopAppl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\Icons\BlueIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BlueIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="Content\LogoBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\Main\Footer\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

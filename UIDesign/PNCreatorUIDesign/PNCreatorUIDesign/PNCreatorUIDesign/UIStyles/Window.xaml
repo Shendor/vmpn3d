@@ -1,0 +1,128 @@
+<ResourceDictionary 
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Microsoft.Windows.Shell"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Shared.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="windowCommandButtons" TargetType="Button">
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="MinWidth" Value="35" />
+        <Setter Property="MinHeight" Value="22" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Border" CornerRadius="0,0,2,2" BorderThickness="1" Background="{StaticResource ConvexHorizontalBrush}" BorderBrush="{StaticResource BorderBrush}">
+                        <ContentPresenter Margin="2" HorizontalAlignment="Center" VerticalAlignment="Top" RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource SelectedHorizontalBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource PressedBrush}" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource DisabledBackgroundBrush}" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource DisabledBorderBrush}" />
+                            <Setter Property="Foreground" Value="{StaticResource DisabledForegroundBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="WindowStyle" TargetType="Window">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="shell:WindowChrome.WindowChrome">
+            <Setter.Value>
+                <shell:WindowChrome GlassFrameThickness="-1" ResizeBorderThickness="4"
+                                        CaptionHeight="28" CornerRadius="0" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Window">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Border BorderThickness="1" Grid.Row="0"  CornerRadius="2,2,0,0" Background="{StaticResource WindowHeaderBackground}" BorderBrush="{StaticResource BorderBrush}" />
+                        
+                        <Border BorderThickness="1,0,1,1" Grid.Row="1" Background="Transparent" BorderBrush="{StaticResource BorderBrush}" CornerRadius="0,0,2,2" />
+
+                        <Border BorderThickness="1,0,1,1" Grid.Row="1" Background="{StaticResource WindowBackgroundBrush}" BorderBrush="{StaticResource BorderBrush}" 
+                                Opacity="0" CornerRadius="0,0,2,2" >
+
+                        </Border>
+                        
+
+                        <Grid Grid.Row="0">
+                            <StackPanel Orientation="Horizontal" Margin="10,7,0,0">
+                                <Image Source="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Icon}" Width="20" Height="20" HorizontalAlignment="Left"
+                                               shell:WindowChrome.IsHitTestVisibleInChrome="True"/>
+
+                                <TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title}" Margin="10,0,0,0" 
+                                               Foreground="{StaticResource BorderBrush}" VerticalAlignment="Center" />
+
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Top">
+                                <Button Name="MinimizeBtn" shell:WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource windowCommandButtons}" 
+                                            Margin="2,0,0,0"
+                                             Command="{x:Static shell:SystemCommands.MinimizeWindowCommand}"
+                                            CommandTarget="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}, Path=TemplatedParent}">
+                                    <Button.Content>
+                                        <Rectangle Width="15" Height="5" Margin="0,12,0,0" Stroke="{StaticResource BorderBrush}" Opacity="1" 
+                                               Fill="{StaticResource HighlightBrush}"/>
+                                    </Button.Content>
+                                </Button>
+
+                                <Button shell:WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource windowCommandButtons}"
+                                            Margin="2,0,0,0"
+                                             Command="{x:Static shell:SystemCommands.MaximizeWindowCommand}"
+                                            CommandTarget="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}, Path=TemplatedParent}">
+                                    <Rectangle Width="14" Height="12" Margin="0,5.2,0,0" Stroke="{StaticResource BorderBrush}"  Opacity="1" 
+                                               Fill="{StaticResource HighlightBrush}"/>
+
+                                </Button>
+
+                                <Button shell:WindowChrome.IsHitTestVisibleInChrome="True" Width="35" Style="{StaticResource windowCommandButtons}" 
+                                            Margin="2,0,0,0"
+                                             Command="{x:Static shell:SystemCommands.CloseWindowCommand}"
+                                            CommandTarget="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}, Path=TemplatedParent}">
+                                    <Button.Content>
+                                        <Polygon Points="0,3 0,2 2,2 2,0 3,0 3,2 5,2 5,3 3,3 3,5 2,5 2,3" Margin="14,0.4,0,0" Width="24" Height="15" 
+                                                 StrokeThickness="1" Stroke="{StaticResource BorderBrush}" Fill="{StaticResource HighlightBrush}" Stretch="Uniform">
+                                            <Polygon.RenderTransform>
+                                                <RotateTransform Angle="45" />
+                                            </Polygon.RenderTransform>
+                                        </Polygon>
+                                    </Button.Content>
+                                </Button>
+                                
+                            </StackPanel>
+                        </Grid>
+
+                        <ContentPresenter Content="{TemplateBinding Content}" Grid.Row="1" Margin="5,0,5,10"/>
+                    </Grid>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

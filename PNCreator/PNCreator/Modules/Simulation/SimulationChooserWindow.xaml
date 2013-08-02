@@ -1,0 +1,71 @@
+﻿<main:BaseWindow x:Class="PNCreator.Modules.Simulation.SimulationChooserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:textBox="clr-namespace:PNCreator.Controls.TextBox"
+        xmlns:main="clr-namespace:PNCreator.Modules.Main"
+        xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Microsoft.Windows.Shell"
+        AllowsTransparency="True" Background="Transparent"
+        Title="Simulation" Height="220" Width="398" WindowStyle="None"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid MouseLeftButtonDown="WindowMouseLeftButtonDown">
+        <Border Grid.Row="0" Style="{StaticResource SemiTransparentBorder}"/>
+        <Grid Margin="15" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition />
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.RowSpan="3" Style="{StaticResource ShadowedBorder}"/>
+
+            <Border Style="{StaticResource HeaderBorder}" >
+               
+            </Border>
+
+            <Border Grid.Row="1" Style="{StaticResource ViewportBorder}">
+                <WrapPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"
+                           Button.Click="ButtonsClick">
+                    <Button x:Name="animationBtn" Style="{StaticResource FunctionalReflectedButton}" Margin="2">
+                        <Button.ToolTip>
+                            <ToolTip Content="Simulation with animation" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/animation.png" />
+                    </Button>
+
+                    <Button x:Name="noAnimationBtn" Style="{StaticResource FunctionalReflectedButton}" Margin="2">
+                        <Button.ToolTip>
+                            <ToolTip Content="Simulation without animation" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/no_animation.png" />
+                    </Button>
+                </WrapPanel>
+            </Border>
+
+            <Border VerticalAlignment="Top" Grid.Row="2" Height="30" Style="{StaticResource FooterBorder}" >
+                <StackPanel Orientation="Horizontal" Margin="0,0,7,2" HorizontalAlignment="Right">
+                    <Popup x:Name="sectorOptionPanel" AllowsTransparency="True" Placement="MousePoint"
+                            IsOpen="{Binding IsChecked, ElementName=simulationNameBtn}">
+                        <Border Style="{StaticResource LightContentBorder}" Grid.Column="1" Grid.Row="0" 
+                            VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="5" >
+                            <StackPanel Orientation="Horizontal" Margin="5,2,5,2" >
+                                <textBox:TipTextBox x:Name="simulationNameTextBox" Width="200" Margin="5" />
+                            </StackPanel>
+                        </Border>
+                    </Popup>
+
+                    <ToggleButton x:Name="simulationNameBtn" Margin="5,2,5,2" Style="{StaticResource OtherButtonStyle}">
+                        <ToggleButton.ToolTip>
+                            <ToolTip Content="Set simulation name" />
+                        </ToggleButton.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/pencil.png" />
+                    </ToggleButton>
+                    <Button x:Name="closeBtn" Margin="2" Command="shell:SystemCommands.CloseWindowCommand">
+                        <Button.ToolTip>
+                            <ToolTip Content="Cancel" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/close.png" />
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</main:BaseWindow>

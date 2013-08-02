@@ -1,0 +1,27 @@
+﻿<Window x:Class="PNCreator.Controls.Progress.ProgressWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True" Background="Transparent"
+        Title="Progress" WindowStyle="None" ResizeMode="NoResize"
+        Height="80" Width="370">
+    <Grid>
+        <Border Grid.Row="0" Style="{StaticResource SemiTransparentBorder}"/>
+        <Grid Margin="15" >
+
+            <Border Grid.RowSpan="3" Style="{StaticResource ShadowedBorder}"/>
+
+            <Border Style="{StaticResource HeaderBorder}" >
+                <ProgressBar x:Name="progressBar" Margin="5" Value="0" Minimum="0" Maximum="100">
+                    <ProgressBar.ToolTip>
+                        <TextBlock Text="Do right click on the prgress bar to cancel current operation" />
+                    </ProgressBar.ToolTip>
+                    <ProgressBar.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Cancel" Click="MenuItemClick"/>
+                        </ContextMenu>
+                    </ProgressBar.ContextMenu>
+                </ProgressBar>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,27 @@
+﻿<StackPanel x:Class="PNCreator.Modules.Simulation.SimulationPlayerToolbar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Microsoft.Windows.Shell"
+            Background="Transparent"
+            Orientation="Horizontal" HorizontalAlignment="Center" Button.Click="ButtonsClick" >
+    <Button x:Name="playBtn" Margin="5,0,0,0" IsEnabled="{Binding IsChecked, ElementName=endTimeBtn}"
+            Style="{StaticResource DefaultButtonStyle}">
+        <Button.ToolTip>
+            <ToolTip Content="Play" />
+        </Button.ToolTip>
+        <Image Source="/Resources;component/Content/Images/play.png" />
+    </Button>
+    <Button x:Name="stopBtn" Margin="5,0,0,0" Style="{StaticResource DefaultButtonStyle}">
+        <Button.ToolTip>
+            <ToolTip Content="Stop" />
+        </Button.ToolTip>
+        <Image Source="/Resources;component/Content/Images/stop.png" />
+    </Button>
+    <Button x:Name="closeBtn" Margin="5,0,0,0" Style="{StaticResource DefaultButtonStyle}" 
+            Command="shell:SystemCommands.CloseWindowCommand">
+        <Button.ToolTip>
+            <ToolTip Content="Exit" />
+        </Button.ToolTip>
+        <Image Source="/Resources;component/Content/Images/close.png" />
+    </Button>
+</StackPanel>

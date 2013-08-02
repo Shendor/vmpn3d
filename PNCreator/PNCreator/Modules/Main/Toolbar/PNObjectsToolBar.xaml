@@ -1,0 +1,95 @@
+﻿<StackPanel x:Class="PNCreator.Modules.Main.Toolbar.PNObjectsToolBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             HorizontalAlignment="Center" Orientation="Horizontal" Background="Transparent">
+    <RadioButton x:Name="selectBtn" GroupName="pnObjectsGroup" IsChecked="True" Margin="5,0,0,0" Click="RadioButtonsClick">
+        <RadioButton.ToolTip>
+            <ToolTip Content="Select object" />
+        </RadioButton.ToolTip>
+        <Image Source="/Resources;component/Content/Images/arrow.png" SnapsToDevicePixels="True" />
+    </RadioButton>
+
+    <!-- Discrete objects -->
+    <RadioButton x:Name="locationBtn" GroupName="pnObjectsGroup" Click="RadioButtonsClick" >
+        <RadioButton.ToolTip>
+            <ToolTip Content="Discrete Location" />
+        </RadioButton.ToolTip>
+        <Image Source="/Resources;component/Content/Images/polygon.png" />
+    </RadioButton>
+    <RadioButton x:Name="transitionBtn" GroupName="pnObjectsGroup"   Margin="5,0,0,0" Click="RadioButtonsClick" >
+        <RadioButton.ToolTip>
+            <ToolTip Content="Discrete Transition" />
+        </RadioButton.ToolTip>
+        <Image Source="/Resources;component/Content/Images/rectangle.png" />
+    </RadioButton>
+    <RadioButton x:Name="cLocationBtn" GroupName="pnObjectsGroup" Click="RadioButtonsClick" >
+        <RadioButton.ToolTip>
+            <ToolTip Content="Continuous Location" />
+        </RadioButton.ToolTip>
+        <Image Source="/Resources;component/Content/Images/circle.png"/>
+    </RadioButton>
+    <RadioButton x:Name="cTransitionBtn" GroupName="pnObjectsGroup" Margin="5,0,0,0" Click="RadioButtonsClick">
+        <RadioButton.ToolTip>
+            <ToolTip Content="Continuous Transition" />
+        </RadioButton.ToolTip>
+        <Image Source="/Resources;component/Content/Images/round_rectangle.png" />
+    </RadioButton>
+    <RadioButton x:Name="membraneBtn" GroupName="pnObjectsGroup" Margin="5,0,0,0" Click="RadioButtonsClick" >
+        <RadioButton.ToolTip>
+            <ToolTip Content="Membrane" />
+        </RadioButton.ToolTip>
+        <Image Source="/Resources;component/Content/Images/membrane.png" />
+    </RadioButton>
+    <RadioButton x:Name="structureMembraneBtn" GroupName="pnObjectsGroup" Margin="5,0,0,0" Click="RadioButtonsClick" >
+        <RadioButton.ToolTip>
+            <ToolTip Content="Structural Membrane" />
+        </RadioButton.ToolTip>
+        <Image Source="/Resources;component/Content/Images/membrane2.png" />
+    </RadioButton>
+    <RadioButton x:Name="arcBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="RadioButtonsClick" >
+        <RadioButton.ToolTip>
+            <ToolTip Content="Discrete Arc" />
+        </RadioButton.ToolTip>
+        <Image Source="/Resources;component/Content/Images/dArc.png" />
+    </RadioButton>
+    <RadioButton x:Name="inghibitorBtn" GroupName="pnObjectsGroup" Margin="5,0,0,0" Click="RadioButtonsClick" >
+        <RadioButton.ToolTip>
+            <ToolTip Content="Discrete Inhibitor Arc" />
+        </RadioButton.ToolTip>
+        <Image Source="/Resources;component/Content/Images/diArc.png" />
+    </RadioButton>
+    <RadioButton x:Name="testBtn" GroupName="pnObjectsGroup" Margin="5,0,0,0" Click="RadioButtonsClick">
+        <RadioButton.ToolTip>
+            <ToolTip Content="Discrete Test Arc" />
+        </RadioButton.ToolTip>
+        <Image Source="/Resources;component/Content/Images/dtArc.png" />
+    </RadioButton>
+
+    <!-- Continuous objects -->
+
+    <RadioButton x:Name="flowArcBtn" GroupName="pnObjectsGroup" Margin="5,0,0,0" Click="RadioButtonsClick" >
+        <RadioButton.ToolTip>
+            <ToolTip Content="Continuous Flow Arc" />
+        </RadioButton.ToolTip>
+        <Image Source="/Resources;component/Content/Images/fArc.png" />
+    </RadioButton>
+
+    <RadioButton x:Name="cArcBtn" GroupName="pnObjectsGroup"  Margin="5,0,0,0" Click="RadioButtonsClick" >
+        <RadioButton.ToolTip>
+            <ToolTip Content="Continuous Arc" />
+        </RadioButton.ToolTip>
+        <Image Source="/Resources;component/Content/Images/cArc.png" />
+    </RadioButton>
+    <RadioButton x:Name="cInghibitorBtn" GroupName="pnObjectsGroup" Margin="5,0,0,0" Click="RadioButtonsClick">
+        <RadioButton.ToolTip>
+            <ToolTip Content="Continuous Inhibitor" />
+        </RadioButton.ToolTip>
+        <Image Source="/Resources;component/Content/Images/ciArc.png" />
+    </RadioButton>
+    <RadioButton x:Name="cTestBtn" GroupName="pnObjectsGroup" Margin="5,0,0,0" Click="RadioButtonsClick">
+        <RadioButton.ToolTip>
+            <ToolTip Content="Continuous Test Arc" />
+        </RadioButton.ToolTip>
+        <Image Source="/Resources;component/Content/Images/ctArc.png" />
+    </RadioButton>
+</StackPanel>

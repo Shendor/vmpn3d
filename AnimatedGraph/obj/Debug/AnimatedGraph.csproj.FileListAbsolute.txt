@@ -1,0 +1,55 @@
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\AnimatedGraph\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\AnimatedGraph\bin\Debug\AnimatedGraph.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\AnimatedGraph\bin\Debug\AnimatedGraph.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\bin\Debug\AnimatedGraph.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\bin\Debug\AnimatedGraph.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\ResolveAssemblyReference.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph_MarkupCompile.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedTreeViewer.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\AnimatedGraph\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph_MarkupCompile.lref
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedTreeViewer.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph.g.resources
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedTreeViewer.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph_MarkupCompile.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph_MarkupCompile.lref
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedTreeViewer.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph.g.resources
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\bin\Debug\AnimatedGraph.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\bin\Debug\AnimatedGraph.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\ResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedTreeViewer.g.cs
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph_MarkupCompile.lref
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedTreeViewer.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph.g.resources
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\AnimatedGraph\bin\Debug\AnimatedGraph.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\AnimatedGraph\bin\Debug\AnimatedGraph.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\AnimatedGraph\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedTreeViewer.g.cs
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\AnimatedGraph\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedGraph_MarkupCompile.cache
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedGraph_MarkupCompile.lref
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedTreeViewer.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedGraph.g.resources
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedGraph.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedGraph.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\bin\Debug\AnimatedGraph.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\bin\Debug\AnimatedGraph.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\obj\Debug\ResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedTreeViewer.g.cs
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedGraph_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedGraph_MarkupCompile.lref
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedTreeViewer.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedGraph.g.resources
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedGraph.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedGraph.pdb

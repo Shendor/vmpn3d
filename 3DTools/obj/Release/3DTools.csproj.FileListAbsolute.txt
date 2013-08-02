@@ -1,0 +1,32 @@
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\bin\Release\3DTools.dll
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Release\ResolveAssemblyReference.cache
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Release\Trackport3D.baml
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Release\Trackport3D.g.cs
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Release\3DTools_MarkupCompile.cache
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Release\3DTools.g.resources
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Release\_3DTools.Properties.Resources.resources
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Release\3DTools.dll
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Release\ResGen.read.1.tlog
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Release\ResGen.write.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\bin\Release\3DTools.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Release\ResolveAssemblyReference.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Release\Trackport3D.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Release\Trackport3D.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Release\3DTools_MarkupCompile.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Release\3DTools.g.resources
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Release\_3DTools.Properties.Resources.resources
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Release\ResGen.read.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Release\ResGen.write.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Release\3DTools.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\bin\Release\3DTools.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Release\Trackport3D.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Release\Trackport3D.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Release\3DTools_MarkupCompile.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Release\3DTools.g.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Release\_3DTools.Properties.Resources.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Release\GenerateResource-ResGen.read.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Release\ResGen.read.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Release\GenerateResource-ResGen.write.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Release\ResGen.write.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Release\3DTools.dll

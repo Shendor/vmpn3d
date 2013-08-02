@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <LinearGradientBrush x:Key="convexBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="White" />
+        <GradientStop Color="#FFC4C4C4" Offset="0.9" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="concaveBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFC4C4C4" />
+        <GradientStop Color="White" Offset="0.9" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="selectBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFCBE6FB" />
+        <GradientStop Color="#FF6FB0D7" Offset="0.9" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="borderBrush" Color="#FF484848" />
+    
+</ResourceDictionary>

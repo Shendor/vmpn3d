@@ -1,0 +1,113 @@
+﻿<main:BaseWindow x:Class="PNCreator.MainWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:commands="clr-namespace:PNCreator.Commands"
+        xmlns:controls="clr-namespace:PNCreator.Controls"
+        xmlns:positioniser="clr-namespace:PNCreator.Modules.Positioniser"
+        xmlns:pnObjectProperties="clr-namespace:PNCreator.Modules.Main.PNObjectProperties"
+        xmlns:toolbar="clr-namespace:PNCreator.Modules.Main.Toolbar"
+        xmlns:menu="clr-namespace:PNCreator.Modules.Main.Menu" 
+        xmlns:main="clr-namespace:PNCreator.Modules.Main"
+        Icon="/PNCreator;component/Content/Icons/BlueIcon.ico"
+        Title="PN 3D Creator" Height="740" Width="1370" Background="Transparent" WindowState="Maximized"
+        KeyDown="WindowKeyDown" Closed="WindowClosed" Loaded="WindowLoaded"  Style="{StaticResource WindowStyle}">
+    
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static commands:MPNCommands.PerspectiveView}" Executed="CommandsExecuted" CanExecute="CanCommandExecute" />
+        <CommandBinding Command="{x:Static commands:MPNCommands.FrontView}" Executed="CommandsExecuted" CanExecute="CanCommandExecute"/>
+        <CommandBinding Command="{x:Static ApplicationCommands.New}" Executed="CommandsExecuted" CanExecute="CanCommandExecute"/>
+        <CommandBinding Command="{x:Static ApplicationCommands.Open}" Executed="CommandsExecuted" CanExecute="CanCommandExecute"/>
+        <CommandBinding Command="{x:Static ApplicationCommands.Find}" Executed="CommandsExecuted" CanExecute="CanCommandExecute"/>
+        <CommandBinding Command="{x:Static ApplicationCommands.Save}" Executed="CommandsExecuted" CanExecute="CanCommandExecute"/>
+        <CommandBinding Command="{x:Static ApplicationCommands.SaveAs}" Executed="CommandsExecuted" CanExecute="CanCommandExecute"/>
+        <CommandBinding Command="{x:Static ApplicationCommands.Properties}" Executed="CommandsExecuted" CanExecute="CanCommandExecute"/>
+    </Window.CommandBindings>
+
+    <Grid x:Name="mainPanel">
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="toolBarRow" Height="60" />
+            <RowDefinition x:Name="viewportRow"/>
+            <RowDefinition x:Name="statusBarRow" Height="23" />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Style="{StaticResource HeaderBorder}">
+            <toolbar:PNObjectsToolBar />
+        </Border>
+
+        <Border Grid.Row="1" Style="{StaticResource ViewportBorder}">
+            <Grid Focusable="True" MouseLeftButtonDown="MainPanelMouseLeftButtonDown" 
+                  MouseLeftButtonUp="MainPanelMouseLeftButtonUp" Background="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition />
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="220" />
+                    <ColumnDefinition Width="26" />
+                </Grid.ColumnDefinitions>
+
+                <controls:PNViewport x:Name="pnViewport" Focusable="True" Grid.RowSpan="3" Grid.ColumnSpan="4" 
+                                     MouseLeftButtonDown="ViewportMouseLeftButtonDown" MouseMove="ViewportMouseMove">
+                </controls:PNViewport>
+               
+
+                <Button x:Name="objOptionsBtn" Grid.Row="1" Grid.Column="2" Margin="5.6,5,-81,381"
+                     Click="OptionsButtonsClick" Style="{StaticResource CornerButtonStyle}">
+                    <Button.Triggers>
+                        <EventTrigger SourceName="objOptionsBtn" RoutedEvent="Button.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation x:Name="objectOptionPanelAnimation"
+                                    Storyboard.TargetName="objectOptionPanel"
+                                    Storyboard.TargetProperty="Width" From="0" To="219" Duration="0:0:0.2" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                    
+                    Object
+                </Button>
+
+                <Button x:Name="positioniserOptionBtn" Grid.Row="1" Grid.Column="2" Margin="5.4,110,-81,0"
+                    Click="OptionsButtonsClick" Style="{StaticResource CornerButtonStyle}">
+                    <Button.Triggers>
+                        <EventTrigger SourceName="positioniserOptionBtn" RoutedEvent="Button.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation x:Name="positioniserOptionPanelAnimation"
+                                    Storyboard.TargetName="positioniserOptionPanel"
+                                    Storyboard.TargetProperty="Width" From="0" To="220" Duration="0:0:0.2" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                 
+                    Positioniser
+                </Button>
+
+                <ScrollViewer x:Name="positioniserOptionPanel" Grid.Column="1" Margin="0,4,0,4" IsEnabled="{Binding Path=IsChecked}"
+                              Visibility="Hidden" VerticalScrollBarVisibility="Auto" Width="0" HorizontalAlignment="Right" Grid.RowSpan="3" >
+                    <positioniser:PositioniserProperty ParametersChanged="PositioniserPropertyParametersChanged"/>
+                </ScrollViewer>
+
+                <ScrollViewer x:Name="objectOptionPanel" Grid.RowSpan="3" Grid.Column="1" Visibility="Hidden" Margin="0,4,1,4" 
+                          HorizontalAlignment="Right" VerticalScrollBarVisibility="Auto" Width="0" >
+                    <pnObjectProperties:PNObjectPropertiesPanel x:Name="pnObjectPropertiesPanel" IsEnabled="{Binding Path=IsNotReadonly}"/>
+                </ScrollViewer>
+
+                <menu:MainMenu x:Name="mainMenu" Grid.Row="0" Grid.Column="0" Margin="15,2,15,0" Foreground="#FF3F3F3F"
+                               IsEnabled="{Binding Path=IsNotReadonly}"/>
+                
+                <toolbar:PNDocumentToolBar x:Name="pnDocumentToolBar" Grid.Row="2" Grid.ColumnSpan="2" 
+                                           IsEnabled="{Binding Path=IsNotReadonly}"/>
+                
+            </Grid>
+        </Border>        
+
+        <Border Grid.Row="3" Style="{StaticResource FooterBorder}">
+        </Border>
+       
+    </Grid>
+</main:BaseWindow>

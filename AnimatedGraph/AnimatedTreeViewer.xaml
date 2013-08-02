@@ -1,0 +1,51 @@
+﻿<local:Graph x:Class="AnimatedGraph.AnimatedTreeViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AnimatedGraph"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             NodesBindingPath="ChildNodes"
+            Dampening="{Binding ElementName=sliderDampening, Path=Value}"
+            Attraction="{Binding ElementName=sliderAttraction, Path=Value}"
+           >
+
+    <local:Graph.Resources>
+
+        <DataTemplate x:Key="folderTemplate" >
+            <Button Command="{x:Static local:AnimatedTreeViewer.ChangeCenter}" MouseRightButtonUp="TreeButtons_MouseRightButtonUp"
+                            CommandParameter="{Binding }" Padding="10" Style="{StaticResource OtherButtonStyle}" Tag="{Binding Path=Item}">
+                <Button.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Rename folder" Click="MenuItem_Click"/>
+                        <MenuItem Header="Remove folder" Click="MenuItem_Click"/>
+                    </ContextMenu>
+                </Button.ContextMenu>
+                <TextBlock Text="{Binding Path=Item}" Style="{StaticResource FolderTextStyle}"/>
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="fileTemplate" >
+            <Button  MouseRightButtonUp="TreeButtons_MouseRightButtonUp" Click="TreeButtons_Click"
+                     Command="{x:Static local:AnimatedTreeViewer.OpenMesh}" CommandParameter="{Binding }"
+                    Padding="10" Style="{StaticResource OtherButtonStyle}" Tag="{Binding Path=Item}">
+                <Button.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Open mesh" Click="MenuItem_Click"/>
+                        <MenuItem Header="Rename mesh" Click="MenuItem_Click"/>
+                        <MenuItem Header="Remove mesh" Click="MenuItem_Click"/>
+                    </ContextMenu>
+                </Button.ContextMenu>
+                <TextBlock Text="{Binding Path=Item}" Style="{StaticResource LargeLightTextStyle}"/>
+            </Button>
+        </DataTemplate>
+
+        <!--<DataTemplate x:Key="rootFolderTemplate" >
+            <Button Background="Red" Command="{x:Static local:AnimatedTreeViewer.ChangeCenter}" CommandParameter="{Binding }" Padding="10" Style="{StaticResource OtherButtonStyle}">
+                <TextBlock Text="{Binding Path=Item}" Style="{StaticResource RootFolderTextStyle}"/>
+            </Button>
+        </DataTemplate>-->
+    </local:Graph.Resources>
+
+</local:Graph>

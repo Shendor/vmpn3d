@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="Selection" R="0xF5" G="0xF5" B="0xF5" />
+    <Color x:Key="DiscreteObjects" R="0xF5" G="0xF5" B="0xF5" />
+    <Color x:Key="ContinuousObjects" R="0xF5" G="0xF5" B="0xF5" />
+    <Color x:Key="Membrane" R="0xF5" G="0xF5" B="0xF5" />
+    <Color x:Key="CarcassPoint" R="0x25" G="0x25" B="0x25" />
+    
+</ResourceDictionary>

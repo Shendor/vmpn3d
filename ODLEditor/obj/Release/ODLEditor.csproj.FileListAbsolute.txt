@@ -1,0 +1,15 @@
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\ODLEditor\bin\Release\ODLEditor.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\ODLEditor\bin\Release\ODLEditor.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\ODLEditor\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\ODLEditor\obj\Release\ODLEditor.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\ODLEditor\obj\Release\ODLEditor.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\ODLEditor\bin\Release\ODLEditor.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\ODLEditor\bin\Release\ODLEditor.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\ODLEditor\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\ODLEditor\obj\Release\ODLEditor.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\ODLEditor\obj\Release\ODLEditor.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\ODLEditor\bin\Release\ODLEditor.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\ODLEditor\bin\Release\ODLEditor.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\ODLEditor\obj\Release\ResolveAssemblyReference.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\ODLEditor\obj\Release\ODLEditor.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\ODLEditor\obj\Release\ODLEditor.pdb

@@ -1,0 +1,148 @@
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\MeshImporter.exe
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\MeshImporter.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\3DTools.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\AnimatedGraph.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\Meshes3D.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\Microsoft.Windows.Shell.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\Resources.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\J832.Common.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\3DTools.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\AnimatedGraph.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\Meshes3D.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\Resources.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\Microsoft.Windows.Shell.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\Microsoft.Windows.Shell.xml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\ResolveAssemblyReference.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MainWindow.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\App.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\AddMeshWindow.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MainWindow.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\App.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MeshImporter_MarkupCompile.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MeshImporter_MarkupCompile.lref
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\AddMeshWindow.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MeshImporter.g.resources
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MeshImporter.Properties.Resources.resources
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\GenerateResource.read.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\GenerateResource.write.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MeshImporter.exe
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MeshImporter.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Release\MeshImporter.exe
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Release\MeshImporter.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Release\3DTools.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Release\AnimatedGraph.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Release\Meshes3D.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Release\Resources.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Release\J832.Common.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Release\3DTools.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Release\AnimatedGraph.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Release\Meshes3D.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Release\Resources.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Release\Microsoft.Windows.Shell.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Release\Microsoft.Windows.Shell.xml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\MainWindow.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\App.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\AddMeshWindow.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\MainWindow.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\App.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\MeshImporter_MarkupCompile.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\MeshImporter_MarkupCompile.lref
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\AddMeshWindow.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\MeshImporter.g.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\MeshImporter.Properties.Resources.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\GenerateResource.write.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\MeshImporter.exe
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\Release\MeshImporter.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Release\MeshImporter.exe.config
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\MeshImporter.exe.config
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\WindowsControl.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\WindowsControl.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\MeshImporter.exe.config
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\MeshImporter.exe
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\MeshImporter.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\3DTools.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\AnimatedGraph.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\Meshes3D.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\Resources.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\WindowsControl.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\J832.Common.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\3DTools.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\AnimatedGraph.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\Meshes3D.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\Resources.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Release\WindowsControl.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\ResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MainWindow.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\App.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\AddMeshWindow.g.cs
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MainWindow.g.cs
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\App.g.cs
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MeshImporter_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MeshImporter_MarkupCompile.lref
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\AddMeshWindow.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MeshImporter.g.resources
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MeshImporter.Properties.Resources.resources
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\GenerateResource.read.1.tlog
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\GenerateResource.write.1.tlog
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MeshImporter.exe
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\Release\MeshImporter.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\bin\Release\MeshImporter.exe.config
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\bin\Release\MeshImporter.exe
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\bin\Release\MeshImporter.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\bin\Release\3DTools.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\bin\Release\AnimatedGraph.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\bin\Release\Meshes3D.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\bin\Release\Resources.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\bin\Release\WindowsControl.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\bin\Release\J832.Common.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\bin\Release\3DTools.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\bin\Release\AnimatedGraph.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\bin\Release\Meshes3D.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\bin\Release\Resources.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\bin\Release\WindowsControl.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\ResolveAssemblyReference.cache
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\MainWindow.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\App.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\AddMeshWindow.g.cs
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\MainWindow.g.cs
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\App.g.cs
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\MeshImporter_MarkupCompile.cache
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\MeshImporter_MarkupCompile.lref
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\AddMeshWindow.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\MeshImporter.g.resources
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\MeshImporter.Properties.Resources.resources
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\GenerateResource.read.1.tlog
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\GenerateResource.write.1.tlog
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\MeshImporter.exe
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\MeshImporter\obj\Release\MeshImporter.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\bin\Release\MeshImporter.exe.config
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\bin\Release\MeshImporter.exe
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\bin\Release\MeshImporter.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\bin\Release\3DTools.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\bin\Release\AnimatedGraph.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\bin\Release\Meshes3D.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\bin\Release\Resources.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\bin\Release\WindowsControl.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\bin\Release\J832.Common.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\bin\Release\3DTools.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\bin\Release\AnimatedGraph.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\bin\Release\Meshes3D.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\bin\Release\Resources.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\bin\Release\WindowsControl.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\ResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\MainWindow.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\App.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\AddMeshWindow.g.cs
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\MainWindow.g.cs
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\App.g.cs
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\MeshImporter_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\MeshImporter_MarkupCompile.lref
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\AddMeshWindow.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\MeshImporter.g.resources
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\MeshImporter.Properties.Resources.resources
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\GenerateResource.read.1.tlog
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\GenerateResource.write.1.tlog
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\MeshImporter.exe
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\MeshImporter\obj\Release\MeshImporter.pdb

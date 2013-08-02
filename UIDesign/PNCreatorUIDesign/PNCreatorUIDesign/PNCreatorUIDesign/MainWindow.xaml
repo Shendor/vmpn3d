@@ -1,0 +1,896 @@
+﻿<Window x:Class="PNCreatorUIDesign.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Microsoft.Windows.Shell"
+         xmlns:numericBox="clr-namespace:NumericBox;assembly=NumericBox"
+        xmlns:aero="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+        Title="MainWindow" Height="611" Width="1056" Style="{StaticResource WindowStyle}">
+    <Window.CommandBindings>
+        <CommandBinding x:Name="closeCommand" Command="{x:Static shell:SystemCommands.CloseWindowCommand}" Executed="OnWindowClose"/>
+        <CommandBinding x:Name="maximizeCommand" Command="{x:Static shell:SystemCommands.MaximizeWindowCommand}" Executed="OnWindowMaximize"/>
+        <CommandBinding x:Name="minimizeCommand" Command="{x:Static shell:SystemCommands.MinimizeWindowCommand}" Executed="OnWindowMinimize"/>
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="menuRow" Height="26" />
+            <RowDefinition x:Name="toolBarRow" Height="55" />
+            <RowDefinition />
+            <RowDefinition x:Name="statusBarRow" Height="25" />
+        </Grid.RowDefinitions>
+
+        <!-- ============================================ MENU ============================================-->
+        <Border Grid.Row="0" Margin="5,2,5,0" Style="{StaticResource defaultBorder}" />
+        <Menu Grid.Row="0" Background="Transparent" Margin="15,2,15,0" Foreground="#FF3F3F3F">
+            <!--*************************************************************************-->
+            <MenuItem Header="File" Background="Transparent">
+                <MenuItem x:Name="f1" Header="New model" Click="MenuItems_Click" >
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/document.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="f2" Header="Open" Click="MenuItems_Click" >
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Open.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="f5" Header="Open recent"  >
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Open.png" />
+                    </MenuItem.Icon>
+                    <MenuItem x:Name="f51" Header="" Click="MenuItems_Click" Visibility="Collapsed"/>
+                    <MenuItem x:Name="f52" Header="" Click="MenuItems_Click" Visibility="Collapsed"/>
+                    <MenuItem x:Name="f53" Header="" Click="MenuItems_Click" Visibility="Collapsed"/>
+                    <MenuItem x:Name="f54" Header="" Click="MenuItems_Click" Visibility="Collapsed"/>
+                    <MenuItem x:Name="f55" Header="" Click="MenuItems_Click" Visibility="Collapsed"/>
+                </MenuItem>
+                <MenuItem x:Name="f3" Header="Save" Click="MenuItems_Click" >
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Save.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="f4" Header="Exit" Click="MenuItems_Click">
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Exit.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <!--*************************************************************************-->
+            <MenuItem Header="Edit">
+                <MenuItem x:Name="p1" Header="Delete" Click="MenuItems_Click">
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Refresh.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="p2" Header="Find object" Click="MenuItems_Click">
+                    <MenuItem.Triggers>
+                        <EventTrigger SourceName="p2" RoutedEvent="MenuItem.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="searchingPanel" Storyboard.TargetProperty="Height" From="0" To="42" Duration="0:0:0.2" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </MenuItem.Triggers>
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Find.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="p3" Header="Model configuration" Click="MenuItems_Click">
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Settings.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <!--*************************************************************************-->
+            <MenuItem Header="View">
+                <MenuItem x:Name="v11" Header="Wire" IsEnabled="False" Click="MenuItems_Click">
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Refresh.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="v6" Header="Properties" Click="MenuItems_Click">
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Settings.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="v7" Header="2D Map" Click="MenuItems_Click">
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Refresh.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Camera">
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/View.png" />
+                    </MenuItem.Icon>
+                    <MenuItem Header="View" Click="MenuItems_Click">
+                        <MenuItem x:Name="v1" Header="Perspective" />
+                        <MenuItem x:Name="v2" Header="Top" />
+                        <MenuItem x:Name="v3" Header="Left" />
+                        <MenuItem x:Name="v4" Header="Front" />
+                    </MenuItem>
+                    <MenuItem x:Name="v5" Header="Properties" Click="MenuItems_Click"/>
+                </MenuItem>
+                <MenuItem Header="Window" Click="MenuItems_Click">
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Find.png" />
+                    </MenuItem.Icon>
+                    <MenuItem x:Name="v8" Header="Menu" />
+                    <MenuItem x:Name="v9" Header="Toolbar"/>
+                    <MenuItem x:Name="v10" Header="Status bar" />
+                </MenuItem>
+            </MenuItem>
+            <!--*************************************************************************-->
+            <MenuItem Header="Analize">
+                <MenuItem x:Name="a1" Header="Diagrammes" Click="MenuItems_Click" >
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Chart.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="a2" Header="Charts" Click="MenuItems_Click" >
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Chart.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <!--*************************************************************************-->
+            <MenuItem Header="Objects">
+                <MenuItem Header="Discrete PN">
+                    <MenuItem x:Name="o1" Header="Location" Click="MenuItems_Click">
+                        <MenuItem.Icon>
+                            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Location.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="o2" Header="Transition" Click="MenuItems_Click">
+                        <MenuItem.Icon>
+                            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Transition.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="o3" Header="Membrane" Click="MenuItems_Click">
+                        <MenuItem.Icon>
+                            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Membrane.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem x:Name="o4" Header="Arc" Click="MenuItems_Click">
+                        <MenuItem.Icon>
+                            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Arc.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="o5" Header="Inhibitor Arc" Click="MenuItems_Click">
+                        <MenuItem.Icon>
+                            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/InghibitorArc.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="o6" Header="Test Arc" Click="MenuItems_Click">
+                        <MenuItem.Icon>
+                            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/TestArc.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Continuous PN">
+                    <MenuItem x:Name="o7" Header="Location" Click="MenuItems_Click">
+                        <MenuItem.Icon>
+                            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/CLocation.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="o8" Header="Transition" Click="MenuItems_Click">
+                        <MenuItem.Icon>
+                            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/CTransition.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="o9" Header="Flow Arc" Click="MenuItems_Click">
+                        <MenuItem.Icon>
+                            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/CFlowArc.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem x:Name="o10" Header="Arc" Click="MenuItems_Click">
+                        <MenuItem.Icon>
+                            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/CArc.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="o11" Header="Inhibitor Arc" Click="MenuItems_Click">
+                        <MenuItem.Icon>
+                            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/CInghibitorArc.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="o12" Header="Text Arc" Click="MenuItems_Click">
+                        <MenuItem.Icon>
+                            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/CTestArc.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <Separator />
+                <MenuItem x:Name="o13" Header="Select" Click="MenuItems_Click">
+                    <MenuItem.Icon>
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="20" Source="/Resources;component/Content/Images/Select.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <!--*************************************************************************-->
+            <MenuItem Header="Reference">
+                <MenuItem x:Name="s1" Header="Help" Click="MenuItems_Click" />
+                <MenuItem x:Name="s2" Header="About" Click="MenuItems_Click" />
+            </MenuItem>
+            <!--*************************************************************************-->
+        </Menu>
+
+        <!-- ============================================ TOOLBAR ============================================-->
+        <Grid Grid.Row="1" Margin="5,5,5,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="260" />
+                <ColumnDefinition Width="360" />
+                <ColumnDefinition Width="310" />
+                <ColumnDefinition Width="356*" />
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" Style="{StaticResource defaultBorder}" />
+            <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="10,3,5,3" UseLayoutRounding="True">
+                <Button x:Name="newBtn" ToolTipService.InitialShowDelay="0" Click="toolBarButtons_Click" Style="{StaticResource DefaultButtonStyle}">
+                    <Button.ToolTip>
+                        <ToolTip Content="Start new model" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/document.png"></Image>
+                </Button>
+                <Button x:Name="openBtn" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="toolBarButtons_Click" Style="{StaticResource DefaultButtonStyle}">
+                    <Button.ToolTip>
+                        <ToolTip Content="Open model" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/Open.png" ></Image>
+                </Button>
+                <Button x:Name="saveBtn" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="toolBarButtons_Click"  Style="{StaticResource DefaultButtonStyle}">
+                    <Button.ToolTip>
+                        <ToolTip Content="Save model" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/Save.png"></Image>
+                </Button>
+
+                <Button x:Name="showAnimPanelBtn" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="toolBarButtons_Click" Style="{StaticResource DefaultButtonStyle}">
+                    <Button.ToolTip>
+                        <ToolTip Content="Start simulation" />
+                    </Button.ToolTip>
+                    <Button.Triggers>
+                        <EventTrigger SourceName="showAnimPanelBtn" RoutedEvent="Button.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="animationPanel"
+                                    Storyboard.TargetProperty="Height" From="0" To="175" Duration="0:0:0.2" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                    <Image Grid.Column="0" Source="/Resources;component/Content/Images/Animation.png" />
+                </Button>
+
+                <RadioButton x:Name="selectBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="RadioButtons_Click">
+                    <RadioButton.ToolTip>
+                        <ToolTip Content="Select object" />
+                    </RadioButton.ToolTip>
+                    <Image Grid.Column="0" Source="/Resources;component/Content/Images/select.png"></Image>
+                </RadioButton>
+            </StackPanel>
+
+            <!-- Discrete PN objects -->
+            <Border Grid.Column="1" Margin="5,0,0,0" Style="{StaticResource defaultBorder}" />
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="15,3,5,3" >
+                <RadioButton x:Name="locationBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0"  Click="RadioButtons_Click" >
+                    <RadioButton.ToolTip>
+                        <ToolTip Content="Discrete Location" />
+                    </RadioButton.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/location.png"></Image>
+                </RadioButton>
+                <RadioButton x:Name="transitionBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="RadioButtons_Click" >
+                    <RadioButton.ToolTip>
+                        <ToolTip Content="Discrete Transition" />
+                    </RadioButton.ToolTip>
+                    <Image Grid.Column="0" Source="/Resources;component/Content/Images/Transition.png"></Image>
+                </RadioButton>
+                <RadioButton x:Name="membraneBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="RadioButtons_Click" >
+                    <RadioButton.ToolTip>
+                        <ToolTip Content="Membrane" />
+                    </RadioButton.ToolTip>
+                    <Image Grid.Column="0" Source="/Resources;component/Content/Images/Membrane.png"></Image>
+                </RadioButton>
+                <RadioButton x:Name="structureMembraneBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="RadioButtons_Click" >
+                    <RadioButton.ToolTip>
+                        <ToolTip Content="Structural Membrane" />
+                    </RadioButton.ToolTip>
+                    <Image Grid.Column="0" Source="/Resources;component/Content/Images/SMembrane.png"></Image>
+                </RadioButton>
+                <RadioButton x:Name="arcBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="RadioButtons_Click" >
+                    <RadioButton.ToolTip>
+                        <ToolTip Content="Discrete Arc" />
+                    </RadioButton.ToolTip>
+                    <Image Grid.Column="0" Source="/Resources;component/Content/Images/arc.png"></Image>
+                </RadioButton>
+                <RadioButton x:Name="inghibitorBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="RadioButtons_Click" >
+                    <RadioButton.ToolTip>
+                        <ToolTip Content="Discrete Inhibitor Arc" />
+                    </RadioButton.ToolTip>
+                    <Image Grid.Column="0" Source="/Resources;component/Content/Images/InghibitorArc.png"></Image>
+                </RadioButton>
+                <RadioButton x:Name="testBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="RadioButtons_Click">
+                    <RadioButton.ToolTip>
+                        <ToolTip Content="Discrete Test Arc" />
+                    </RadioButton.ToolTip>
+                    <Image Grid.Column="0" Source="/Resources;component/Content/Images/TestArc.png"></Image>
+                </RadioButton>
+            </StackPanel>
+
+            <!-- Continuous PN objects -->
+            <Border Grid.Column="2" Margin="5,0,0,0" Style="{StaticResource defaultBorder}"/>
+            <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="15,3,5,3">
+                <RadioButton x:Name="cLocationBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0" Click="RadioButtons_Click" >
+                    <RadioButton.ToolTip>
+                        <ToolTip Content="Continuous Location" />
+                    </RadioButton.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/clocation.png" />
+                </RadioButton>
+                <RadioButton x:Name="cTransitionBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="RadioButtons_Click">
+                    <RadioButton.ToolTip>
+                        <ToolTip Content="Continuous Transition" />
+                    </RadioButton.ToolTip>
+                    <Image Grid.Column="0" Source="/Resources;component/Content/Images/cTransition.png"></Image>
+                </RadioButton>
+                <RadioButton x:Name="flowArcBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="RadioButtons_Click" >
+                    <RadioButton.ToolTip>
+                        <ToolTip Content="Continuous Flow Arc" />
+                    </RadioButton.ToolTip>
+                    <Image Grid.Column="0" Source="/Resources;component/Content/Images/CFlowArc.png"></Image>
+                </RadioButton>
+
+                <RadioButton x:Name="cArcBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="RadioButtons_Click" >
+                    <RadioButton.ToolTip>
+                        <ToolTip Content="Continuous Arc" />
+                    </RadioButton.ToolTip>
+                    <Image Grid.Column="0" Source="/Resources;component/Content/Images/carc.png"></Image>
+                </RadioButton>
+                <RadioButton x:Name="cInghibitorBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="RadioButtons_Click">
+                    <RadioButton.ToolTip>
+                        <ToolTip Content="Continuous Inhibitor" />
+                    </RadioButton.ToolTip>
+                    <Image Grid.Column="0" Source="/Resources;component/Content/Images/cInghibitorArc.png"></Image>
+                </RadioButton>
+                <RadioButton x:Name="cTestBtn" GroupName="pnObjectsGroup" ToolTipService.InitialShowDelay="0" Margin="5,0,0,0" Click="RadioButtons_Click">
+                    <RadioButton.ToolTip>
+                        <ToolTip Content="Continuous Test Arc" />
+                    </RadioButton.ToolTip>
+                    <Image Grid.Column="0" Source="/Resources;component/Content/Images/cTestArc.png"></Image>
+                </RadioButton>
+            </StackPanel>
+
+            <Border Grid.Column="3" Margin="5,0,0,0" Style="{StaticResource defaultBorder}" />
+        </Grid>
+
+        <!--============================================================= EDIT WINDOW ===============================================================-->
+        <Grid  x:Name="grid1" Grid.Row="2" Margin="5,5,5,0" Focusable="True" MouseMove="Grid_MouseMove" MouseWheel="grid1_MouseWheel"
+               MouseLeftButtonDown="Grid_MouseLeftButtonDown" MouseLeftButtonUp="grid1_MouseLeftButtonUp" Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="440" />
+                <ColumnDefinition Width="238*" />
+                <ColumnDefinition Width="220" />
+                <ColumnDefinition Width="26" />
+            </Grid.ColumnDefinitions>
+            <Border x:Name="border" Grid.ColumnSpan="4" Style="{StaticResource defaultBorder}" />
+
+            <!--============================================================= VIEWPORT3D ===============================================================-->
+            <Viewport3D x:Name="viewport" Grid.Row="2" Grid.ColumnSpan="4"  MouseLeftButtonDown="viewport_MouseLeftButtonDown" >
+                <!--*************************************************************************-->
+                <Viewport3D.Camera>
+                    <PerspectiveCamera x:Name="camera" FarPlaneDistance="8000" LookDirection="-1,-1,-640" UpDirection="0,1,0" NearPlaneDistance="0.1" Position="1,1,1200" FieldOfView="50" >
+                        <PerspectiveCamera.Transform>
+                            <Transform3DGroup>
+                                <TranslateTransform3D OffsetX="0" OffsetY="0" OffsetZ="-600" />
+                                <ScaleTransform3D ScaleX="0.0055" ScaleY="0.0055" ScaleZ="0.0055" />
+                                <TranslateTransform3D OffsetX="0" OffsetY="0" OffsetZ="-600" />
+                            </Transform3DGroup>
+                        </PerspectiveCamera.Transform>
+                    </PerspectiveCamera>
+                </Viewport3D.Camera>
+
+                <!--*************************************************************************-->
+                <ModelVisual3D x:Name="light">
+                    <ModelVisual3D.Content>
+                        <Model3DGroup>
+                            <Model3DGroup.Children>
+                                <AmbientLight Color="#333333" />
+                                <DirectionalLight Color="#FFFFFF" Direction="-0.6,-0.5,-0.6"  />
+                            </Model3DGroup.Children>
+                        </Model3DGroup>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+
+                <!--*************************************************************************-->
+
+            </Viewport3D>
+            <Canvas Name="mainViewportCanvas" Grid.Row="2" ClipToBounds="True" IsHitTestVisible="False"  Grid.Column="0" Grid.ColumnSpan="4"></Canvas>
+
+            <!-- ============================================ SIMULATION PANEL  ============================================-->
+            <Grid x:Name="animationPanel" Grid.Column="0" VerticalAlignment="Top" Height="0" Visibility="Hidden">
+                <Grid Margin="15,1,15,5" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition />
+                        <RowDefinition Height="50"/>
+
+                    </Grid.RowDefinitions>
+                    <Border Grid.RowSpan="2" Style="{StaticResource upperTransparentBorder}" />
+                    <Border Grid.RowSpan="2" Style="{StaticResource upperSemiTransparentBorder}" />
+                    <Border Grid.Column="0" Grid.Row="0" Style="{StaticResource upperWhiteBorder}" Width="140"  Margin="10,0,0,0"  />
+
+                    <ComboBox x:Name="simulationTypes" SelectedIndex="0" Grid.Row="0" Margin="20,10,10,5" Width="120" SelectionChanged="ComboBoxes_SelectionChanged">
+                        <ComboBox.Triggers>
+                            <EventTrigger SourceName="simulationTypes" RoutedEvent="ComboBox.SelectionChanged">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="uiForAnimation"
+                                             Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.8" />
+                                        <DoubleAnimation Storyboard.TargetName="uiForNoAnimation"
+                                             Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.8" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ComboBox.Triggers>
+                        <ComboBoxItem Content="With animation" />
+                        <ComboBoxItem Content="Without animation" />
+                    </ComboBox>
+
+                    <Border x:Name="simulationContentBorder" Grid.Column="0" Margin="20,15,20,1" Grid.Row="1" Height="55" Style="{StaticResource lowerWhiteBorder}" />
+                    <StackPanel x:Name="uiForAnimation" Grid.Row="1" Margin="30,20,30,5" VerticalAlignment="Bottom" >
+                        <TextBlock Text="Animation speed: " />
+                        <Slider x:Name="timeSpeedSlider" Margin="0,5,0,0" Value="2.15" Minimum="0.300" Maximum="12" ValueChanged="Sliders_ValueChanged">
+                            <Slider.ToolTip>
+                                <TextBlock Text="Animation speed" />
+                            </Slider.ToolTip>
+                        </Slider>
+                    </StackPanel>
+
+                    <StackPanel x:Name="uiForNoAnimation" Grid.Row="1" Margin="30,20,30,5" Visibility="Collapsed" VerticalAlignment="Bottom">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Finish time:  "  />
+                            <TextBox x:Name="finishTimeTB" Width="50" Text="1" />
+                        </StackPanel>
+                        <ProgressBar x:Name="simulationProgress" Height="20" Margin="0,5,0,0" Minimum="0" Value="0"></ProgressBar>
+                    </StackPanel>
+
+                    <Border Grid.Column="0" Margin="5,0,0,10" Grid.Row="2" Width="140" Style="{StaticResource upperWhiteBorder}" />
+
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="15,3,10,14" HorizontalAlignment="Center">
+                        <Button x:Name="playBtn" Click="toolBarButtons_Click" Style="{StaticResource DefaultButtonStyle}">
+                            <Button.ToolTip>
+                                <ToolTip Content="Run" />
+                            </Button.ToolTip>
+                            <Image Source="/Resources;component/Content/Images/Play.png"></Image>
+                        </Button>
+                        <Button x:Name="stopBtn" Margin="5,0,5,0" Click="toolBarButtons_Click" Style="{StaticResource DefaultButtonStyle}">
+                            <Button.ToolTip>
+                                <ToolTip Content="Stop" />
+                            </Button.ToolTip>
+                            <Image Source="/Resources;component/Content/Images/Stop.png"></Image>
+                        </Button>
+                        <Button x:Name="serverBtn" Click="toolBarButtons_Click" Style="{StaticResource DefaultButtonStyle}">
+                            <Button.ToolTip>
+                                <ToolTip Content="Configure server" />
+                            </Button.ToolTip>
+                            <Image Source="/Resources;component/Content/Images/Step.png"></Image>
+                        </Button>
+                    </StackPanel>
+
+                </Grid>
+            </Grid>
+
+            <Grid x:Name="searchingPanel" Grid.Column="0" VerticalAlignment="Bottom" Height="42" Visibility="Hidden">
+                <Border Grid.Column="0" Margin="10,0,0,2" Style="{StaticResource lowerTransparentBorder}"  />
+                <Border Grid.Column="0" Margin="10,0,0,2" Style="{StaticResource lowerSemiTransparentBorder}"  />
+                <StackPanel Grid.Column="0" VerticalAlignment="Top" Height="30" Orientation="Horizontal" Margin="20,7,5,0" >
+                    <TextBlock Text="Object name:" Margin="5,5,20,0" />
+                    <TextBox x:Name="searchedNameTB" Width="200" Height="23" PreviewTextInput="options_TextInput" />
+                </StackPanel>
+            </Grid>
+
+            <Button x:Name="objOptionsBtn" Grid.Column="4" Margin="5.6,5,-81,381" Height="21" VerticalAlignment="Top"
+                     Click="objectOptionButtons_Click" Style="{StaticResource CornerButtonStyle}">
+                <Button.Triggers>
+                    <EventTrigger  SourceName="objOptionsBtn" RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation x:Name="objectOptionPanelAnimation"
+                                    Storyboard.TargetName="objectOptionPanel"
+                                    Storyboard.TargetProperty="Width" From="0" To="219" Duration="0:0:0.2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
+                <Button.RenderTransform>
+                    <RotateTransform Angle="90" CenterX="9" CenterY="7.6" />
+                </Button.RenderTransform>
+                Object
+            </Button>
+
+            <!--*************************************************************************-->
+            <Button x:Name="cameraOptionBtn" Grid.Column="4" VerticalAlignment="Top" Margin="5.4,110,-81,0"  Height="21"
+                    Click="objectOptionButtons_Click" Style="{StaticResource CornerButtonStyle}">
+                <Button.Triggers>
+                    <EventTrigger SourceName="cameraOptionBtn" RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation x:Name="cameraOptionPanelAnimation"
+                                    Storyboard.TargetName="cameraOptionPanel"
+                                    Storyboard.TargetProperty="Width" From="0" To="220" Duration="0:0:0.2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
+                <Button.RenderTransform>
+                    <RotateTransform Angle="90" CenterX="9" CenterY="7.6" />
+                </Button.RenderTransform>
+                Camera
+            </Button>
+
+            <!-- ============================================ CAMERA OPTIONS  ============================================-->
+            <ScrollViewer x:Name="cameraOptionPanel" Grid.Column="2" Margin="0,4,0,4" Visibility="Hidden" VerticalScrollBarVisibility="Auto"
+                          Width="0" HorizontalAlignment="Right" Grid.RowSpan="2" PreviewTextInput="options_TextInput" >
+                <Grid Grid.Row="2" Background="Transparent">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="65.5*" />
+                        <ColumnDefinition Width="101*" />
+                        <ColumnDefinition Width="36.5*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="33.35"/>
+                        <RowDefinition Height="80"></RowDefinition>
+                        <RowDefinition Height="112"></RowDefinition>
+                        <RowDefinition Height="112"></RowDefinition>
+                        <RowDefinition Height="112" />
+                        <RowDefinition Height="55.827" />
+                        <RowDefinition Height="55.827" />
+                        <RowDefinition Height="55.827" />
+                        <RowDefinition Height="55.827" />
+                        <RowDefinition Height="55.827" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Border Grid.RowSpan="11" Grid.ColumnSpan="3" Style="{StaticResource leftBorder}" Background="Transparent" Opacity="1" />
+                    <Border Grid.RowSpan="11" Grid.ColumnSpan="3" Style="{StaticResource leftBorder}" />
+                    <TextBlock Text="Camera properties" Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" FontSize="16" />
+                    <!--*************************************************************************-->
+                    <Border Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource rightTransparentBorder}" />
+                    <TextBlock Text="Move to object" Grid.ColumnSpan="2" Margin="30,2,0,20" Grid.Row="1" Height="27.091" VerticalAlignment="Top" />
+                    <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,23,0,5">
+                        <ComboBox x:Name="camerasNameList" Grid.Row="1" Grid.Column="1" SelectionChanged="ComboBoxes_SelectionChanged"/>
+                        <StackPanel Grid.Row="1" Height="30" Orientation="Horizontal"  HorizontalAlignment="Right">
+                            <Button x:Name="addCameraBtn" Margin="0,0,0,3" ToolTipService.InitialShowDelay="0" Click="objectOptionButtons_Click" Style="{StaticResource DefaultButtonStyle}">
+                                <Button.ToolTip>
+                                    <ToolTip Content="Save camera position" />
+                                </Button.ToolTip>
+                                <Image Source="/Resources;component/Content/Images/Save.png"></Image>
+                            </Button>
+                            <Button x:Name="delCameraBtn" Margin="2,0,0,3" ToolTipService.InitialShowDelay="0" Click="objectOptionButtons_Click" Style="{StaticResource DefaultButtonStyle}">
+                                <Button.ToolTip>
+                                    <ToolTip Content="Delete camera" />
+                                </Button.ToolTip>
+                                <Image Source="/Resources;component/Content/Images/Cancel.png"></Image>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!--*************************************************************************-->
+                    <Border Grid.Row="2" Grid.ColumnSpan="3"  Style="{StaticResource rightTransparentBorder}" />
+                    <TextBlock Text="Position" Grid.ColumnSpan="2" Margin="30,5,0,20" Grid.Row="2" Height="27.091" VerticalAlignment="Top"/>
+                    <StackPanel Grid.Column="0" Grid.Row="2">
+                        <TextBlock Text="X: " Margin="30,29,0,0" />
+                        <TextBlock Text="Y: " Margin="30,10,0,0" />
+                        <TextBlock Text="Z: " Margin="30,12,0,0"  />
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Grid.Row="2">
+                        <TextBox x:Name="camPosXTB" Text="0" Margin="0,25,0,0"  />
+                        <TextBox x:Name="camPosYTB" Text="0" Margin="0,6,0,0"  />
+                        <TextBox x:Name="camPosZTB"  Text="0" Margin="0,6,0,0" />
+                    </StackPanel>
+                    <!--*************************************************************************-->
+
+                    <Border Grid.Row="3" Grid.ColumnSpan="3"  Style="{StaticResource rightTransparentBorder}" />
+                    <TextBlock Grid.Row="3" Grid.ColumnSpan="3" Text="View point" Margin="30,5,0,0" VerticalAlignment="Top"/>
+                    <StackPanel Grid.Column="0" Grid.Row="3">
+                        <TextBlock Text="X: " Margin="30,29,0,0" />
+                        <TextBlock Text="Y: " Margin="30,10,0,0" />
+                        <TextBlock Text="Z: " Margin="30,12,0,0"  />
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Grid.Row="3">
+                        <TextBox x:Name="camViewXTB"  Text="0" Margin="0,25,0,0" />
+                        <TextBox x:Name="camViewYTB" Text="0" Margin="0,6,0,0" />
+                        <TextBox x:Name="camViewZTB" Text="0" Margin="0,6,0,0" />
+                    </StackPanel>
+                    <!--*************************************************************************-->
+
+                    <Border Grid.Row="4" Grid.ColumnSpan="3"  Style="{StaticResource rightTransparentBorder}"/>
+                    <TextBlock Grid.Row="4" Grid.ColumnSpan="3" Text="Direction" Margin="30,5,0,0" VerticalAlignment="Top" />
+                    <StackPanel Grid.Column="0" Grid.Row="4">
+                        <TextBlock Text="X: " Margin="30,29,0,0" />
+                        <TextBlock Text="Y: " Margin="30,10,0,0"  />
+                        <TextBlock Text="Z: " Margin="30,12,0,0"  />
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Grid.Row="4">
+                        <TextBox x:Name="camUpDirXTB"  Text="0" Margin="0,25,0,0" />
+                        <TextBox x:Name="camUpDirYTB" Text="0" Margin="0,6,0,0" />
+                        <TextBox x:Name="camUpDirZTB" Text="0" Margin="0,6,0,0" />
+                    </StackPanel>
+                    <!--*************************************************************************-->
+
+                    <Border Grid.Row="5" Grid.ColumnSpan="3"  Style="{StaticResource rightTransparentBorder}"/>
+                    <TextBlock Grid.Row="5" Grid.ColumnSpan="2" Text="Field of view" Margin="30,5,0,0" VerticalAlignment="Top" />
+                    <TextBox x:Name="camFOVTB" Grid.Row="5" Grid.Column="1" Margin="3,28,0,0" Text="0" VerticalAlignment="Top" />
+                    <!--*************************************************************************-->
+
+                    <Border Grid.Row="6" Grid.ColumnSpan="3"  Style="{StaticResource rightTransparentBorder}"/>
+                    <TextBlock Grid.Row="6" Grid.ColumnSpan="3" Text="Near plane distance" Margin="30,5,0,0" VerticalAlignment="Top" />
+                    <TextBox x:Name="camNPDTB" Grid.Row="6" Grid.Column="1" Margin="3,28,3,0" Text="0" VerticalAlignment="Top"  />
+                    <!--*************************************************************************-->
+
+                    <Border Grid.Row="7" Grid.ColumnSpan="3"  Style="{StaticResource rightTransparentBorder}" />
+                    <TextBlock Grid.Row="7" Grid.ColumnSpan="3" Text="Far plane distance" Margin="30,5,0,0" VerticalAlignment="Top" />
+                    <TextBox x:Name="camFPDTB" Grid.Row="7" Grid.Column="1" Margin="3,28.074,3,0" Text="0" VerticalAlignment="Top"  />
+                    <!--*************************************************************************-->
+
+                    <Border Grid.Row="8" Grid.ColumnSpan="3"  Style="{StaticResource rightTransparentBorder}"/>
+                    <TextBlock Grid.Row="8" Grid.ColumnSpan="3" Text="Скорость движения" Margin="30,5,0,0" VerticalAlignment="Top" />
+                    <TextBox x:Name="cameraMoveTB" Grid.Row="8" Grid.Column="1" Margin="3,28.074,3,0" Text="10" VerticalAlignment="Top" />
+                    <!--*************************************************************************-->
+
+                    <Border Grid.Row="9" Grid.ColumnSpan="3"  Style="{StaticResource rightTransparentBorder}" />
+                    <TextBlock Grid.Row="9" Grid.ColumnSpan="3" Text="Zoom speed" Margin="30,5,0,0" VerticalAlignment="Top" />
+                    <TextBox x:Name="cameraZoomTB" Grid.Row="9" Grid.Column="1" Margin="3,28.074,3,0" Text="10" VerticalAlignment="Top"  />
+
+                </Grid>
+            </ScrollViewer>
+
+            <!-- ============================================ OBJECT OPTIONS  ============================================-->
+            <ScrollViewer x:Name="objectOptionPanel" Grid.Column="2" Visibility="Hidden" Opacity="1" Margin="0,4,1,4" 
+                          HorizontalAlignment="Right" VerticalScrollBarVisibility="Auto" Width="0" >
+                <Grid>
+                    <Border Grid.RowSpan="11" Grid.ColumnSpan="3" Style="{StaticResource leftBorder}" Background="Transparent" Opacity="1" />
+                    <Border Grid.RowSpan="11" Grid.ColumnSpan="3" Style="{StaticResource leftBorder}" />
+                    <StackPanel>
+                        <!-- ******************* Membrane options *****************************-->
+                        <Expander x:Name="membraneOptions" Header="Membrane" Padding="2" Visibility="Collapsed" Background="White" Margin="5" BorderBrush="Black" BorderThickness="1">
+                            <Grid HorizontalAlignment="Stretch" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70"></ColumnDefinition>
+                                    <ColumnDefinition ></ColumnDefinition>
+                                    <ColumnDefinition Width="25"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Grid.Column="0" Text="  Name"  Margin="0,8,0,0" />
+                                    <TextBlock Grid.Column="0" Text="  Group" Margin="0,11,0,0" />
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1">
+                                    <TextBox x:Name="membraneNameTB" Grid.Column="1" VerticalAlignment="Top" Margin="5,5,5,0" PreviewTextInput="options_TextInput"  />
+                                    <TextBox x:Name="membraneGroupTB" Grid.Column="1" VerticalAlignment="Top" Margin="5,5,5,5" PreviewTextInput="options_TextInput" />
+                                </StackPanel>
+                                <Button x:Name="coverBtn" Grid.Column="2" Content=" C " Margin="0,3,4,5" VerticalAlignment="Bottom" HorizontalAlignment="Right"  Click="MembraneButton_Click" Style="{StaticResource OtherButtonStyle}" >
+                                    <Button.ToolTip>
+                                        <ToolTip Content="Cover all objects which are inside of this membrane" />
+                                    </Button.ToolTip>
+                                </Button>
+                            </Grid>
+                        </Expander>
+                        <!-- ******************* Structural Membrane options *****************************-->
+                        <Expander x:Name="sMembraneOptions" Header="Structural membrane" Padding="2" Visibility="Collapsed" Background="White" Margin="5" BorderBrush="Black" BorderThickness="1">
+                            <Grid HorizontalAlignment="Stretch" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70"></ColumnDefinition>
+                                    <ColumnDefinition ></ColumnDefinition>
+                                    <ColumnDefinition Width="25"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Grid.Column="0" Text="  Name"  Margin="0,8,0,0" />
+                                    <TextBlock Grid.Column="0" Text="  Group" Margin="0,11,0,0" />
+                                    <TextBlock Grid.Column="0" Text="  Size" Margin="0,11,0,0" />
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1">
+                                    <TextBox x:Name="sMembraneNameTB" Grid.Column="1" VerticalAlignment="Top" Margin="5,5,5,0" PreviewTextInput="options_TextInput"  />
+                                    <TextBox x:Name="sMembraneGroupTB" Grid.Column="1" VerticalAlignment="Top" Margin="5,5,5,0" PreviewTextInput="options_TextInput" />
+                                    <TextBox x:Name="sMembraneSizeTB" Grid.Column="1" VerticalAlignment="Top" Margin="5,5,5,5" PreviewTextInput="options_TextInput" />
+                                </StackPanel>
+                                <Button x:Name="smFuncBtn" Grid.Column="2" Content=" F " Margin="0,3,4,5" VerticalAlignment="Bottom" HorizontalAlignment="Right"  Click="FormulaButton_Click" Style="{StaticResource OtherButtonStyle}" >
+                                    <Button.ToolTip>
+                                        <ToolTip Content="Add formula" />
+                                    </Button.ToolTip>
+                                </Button>
+                            </Grid>
+                        </Expander>
+                        <!-- ******************* Location options *****************************-->
+                        <Expander x:Name="locationOptions" Header="Location" Visibility="Collapsed" Background="White" Padding="2" Margin="5,1,5,5" BorderBrush="Black" BorderThickness="1" >
+                            <Grid HorizontalAlignment="Stretch">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70"></ColumnDefinition>
+                                    <ColumnDefinition Width="110"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="  Name" Margin="0,8,0,0" />
+                                    <TextBlock Text="  Group" Margin="0,11,0,0" />
+                                    <TextBlock x:Name="levelLabel" Text="  Level" Margin="0,11,0,0"  />
+                                    <TextBlock x:Name="tokensLabel" Text="  Tokens" Margin="0,11,0,0"  />
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Margin="0,0,0,5">
+                                    <TextBox x:Name="locationNameTB" VerticalAlignment="Top" Grid.Column="1" Margin="5,5,5,0" PreviewTextInput="options_TextInput" />
+                                    <TextBox x:Name="locationGroupTB" VerticalAlignment="Top" Grid.Column="1" Margin="5,5,5,0" PreviewTextInput="options_TextInput" />
+                                    <TextBox x:Name="levelTB" VerticalAlignment="Top" Visibility="Visible" Grid.Column="1" Margin="5,5,5,0" PreviewTextInput="options_TextInput" />
+                                    <TextBox x:Name="tokensTB"  VerticalAlignment="Top" Grid.Column="1" Margin="5,5,5,0" PreviewTextInput="options_TextInput"  />
+                                </StackPanel>
+                            </Grid>
+                        </Expander>
+                        <!-- ******************* Transition options *****************************-->
+                        <Expander x:Name="transitionOptions" Header="Transition" Visibility="Collapsed" Background="White" Padding="2" Margin="5,1,5,5" BorderBrush="Black" BorderThickness="1" >
+                            <Grid HorizontalAlignment="Stretch">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="25"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="  Name" Margin="0,8,0,0" />
+                                    <TextBlock Text="  Group"  Margin="0,11,0,0" />
+                                    <TextBlock x:Name="delayLabel" Text="  Delay" Margin="0,11,0,0" />
+                                    <TextBlock x:Name="expectLabel" Text="  Expectance" Margin="0,11,0,0" />
+                                    <TextBlock x:Name="guardLabel" Text="  Guard" Margin="0,11,0,0" />
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Margin="0,0,0,5">
+                                    <TextBox x:Name="transitionNameTB" Grid.Column="1" Margin="5,5,5,0" PreviewTextInput="options_TextInput" />
+                                    <TextBox x:Name="transitionGroupTB" VerticalAlignment="Top" Grid.Column="1" Margin="5,5,5,0" PreviewTextInput="options_TextInput" />
+                                    <TextBox x:Name="delayTB" VerticalAlignment="Top" Grid.Column="1" Margin="5,5,5,0" PreviewTextInput="options_TextInput" />
+                                    <TextBox x:Name="expectanceTB" VerticalAlignment="Top" Grid.Column="1" Margin="5,5,5,0" PreviewTextInput="options_TextInput" />
+                                    <TextBox x:Name="guardTB" VerticalAlignment="Top" Grid.Column="1" Margin="5,5,5,0" PreviewTextInput="options_TextInput" />
+                                </StackPanel>
+                                <StackPanel Grid.Column="2" VerticalAlignment="Bottom">
+                                    <Button x:Name="funcBtn" Content=" F " Margin="0,3,4,5" Click="FormulaButton_Click" Style="{StaticResource OtherButtonStyle}">
+                                        <Button.ToolTip>
+                                            <ToolTip Content="Add formula" />
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Button x:Name="guardFuncBtn" Content=" F " Margin="1,0,4,5" Click="FormulaButton_Click" Style="{StaticResource OtherButtonStyle}" >
+                                        <Button.ToolTip>
+                                            <ToolTip Content="Add Guard formula" />
+                                        </Button.ToolTip>
+                                    </Button>
+                                </StackPanel>
+                            </Grid>
+                        </Expander>
+                        <!-- ******************* Arc options *****************************-->
+                        <Expander x:Name="arcOptions" Header="Arc" Padding="2" Visibility="Collapsed" Background="White" Margin="5,1,5,5" BorderBrush="Black" BorderThickness="1">
+                            <Grid HorizontalAlignment="Stretch" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70"></ColumnDefinition>
+                                    <ColumnDefinition ></ColumnDefinition>
+                                    <ColumnDefinition Width="25"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="  Name" Margin="0,8,0,0" />
+                                    <TextBlock Text="  Group"  Margin="0,11,0,0" />
+                                    <TextBlock Text="  Weight" Margin="0,11,0,0"  />
+                                </StackPanel>
+                                <StackPanel Grid.Column="1">
+                                    <TextBox x:Name="arcNameTB" VerticalAlignment="Top" Grid.Column="1" Margin="5,5,5,0" PreviewTextInput="options_TextInput" />
+                                    <TextBox x:Name="arcGroupTB" VerticalAlignment="Top" Grid.Column="1" Margin="5,5,5,0" PreviewTextInput="options_TextInput"  />
+                                    <TextBox x:Name="arcWeightTB" VerticalAlignment="Top" Grid.Column="1" Margin="5,5,5,5" PreviewTextInput="options_TextInput" />
+                                </StackPanel>
+                                <StackPanel Grid.Column="2" VerticalAlignment="Bottom">
+                                    <Button Content=" F " Margin="1,3,4,5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="FormulaButton_Click" Style="{StaticResource OtherButtonStyle}" >
+                                        <Button.ToolTip>
+                                            <ToolTip Content="Add formula" />
+                                        </Button.ToolTip>
+                                    </Button>
+                                </StackPanel>
+                            </Grid>
+                        </Expander>
+                        <!-- ******************* Object data *****************************-->
+                        <Expander x:Name="objectInfo" Header="Properties" Padding="2" Visibility="Collapsed" Background="White" Margin="5,1,5,5" BorderBrush="Black" BorderThickness="1">
+                            <Grid HorizontalAlignment="Stretch" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="85"/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="Save history" Margin="7,5,7,3" />
+                                    <TextBlock Text="Transparent" Margin="7,5,7,5" />
+                                    <TextBlock Text="Color" Margin="7,10,7,5" />
+                                    <TextBlock Text="Form" Margin="7,12,5,0"/>
+                                    <TextBlock Text="Description" Margin="7,12,5,0"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1">
+                                    <CheckBox x:Name="allowHistoryCB" Margin="7,5,7,5" IsChecked="False"  Click="checkBoxes_Click" >
+                                        <CheckBox.ToolTip>
+                                            <ToolTip Content="Сохранять историю работы объекта"/>
+                                        </CheckBox.ToolTip>
+                                    </CheckBox>
+                                    <CheckBox x:Name="isTransparentCB" Margin="7,5,7,5" IsChecked="False"  Click="checkBoxes_Click" >
+                                        <CheckBox.ToolTip>
+                                            <ToolTip Content="Сделать объект полупрозрачным"/>
+                                        </CheckBox.ToolTip>
+                                    </CheckBox>
+                                    
+                                    <ComboBox x:Name="objectMeshList" Margin="7,5,5,0" SelectionChanged="ComboBoxes_SelectionChanged">
+
+                                    </ComboBox>
+                                    <TextBox x:Name="objectDescription" Margin="7,5,5,5" IsUndoEnabled="False" TextWrapping="Wrap"/>
+
+                                </StackPanel>
+                            </Grid>
+                        </Expander>
+                        <!-- ******************* Move options *****************************-->
+                        <Expander x:Name="moveOptions" Header="Position" Padding="2" Visibility="Collapsed" Background="White" Margin="5,1,5,5" BorderBrush="Black" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="72"></ColumnDefinition>
+                                    <ColumnDefinition Width="110"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="X:" Margin="5,8,0,0" />
+                                    <TextBlock Text="Y:" Margin="5,11,0,0" />
+                                    <TextBlock Text="Z:" Margin="5,11,0,0" />
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1">
+                                    <numericBox:NumericBox Name="moveXNB" Margin="5,5,5,0" Increment="0.5" ValueChanged="NumericBox_ValueChanged"/>
+                                    <numericBox:NumericBox Name="moveYNB" Margin="5,5,5,0" Increment="0.5" ValueChanged="NumericBox_ValueChanged"/>
+                                    <numericBox:NumericBox Name="moveZNB" Margin="5,5,5,0" Increment="0.5" ValueChanged="NumericBox_ValueChanged"/>
+                                </StackPanel>
+                            </Grid>
+                        </Expander>
+                        <!-- ******************* Scale options *****************************-->
+                        <Expander x:Name="scaleOptions" Header="Scale" Padding="2" Visibility="Collapsed" Background="White" Margin="5,1,5,5" BorderBrush="Black" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75" />
+                                    <ColumnDefinition Width="110" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Grid.Column="0" Margin="5" Text="Value:" />
+                                <numericBox:NumericBox Grid.Column="1" Name="scaleNB" Minimum="0.1" Maximum="1000" Increment="1" Margin="5" ValueChanged="NumericBox_ValueChanged" />
+                            </Grid>
+                        </Expander>
+                        <!-- ******************* Rotate options *****************************-->
+                        <Expander x:Name="rotateOptions" Header="Rotation" Visibility="Collapsed" Padding="2" Background="White" Margin="5,1,5,5" BorderBrush="Black" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"></ColumnDefinition>
+                                    <ColumnDefinition Width="110"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="X:" Grid.Row="2" Margin="5,5,0,6"  />
+                                    <TextBlock Text="Y:" Grid.Row="2" Margin="5,5,0,6" />
+                                    <TextBlock Text="Z:" Grid.Row="2"  Margin="5,5,0,6" />
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1">
+                                    <Slider Grid.Row="2" Name="rotateSliderX" Value="9" Interval="1" Maximum="360" Margin="5" ValueChanged="Sliders_ValueChanged" />
+                                    <Slider Grid.Row="2" Name="rotateSliderY" Value="9" Interval="1" Maximum="360" Margin="5" ValueChanged="Sliders_ValueChanged" />
+                                    <Slider Grid.Row="2" Name="rotateSliderZ" Value="9" Interval="1" Maximum="360" Margin="5" ValueChanged="Sliders_ValueChanged" />
+                                </StackPanel>
+                            </Grid>
+                        </Expander>
+
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+
+        </Grid>
+
+        <!--============================================================= STATUS BAR ===============================================================-->
+        <Border Grid.Row="3" Margin="5,5,5,0" Width="440" HorizontalAlignment="Left" Style="{StaticResource defaultBorder}" />
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="15,7,5,0">
+            <TextBlock Text="Time: " Margin="10,0,10,0"  />
+            <TextBlock x:Name="timeTB" Width="150" />
+            <!-- <TextBlock x:Name="timeIncTB" Margin="10,0,10,0" Width="40" Style="{StaticResource smallTextBlock}" /> -->
+            <ProgressBar x:Name="fileOpenProgress" Width="100" Margin="110,1,0,3" Visibility="Hidden" HorizontalAlignment="Right"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+D:\Manuals\WPF\Pro WPF\Chapter23\PetriNets\Meshes3D\bin\Release\Meshes3D.dll
+D:\Manuals\WPF\Pro WPF\Chapter23\PetriNets\Meshes3D\bin\Release\Meshes3D.pdb
+D:\Manuals\WPF\Pro WPF\Chapter23\PetriNets\Meshes3D\bin\Release\3DTools.dll
+D:\Manuals\WPF\Pro WPF\Chapter23\PetriNets\Meshes3D\obj\Release\ResolveAssemblyReference.cache
+D:\Manuals\WPF\Pro WPF\Chapter23\PetriNets\Meshes3D\obj\Release\Meshes3D.dll
+D:\Manuals\WPF\Pro WPF\Chapter23\PetriNets\Meshes3D\obj\Release\Meshes3D.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\obj\Release\ResolveAssemblyReference.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\obj\Release\Meshes3D.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\obj\Release\Meshes3D.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Release\Meshes3D.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Release\Meshes3D.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Release\3DTools.dll

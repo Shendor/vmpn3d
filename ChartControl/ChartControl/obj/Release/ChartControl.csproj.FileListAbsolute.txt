@@ -1,0 +1,13 @@
+D:\My Works\Programmes\C Sharp\WPF\Controls\ChartControl\ChartControl\bin\Release\ChartControl.dll
+D:\My Works\Programmes\C Sharp\WPF\Controls\ChartControl\ChartControl\bin\Release\ChartControl.pdb
+D:\My Works\Programmes\C Sharp\WPF\Controls\ChartControl\ChartControl\obj\Release\ResolveAssemblyReference.cache
+D:\My Works\Programmes\C Sharp\WPF\Controls\ChartControl\ChartControl\obj\Release\Chart.baml
+D:\My Works\Programmes\C Sharp\WPF\Controls\ChartControl\ChartControl\obj\Release\Chart.g.cs
+D:\My Works\Programmes\C Sharp\WPF\Controls\ChartControl\ChartControl\obj\Release\ChartControl_MarkupCompile.cache
+D:\My Works\Programmes\C Sharp\WPF\Controls\ChartControl\ChartControl\obj\Release\ChartControl.g.resources
+D:\My Works\Programmes\C Sharp\WPF\Controls\ChartControl\ChartControl\obj\Release\ChartControl.Properties.Resources.resources
+D:\My Works\Programmes\C Sharp\WPF\Controls\ChartControl\ChartControl\obj\Release\GenerateResource.read.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\Controls\ChartControl\ChartControl\obj\Release\GenerateResource.write.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\Controls\ChartControl\ChartControl\obj\Release\ChartControl.dll
+D:\My Works\Programmes\C Sharp\WPF\Controls\ChartControl\ChartControl\obj\Release\ChartControl.pdb
+D:\My Works\Programmes\C Sharp\WPF\Controls\ChartControl\ChartControl\obj\Release\Styles\Styles.baml

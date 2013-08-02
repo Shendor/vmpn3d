@@ -1,0 +1,20 @@
+C:\Documents and Settings\crmd163\Local Settings\Application Data\Temporary Projects\FormulaCompiler\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\Local Settings\Application Data\Temporary Projects\FormulaCompiler\bin\Release\FormulaCompiler.dll
+C:\Documents and Settings\crmd163\Local Settings\Application Data\Temporary Projects\FormulaCompiler\bin\Release\FormulaCompiler.pdb
+C:\Documents and Settings\crmd163\Local Settings\Application Data\Temporary Projects\FormulaCompiler\obj\Release\FormulaCompiler.dll
+C:\Documents and Settings\crmd163\Local Settings\Application Data\Temporary Projects\FormulaCompiler\obj\Release\FormulaCompiler.pdb
+C:\Documents and Settings\crmd163\My Documents\Programes\FormulaCompiler\FormulaCompiler\bin\Release\FormulaCompiler.dll
+C:\Documents and Settings\crmd163\My Documents\Programes\FormulaCompiler\FormulaCompiler\bin\Release\FormulaCompiler.pdb
+C:\Documents and Settings\crmd163\My Documents\Programes\FormulaCompiler\FormulaCompiler\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Programes\FormulaCompiler\FormulaCompiler\obj\Release\FormulaCompiler.dll
+C:\Documents and Settings\crmd163\My Documents\Programes\FormulaCompiler\FormulaCompiler\obj\Release\FormulaCompiler.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\FormulaCompiler\FormulaCompiler\bin\Release\FormulaCompiler.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\FormulaCompiler\FormulaCompiler\bin\Release\FormulaCompiler.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\FormulaCompiler\FormulaCompiler\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\FormulaCompiler\FormulaCompiler\obj\Release\FormulaCompiler.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\FormulaCompiler\FormulaCompiler\obj\Release\FormulaCompiler.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\FormulaCompiler\FormulaCompiler\bin\Release\FormulaCompiler.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\FormulaCompiler\FormulaCompiler\bin\Release\FormulaCompiler.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\FormulaCompiler\FormulaCompiler\obj\Release\ResolveAssemblyReference.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\FormulaCompiler\FormulaCompiler\obj\Release\FormulaCompiler.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\FormulaCompiler\FormulaCompiler\obj\Release\FormulaCompiler.pdb

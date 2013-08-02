@@ -1,0 +1,32 @@
+﻿<WrapPanel x:Class="PNCreator.Modules.Main.Toolbar.PNDocumentToolBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             HorizontalAlignment="Center">
+    
+    <Button Command="New" Style="{StaticResource FunctionalReflectedButton}">
+        <Button.ToolTip>
+            <ToolTip Content="Start new model" />
+        </Button.ToolTip>
+        <Image Source="/Resources;component/Content/Images/document.png" />
+    </Button>
+    
+    <Button Margin="5,0,0,0" Command="Open" Style="{StaticResource FunctionalReflectedButton}">
+        <Button.ToolTip>
+            <ToolTip Content="Open model" />
+        </Button.ToolTip>
+        <Image Source="/Resources;component/Content/Images/folder.png"/>
+    </Button>
+    <Button Margin="5,0,0,0" Command="Save" Style="{StaticResource FunctionalReflectedButton}">
+        <Button.ToolTip>
+            <ToolTip Content="Save model" />
+        </Button.ToolTip>
+        <Image Source="/Resources;component/Content/Images/save2.png" />
+    </Button>
+
+    <Button Margin="5,0,0,0" Click="SimulationButtonClick" Style="{StaticResource FunctionalReflectedButton}">
+        <Button.ToolTip>
+            <ToolTip Content="Start simulation" />
+        </Button.ToolTip>
+        <Image Source="/Resources;component/Content/Images/play.png" />
+    </Button>
+</WrapPanel>

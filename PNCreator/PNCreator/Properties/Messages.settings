@@ -1,0 +1,63 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PNCreator.Properties" GeneratedClassName="Messages">
+  <Profiles />
+  <Settings>
+    <Setting Name="RecentOpenedModelsNotFound" Type="System.String" Scope="User">
+      <Value Profile="(Default)">File with recent opened models not found !</Value>
+    </Setting>
+    <Setting Name="CannotOpenHelp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Cannot open help module</Value>
+    </Setting>
+    <Setting Name="DeleteObjects" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Delete selected objects ?</Value>
+    </Setting>
+    <Setting Name="ExitFromProgramm" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Do you want to exit ?</Value>
+    </Setting>
+    <Setting Name="ServiceUnavailable" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Service temporary unavailable !</Value>
+    </Setting>
+    <Setting Name="FileNotFound" Type="System.String" Scope="User">
+      <Value Profile="(Default)">File not found</Value>
+    </Setting>
+    <Setting Name="DirNotFound" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Directory not found</Value>
+    </Setting>
+    <Setting Name="CorrectFormula" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Formula is correct. Calculated value =</Value>
+    </Setting>
+    <Setting Name="FormulaIsOK" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The sintax of the formula is valid</Value>
+    </Setting>
+    <Setting Name="WrongNetFileFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The file of MPN Model has incorrect format</Value>
+    </Setting>
+    <Setting Name="WrongPNObjectForArc" Type="System.String" Scope="User">
+      <Value Profile="(Default)">You cannot connect these objects by choosen arc</Value>
+    </Setting>
+    <Setting Name="NameWasNotFound" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Name of the object was not found: </Value>
+    </Setting>
+    <Setting Name="NameAlreadyExists" Type="System.String" Scope="User">
+      <Value Profile="(Default)">This name already exists. Choose another one</Value>
+    </Setting>
+    <Setting Name="LoopAtFormula" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Loops in formula are not allowed</Value>
+    </Setting>
+    <Setting Name="SimulationFinished" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Simulation has been finished !</Value>
+    </Setting>
+    <Setting Name="BadObjectForMembrane" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Membrane {0} has already contains object with name {1}. Rename this object</Value>
+    </Setting>
+    <Setting Name="InvalidParametersCount" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Event handler must contain only one parameter of AbstractEventArgs class</Value>
+    </Setting>
+    <Setting Name="NewNet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">All unsave data will be lost. Do you want to proceed ?</Value>
+    </Setting>
+    <Setting Name="SimulationTextBoxTip" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter simulation name (optionally)</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

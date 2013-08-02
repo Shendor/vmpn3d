@@ -1,0 +1,114 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Shared.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+   
+    <Style x:Key="defaultBorder" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource ConvexHorizontalBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="2" />
+        
+    </Style>
+
+    <Style x:Key="cornerBorder" TargetType="Border">
+        <Setter Property="Background"  Value="{StaticResource ConvexHorizontalBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="2,2,0,2" />
+    </Style>
+
+    <Style x:Key="lowButtonsBorder" TargetType="Border">
+        <Setter Property="Background" Value="#FFC4C4C4" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="BorderThickness" Value="1,0,1,1" />
+        <Setter Property="CornerRadius" Value="0,0,2,2" />
+        <Setter Property="Width" Value="90" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+    </Style>
+
+     <Style x:Key="lowerWhiteBorder" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource ConvexHorizontalBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="BorderThickness" Value="1,1,1,0" />
+        <Setter Property="CornerRadius" Value="2,2,0,0" />
+        <Setter Property="VerticalAlignment" Value="Bottom" />
+    </Style>
+
+    <Style x:Key="upperWhiteBorder" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource ConvexHorizontalBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="BorderThickness" Value="1,0,1,1" />
+        <Setter Property="CornerRadius" Value="0,0,2,2" />
+    </Style>
+
+
+    <Style x:Key="upperTransparentBorder" TargetType="Border">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="BorderThickness" Value="1,0,1,1" />
+        <Setter Property="CornerRadius" Value="0,0,2,2" />
+    </Style>
+    
+    <Style x:Key="upperSemiTransparentBorder" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource DarkBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="Opacity" Value="0.4" />
+        <Setter Property="BorderThickness" Value="1,0,1,1" />
+        <Setter Property="CornerRadius" Value="0,0,2,2" />
+    </Style>
+
+    <Style x:Key="lowerTransparentBorder" TargetType="Border">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="BorderThickness" Value="1,1,1,0" />
+        <Setter Property="CornerRadius" Value="2,2,0,0" />
+    </Style>
+
+    <Style x:Key="lowerSemiTransparentBorder" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource DarkBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="Opacity" Value="0.4" />
+        <Setter Property="BorderThickness" Value="1,1,1,0" />
+        <Setter Property="CornerRadius" Value="2,2,0,0" />
+    </Style>
+
+    <Style x:Key="leftBorder" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource DarkBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="Opacity" Value="0.4" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="2,0,0,2" />
+    </Style>
+
+    <Style x:Key="transparentBorder" TargetType="Border">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="2" />
+    </Style>
+
+    <Style x:Key="semiTransparentBorder" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource DarkBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="Opacity" Value="0.4" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="2" />
+    </Style>
+
+    <Style x:Key="rightTransparentBorder" TargetType="Border">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+        <Setter Property="BorderThickness" Value="1,1,0,1" />
+        <Setter Property="CornerRadius" Value="2,0,0,2" />
+        <Setter Property="Margin" Value="20,2,0,2" />
+    </Style>
+
+</ResourceDictionary>

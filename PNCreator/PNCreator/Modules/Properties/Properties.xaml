@@ -1,0 +1,287 @@
+﻿<main:BaseWindow x:Class="PNCreator.Modules.Properties.Properties"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:nb="clr-namespace:NumericBox;assembly=NumericBox"
+        xmlns:telerikInput="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:main="clr-namespace:PNCreator.Modules.Main"
+        Icon="/Resources;component/Content/Images/gear.png"
+        Title="Properties" WindowStyle="None" ResizeMode="NoResize" Background="Transparent"
+        WindowStartupLocation="CenterScreen" AllowsTransparency="True"
+        Height="571" Width="427">
+
+    <Grid>
+
+        <Border Grid.Row="0" Style="{StaticResource SemiTransparentBorder}"/>
+        <Grid Margin="15" MouseLeftButtonDown="WindowMouseLeftButtonDown">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+
+            <Border Grid.RowSpan="3" Style="{StaticResource ShadowedBorder}"/>
+
+            <Border Grid.Row="0" Style="{StaticResource HeaderBorder}" />
+
+            <Border Grid.Row="1" Style="{StaticResource ViewportBorder}">
+                <TabControl x:Name="tabControl" Margin="5">
+                    <TabItem Header="Objects">
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="Default discrete location object" />
+                            <TextBlock Grid.Row="1" Text="Default continuous location object" />
+                            <TextBlock Grid.Row="2" Text="Default discrete transition object" />
+                            <TextBlock Grid.Row="3" Text="Default continuous transition object" />
+                            <TextBlock Grid.Row="4" Text="Show discrete objects names" />
+                            <TextBlock Grid.Row="5" Text="Show discrete objects values" />
+                            <TextBlock Grid.Row="6" Text="Show continuous objects names" />
+                            <TextBlock Grid.Row="7" Text="Show continuous objects values" />
+                            <TextBlock Grid.Row="8" Text="Default discrete objects color" />
+                            <TextBlock Grid.Row="9" Text="Default continuous objects color" />
+
+                            <Button x:Name="dLocFormBtn" Grid.Column="1" Margin="0,5,0,5" Width="35" 
+                                    Click="SetMeshButtonsClick" HorizontalAlignment="Left" Tag="{Binding Path=DiscreteLocationsForm, Mode=TwoWay}">
+                                <Button.ToolTip>
+                                    <TextBlock x:Name="dLocFormTB" Text="{Binding Path=DiscreteLocationsForm}" />
+                                </Button.ToolTip>
+                                <Button.Content>
+                                    <Image Source="/Resources;component/Content/Images/membrane2.png" />
+                                </Button.Content>
+                            </Button>
+                            <Button x:Name="cLocFormBtn" Grid.Column="1" Grid.Row="1" Tag="{Binding Path=ContinuousLocationsForm, Mode=TwoWay}"
+                                       Margin="0,5,0,5" Width="35"  Click="SetMeshButtonsClick" HorizontalAlignment="Left">
+                                <Button.ToolTip>
+                                    <TextBlock x:Name="cLocFormTB" Text="{Binding Path=ContinuousLocationsForm}" />
+                                </Button.ToolTip>
+                                <Button.Content>
+                                    <Image Source="/Resources;component/Content/Images/membrane2.png" />
+                                </Button.Content>
+                            </Button>
+                            <Button x:Name="dTransFormBtn" Grid.Column="1" Grid.Row="2" Tag="{Binding Path=DiscreteTransitionsForm, Mode=TwoWay}"
+                                        Margin="0,5,0,5" Width="35" Click="SetMeshButtonsClick" HorizontalAlignment="Left">
+                                <Button.ToolTip>
+                                    <TextBlock x:Name="dTransFormTB" Text="{Binding Path=DiscreteTransitionsForm}" />
+                                </Button.ToolTip>
+                                <Button.Content>
+                                    <Image Source="/Resources;component/Content/Images/membrane2.png" />
+                                </Button.Content>
+                            </Button>
+                            <Button x:Name="cTransFormBtn" Grid.Column="1" Grid.Row="3" Tag="{Binding Path=ContinuousTransitionsForm, Mode=TwoWay}"
+                                       Margin="0,5,0,5" Width="35" Click="SetMeshButtonsClick" HorizontalAlignment="Left">
+                                <Button.ToolTip>
+                                    <TextBlock x:Name="cTransFormTB" Text="{Binding Path=ContinuousTransitionsForm}" />
+                                </Button.ToolTip>
+                                <Button.Content>
+                                    <Image Source="/Resources;component/Content/Images/membrane2.png" />
+                                </Button.Content>
+                            </Button>
+
+                            <CheckBox x:Name="dObjectsNamesVisibility" Grid.Column="1" Grid.Row="4"
+                                        VerticalAlignment="Center" HorizontalAlignment="Left" IsChecked="{Binding Path=DiscreteObjectsNamesVisibility}"/>
+                            <CheckBox x:Name="dObjectsValuesVisibility" Grid.Column="1" Grid.Row="5"
+                                       VerticalAlignment="Center" HorizontalAlignment="Left"  IsChecked="{Binding Path=DiscreteObjectsValuesVisibility}" />
+                            <CheckBox x:Name="cObjectsNamesVisibility" Grid.Column="1" Grid.Row="6"
+                                       VerticalAlignment="Center" HorizontalAlignment="Left" IsChecked="{Binding Path=ContinuousObjectsNamesVisibility}"  />
+                            <CheckBox x:Name="cObjectsValuesVisibility" Grid.Column="1" Grid.Row="7"
+                                        VerticalAlignment="Center" HorizontalAlignment="Left" IsChecked="{Binding Path=ContinuousObjectsValuesVisibility}" />
+                            <telerikInput:RadColorPicker x:Name="dObjetcsColor" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Left"
+                                                             SelectedColor="{Binding Path=DiscreteObjetcsColor}"  />
+                            <telerikInput:RadColorPicker x:Name="cObjetcsColor" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Left"
+                                                             SelectedColor="{Binding Path=ContinuousObjetcsColor}" />
+                        </Grid>
+                    </TabItem>
+
+                    <TabItem Header="Membranes">
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="Opacity level" Margin="10" />
+                            <TextBlock Grid.Row="1" Text="Default membranes form" Margin="10" />
+                            <TextBlock Grid.Row="2" Text="Default membranes color" Margin="10" />
+
+                            <nb:NumericBox x:Name="opacityLevel" Grid.Column="1" Width="50" Increment="0.1"
+                                           Minimum="0" Maximum="1" Value="{Binding Path=OpacityLevel}" Margin="0,5,0,5" HorizontalAlignment="Left" />
+                            <Button x:Name="membranesFormBtn" Grid.Row="1" Grid.Column="1" Margin="0,5,0,5" Width="35" 
+                                    Click="SetMeshButtonsClick" HorizontalAlignment="Left" Tag="{Binding Path=MembranesForm, Mode=TwoWay}">
+                                <Button.ToolTip>
+                                    <TextBlock x:Name="membranesFormTB" Text="{Binding Path=MembranesForm}" />
+                                </Button.ToolTip>
+                                <Button.Content>
+                                    <Image Source="/Resources;component/Content/Images/membrane2.png" />
+                                </Button.Content>
+                            </Button>
+                            <telerikInput:RadColorPicker x:Name="membranesColor" Grid.Row="2" Grid.Column="1" 
+                                                         SelectedColor="{Binding Path=MembranesColor}" HorizontalAlignment="Left" Width="43" />
+                        </Grid>
+                    </TabItem>
+
+                    <TabItem Header="Arcs">
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="Arc thickness"/>
+                            <TextBlock Grid.Row="1" Text="Default discrete arc" />
+                            <TextBlock Grid.Row="2" Text="Default discrete inhibitor arc" />
+                            <TextBlock Grid.Row="3" Text="Default discrete test arc" />
+                            <TextBlock Grid.Row="4" Text="Default continuous arc" />
+                            <TextBlock Grid.Row="5" Text="Default continuous inhibitor arc" />
+                            <TextBlock Grid.Row="6" Text="Default continuous test arc" />
+                            <TextBlock Grid.Row="7" Text="Default continuous flow arc" />
+                            <TextBlock Grid.Row="8" Text="Show arcs names" />
+                            <TextBlock Grid.Row="9" Text="Show arcs values" />
+
+                            <nb:NumericBox x:Name="arcsThickness" Grid.Column="1" Minimum="0.2" Maximum="20" Width="50"
+                                           Value="{Binding Path=ArcsThickness}" Increment="0.1" HorizontalAlignment="Left"/>
+                            <Button x:Name="dArcFormBtn" Grid.Column="1" Grid.Row="1" Tag="{Binding Path=DiscreteArcTexture, Mode=TwoWay}"
+                                    Width="35" Margin="0,5,0,5" HorizontalAlignment="Left" Click="SetMeshButtonsClick">
+                                <Button.ToolTip>
+                                    <TextBlock x:Name="dArcFormTB" Text="{Binding Path=DiscreteArcTexture}" />
+                                </Button.ToolTip>
+                                <Button.Content>
+                                    <Image Source="/Resources;component/Content/Images/membrane2.png" />
+                                </Button.Content>
+                            </Button>
+                            <Button x:Name="dIArcFormBtn" Grid.Column="1" Grid.Row="2" Tag="{Binding Path=DiscreteIArcTexture, Mode=TwoWay}"
+                                    Width="35" Margin="0,5,0,5" HorizontalAlignment="Left" Click="SetMeshButtonsClick">
+                                <Button.ToolTip>
+                                    <TextBlock x:Name="dIArcFormTB" Text="{Binding Path=DiscreteIArcTexture}" />
+                                </Button.ToolTip>
+                                <Button.Content>
+                                    <Image Source="/Resources;component/Content/Images/membrane2.png" />
+                                </Button.Content>
+                            </Button>
+                            <Button x:Name="dTArcFormBtn" Grid.Column="1" Grid.Row="3" Tag="{Binding Path=DiscreteTArcTexture, Mode=TwoWay}"
+                                    Width="35" Margin="0,5,0,5" HorizontalAlignment="Left" Click="SetMeshButtonsClick">
+                                <Button.ToolTip>
+                                    <TextBlock x:Name="dTArcFormTB" Text="{Binding Path=DiscreteTArcTexture}" />
+                                </Button.ToolTip>
+                                <Button.Content>
+                                    <Image Source="/Resources;component/Content/Images/membrane2.png" />
+                                </Button.Content>
+                            </Button>
+                            <Button x:Name="cArcFormBtn" Grid.Column="1" Grid.Row="4" Tag="{Binding Path=ContinuousArcTexture, Mode=TwoWay}"
+                                    Width="35" Margin="0,5,0,5" HorizontalAlignment="Left" Click="SetMeshButtonsClick">
+                                <Button.ToolTip>
+                                    <TextBlock x:Name="cArcFormTB" Text="{Binding Path=ContinuousArcTexture}" />
+                                </Button.ToolTip>
+                                <Button.Content>
+                                    <Image Source="/Resources;component/Content/Images/membrane2.png" />
+                                </Button.Content>
+                            </Button>
+                            <Button x:Name="cIArcFormBtn" Grid.Column="1" Grid.Row="5" Tag="{Binding Path=ContinuousIArcTexture, Mode=TwoWay}"
+                                    Width="35" Margin="0,5,0,5" HorizontalAlignment="Left" Click="SetMeshButtonsClick">
+                                <Button.ToolTip>
+                                    <TextBlock x:Name="cIArcFormTB" Text="{Binding Path=ContinuousIArcTexture}" />
+                                </Button.ToolTip>
+                                <Button.Content>
+                                    <Image Source="/Resources;component/Content/Images/membrane2.png" />
+                                </Button.Content>
+                            </Button>
+                            <Button x:Name="cTArcFormBtn" Grid.Column="1" Grid.Row="6" Tag="{Binding Path=ContinuousTArcTexture, Mode=TwoWay}"
+                                    Width="35" Margin="0,5,0,5" HorizontalAlignment="Left" Click="SetMeshButtonsClick">
+                                <Button.ToolTip>
+                                    <TextBlock x:Name="cTArcFormTB" Text="{Binding Path=ContinuousTArcTexture}" />
+                                </Button.ToolTip>
+                                <Button.Content>
+                                    <Image Source="/Resources;component/Content/Images/membrane2.png" />
+                                </Button.Content>
+                            </Button>
+                            <Button x:Name="cFArcFormBtn" Grid.Column="1" Grid.Row="7" Tag="{Binding Path=ContinuousFArcTexture, Mode=TwoWay}"
+                                    Width="35" Margin="0,5,0,5" HorizontalAlignment="Left" Click="SetMeshButtonsClick">
+                                <Button.ToolTip>
+                                    <TextBlock x:Name="cFArcFormTB" Text="{Binding Path=ContinuousFArcTexture}" />
+                                </Button.ToolTip>
+                                <Button.Content>
+                                    <Image Source="/Resources;component/Content/Images/membrane2.png" />
+                                </Button.Content>
+                            </Button>
+                            <CheckBox x:Name="arcsNamesVisibility" Grid.Column="1" Grid.Row="8"
+                                        HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=ArcsNamesVisibility}"/>
+                            <CheckBox x:Name="arcsValuesVisibility" Grid.Column="1" Grid.Row="9"
+                                        HorizontalAlignment="Left" VerticalAlignment="Center"  IsChecked="{Binding Path=ArcsValuesVisibility}"/>
+
+                        </Grid>
+                    </TabItem>
+
+                    <TabItem Header="Dialog">
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="35"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="Confirm removing of objects" />
+                            <TextBlock Grid.Row="1" Text="Confirm exit"/>
+
+                            <CheckBox x:Name="isConfirmRemoving" Grid.Column="1" Grid.Row="0"
+                                        VerticalAlignment="Center" IsChecked="{Binding Path=IsConfirmRemoving}"/>
+                            <CheckBox x:Name="isConfirmExit" Grid.Column="1" Grid.Row="1"
+                                     VerticalAlignment="Center" IsChecked="{Binding Path=IsConfirmExit}" />
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+            </Border>
+
+            <Border x:Name="naBorder" VerticalAlignment="Top" Grid.Row="2" Style="{StaticResource FooterBorder}">
+                <StackPanel Orientation="Horizontal" Margin="0,0,7,2" HorizontalAlignment="Right">
+                    <Button x:Name="okBtn" Margin="2" Click="OtherButton_Click" >
+                        <Button.ToolTip>
+                            <ToolTip Content="Accept" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/ok.png" />
+                    </Button>
+                    <Button x:Name="cancelBtn" Margin="2"  Click="OtherButton_Click">
+                        <Button.ToolTip>
+                            <ToolTip Content="Cancel" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/close.png" />
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</main:BaseWindow>

@@ -1,0 +1,187 @@
+﻿<UserControl x:Class="ChartControl.Chart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="428" d:DesignWidth="703" Background="Transparent">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/ChartControl;component/Styles/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="60"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <Grid x:Name="grid" Grid.Column="1" Margin="0,3,0,0" IsHitTestVisible="False">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Line Grid.Row="0" Grid.ColumnSpan="10" X1="0" X2="1" Y1="1" Y2="1" VerticalAlignment="Bottom" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8" />
+            <Line Grid.Row="1" Grid.ColumnSpan="10" X1="0" X2="1" Y1="1" Y2="1" VerticalAlignment="Bottom" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+            <Line Grid.Row="2" Grid.ColumnSpan="10" X1="0" X2="1" Y1="1" Y2="1" VerticalAlignment="Bottom" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+            <Line Grid.Row="3" Grid.ColumnSpan="10" X1="0" X2="1" Y1="1" Y2="1" VerticalAlignment="Bottom" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+            <Line Grid.Row="4" Grid.ColumnSpan="10" X1="0" X2="1" Y1="1" Y2="1" VerticalAlignment="Bottom" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+            <Line Grid.Row="5" Grid.ColumnSpan="10" X1="0" X2="1" Y1="1" Y2="1" VerticalAlignment="Bottom" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+            <Line Grid.Row="6" Grid.ColumnSpan="10" X1="0" X2="1" Y1="1" Y2="1" VerticalAlignment="Bottom" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+            <Line Grid.Row="7" Grid.ColumnSpan="10" X1="0" X2="1" Y1="1" Y2="1" VerticalAlignment="Bottom" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+            <Line Grid.Row="8" Grid.ColumnSpan="10" X1="0" X2="1" Y1="1" Y2="1" VerticalAlignment="Bottom" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+
+            <Line Grid.RowSpan="10" Grid.Column="0" X1="0" X2="0" Y1="0" Y2="1" HorizontalAlignment="Right" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8" />
+            <Line Grid.RowSpan="10" Grid.Column="1" X1="0" X2="0" Y1="0" Y2="1" HorizontalAlignment="Right" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+            <Line Grid.RowSpan="10" Grid.Column="2" X1="0" X2="0" Y1="0" Y2="1" HorizontalAlignment="Right" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+            <Line Grid.RowSpan="10" Grid.Column="3" X1="0" X2="0" Y1="0" Y2="1" HorizontalAlignment="Right" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+            <Line Grid.RowSpan="10" Grid.Column="4" X1="0" X2="0" Y1="0" Y2="1" HorizontalAlignment="Right" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+            <Line Grid.RowSpan="10" Grid.Column="5" X1="0" X2="0" Y1="0" Y2="1" HorizontalAlignment="Right" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+            <Line Grid.RowSpan="10" Grid.Column="6" X1="0" X2="0" Y1="0" Y2="1" HorizontalAlignment="Right" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+            <Line Grid.RowSpan="10" Grid.Column="7" X1="0" X2="0" Y1="0" Y2="1" HorizontalAlignment="Right" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+            <Line Grid.RowSpan="10" Grid.Column="8" X1="0" X2="0" Y1="0" Y2="1" HorizontalAlignment="Right" Stroke="{StaticResource StrokeBrush}" Stretch="Uniform" StrokeThickness="0.8"/>
+        </Grid>
+        
+       <!-- <Polyline x:Name="line" Grid.Row="0" Grid.Column="1" Points="10,5 12,6 16,22 " Stroke="DodgerBlue" StrokeThickness="2" Stretch="Fill">
+        </Polyline>-->
+        <Viewbox Stretch="Fill" Grid.Column="1" Grid.Row="0" Margin="3">
+            
+            <Canvas Name="chartCanvas" Width="250" Height="200" ClipToBounds="True"></Canvas>
+        </Viewbox>
+
+        <Grid Grid.Row="1" Grid.Column="1" Margin="0,3,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Line Grid.Row="0" Grid.ColumnSpan="10" X1="0" X2="1" Y1="0" Y2="0" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" Stretch="Fill"/>
+                <Line Grid.Row="0" Grid.Column="0" X1="0" X2="0" Y1="0" Y2="1" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill"/>
+                <Line Grid.Row="0" Grid.Column="1" X1="0" X2="0" Y1="0" Y2="1" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill"/>
+                <Line Grid.Row="0" Grid.Column="2" X1="0" X2="0" Y1="0" Y2="1" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill"/>
+                <Line Grid.Row="0" Grid.Column="3" X1="0" X2="0" Y1="0" Y2="1" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill"/>
+                <Line Grid.Row="0" Grid.Column="4" X1="0" X2="0" Y1="0" Y2="1" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill"/>
+                <Line Grid.Row="0" Grid.Column="5" X1="0" X2="0" Y1="0" Y2="1" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill"/>
+                <Line Grid.Row="0" Grid.Column="6" X1="0" X2="0" Y1="0" Y2="1" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill"/>
+                <Line Grid.Row="0" Grid.Column="7" X1="0" X2="0" Y1="0" Y2="1" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill"/>
+                <Line Grid.Row="0" Grid.Column="8" X1="0" X2="0" Y1="0" Y2="1" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill"/>
+                <Line Grid.Row="0" Grid.Column="9" X1="0" X2="0" Y1="0" Y2="1" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill"/>
+
+                <TextBlock x:Name="x1" Margin="0,0,0,0" Grid.Column="0" Grid.Row="1"/>
+                <TextBlock x:Name="x2" Margin="0,0,0,0" Grid.Column="1" Grid.Row="1"/>
+                <TextBlock x:Name="x3" Margin="0,0,0,0" Grid.Column="2" Grid.Row="1"/>
+                <TextBlock x:Name="x4" Margin="0,0,0,0" Grid.Column="3" Grid.Row="1"/>
+                <TextBlock x:Name="x5" Margin="0,0,0,0" Grid.Column="4" Grid.Row="1"/>
+                <TextBlock x:Name="x6" Margin="0,0,0,0" Grid.Column="5" Grid.Row="1"/>
+                <TextBlock x:Name="x7" Margin="0,0,0,0" Grid.Column="6" Grid.Row="1"/>
+                <TextBlock x:Name="x8" Margin="0,0,0,0" Grid.Column="7" Grid.Row="1"/>
+                <TextBlock x:Name="x9" Margin="0,0,0,0" Grid.Column="8" Grid.Row="1"/>
+                <TextBlock x:Name="x10" Margin="0,0,0,0" Grid.Column="9" Grid.Row="1" />
+            </Grid>
+            
+            <TextBlock x:Name="axisXLabel" HorizontalAlignment="Center" Grid.Row="1" Text="X Axis" />
+        </Grid>
+
+        <Grid Grid.Column="0" Grid.Row="0" Margin="0,0,3,2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" HorizontalAlignment="Right" >
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+
+                <Line Grid.RowSpan="10" Grid.Column="1" X1="0" X2="0" Y1="1" Y2="0" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" HorizontalAlignment="Right" Stretch="Fill"/>
+                <Line Grid.Row="0" Grid.Column="1" X1="0" X2="1" Y1="0" Y2="0" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" Stretch="Fill"/>
+                <Line Grid.Row="1" Grid.Column="1" X1="0" X2="1" Y1="0" Y2="0" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" Stretch="Fill"/>
+                <Line Grid.Row="2" Grid.Column="1" X1="0" X2="1" Y1="0" Y2="0" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" Stretch="Fill"/>
+                <Line Grid.Row="3" Grid.Column="1" X1="0" X2="1" Y1="0" Y2="0" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" Stretch="Fill"/>
+                <Line Grid.Row="4" Grid.Column="1" X1="0" X2="1" Y1="0" Y2="0" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" Stretch="Fill"/>
+                <Line Grid.Row="5" Grid.Column="1" X1="0" X2="1" Y1="0" Y2="0" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" Stretch="Fill"/>
+                <Line Grid.Row="6" Grid.Column="1" X1="0" X2="1" Y1="0" Y2="0" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" Stretch="Fill"/>
+                <Line Grid.Row="7" Grid.Column="1" X1="0" X2="1" Y1="0" Y2="0" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" Stretch="Fill"/>
+                <Line Grid.Row="8" Grid.Column="1" X1="0" X2="1" Y1="0" Y2="0" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" Stretch="Fill"/>
+                <Line Grid.Row="9" Grid.Column="1" X1="0" X2="1" Y1="0" Y2="0" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Top" Stretch="Fill"/>
+                <Line Grid.Row="9" Grid.Column="1" X1="0" X2="1" Y1="0" Y2="0" Stroke="{StaticResource StrokeBrush}" StrokeThickness="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Stretch="Fill"/>
+
+
+                <TextBlock x:Name="y10" Margin="0,0,0,0" Grid.Row="0" />
+                <TextBlock x:Name="y9" Margin="0,0,0,0" Grid.Row="1" />
+                <TextBlock x:Name="y8" Margin="0,0,0,0" Grid.Row="2" />
+                <TextBlock x:Name="y7" Margin="0,0,0,0" Grid.Row="3" />
+                <TextBlock x:Name="y6" Margin="0,0,0,0" Grid.Row="4" />
+                <TextBlock x:Name="y5" Margin="0,0,0,0" Grid.Row="5" />
+                <TextBlock x:Name="y4" Margin="0,0,0,0" Grid.Row="6" />
+                <TextBlock x:Name="y3" Margin="0,0,0,0" Grid.Row="7" />
+                <TextBlock x:Name="y2" Margin="0,0,0,0" Grid.Row="8" />
+                <TextBlock x:Name="y1" Margin="0,0,0,0" Grid.Row="9" />
+            </Grid>
+            
+            <Canvas Grid.Column="1" VerticalAlignment="Center">
+                <Canvas.RenderTransform>
+                    <RotateTransform Angle="90" />
+                </Canvas.RenderTransform>
+                <TextBlock x:Name="axisYLabel" Text="Y Axis" Grid.Column="1" >
+                
+                </TextBlock>
+            </Canvas>
+        </Grid>
+    </Grid>
+</UserControl>

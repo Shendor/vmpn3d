@@ -1,0 +1,20 @@
+﻿PNCreator
+
+
+winexe
+C#
+.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Release\
+PNCreator
+none
+false
+
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\App.xaml
+16577689612
+
+68-361036223
+36-506952044
+Controls\PopupHelp.xaml;MainWindow.xaml;Modules\About\About.xaml;Modules\Analizing\Chart\Chart.xaml;Modules\Analizing\Diagram\Diagram.xaml;Modules\Analizing\Diagram\HistoryExport.xaml;Modules\Formula Builder\FormulaBuilder.xaml;Modules\Formula Builder\Geometry Formula Builder\GeometryFormulaBuilder.xaml;Modules\ModelConfiguration\ModelConfiguration.xaml;Modules\ModelInformation\ModelInfo.xaml;Modules\NavigationMap\NavigationMap.xaml;Modules\ODL Editor\ODLEditorWindow.xaml;Modules\Properties\Properties.xaml;Modules\Searching\Searching.xaml;Modules\ServerConnection\ServerProperties.xaml;Modules\Simulation\Simulation.xaml;
+content\startscreen.png
+True
+

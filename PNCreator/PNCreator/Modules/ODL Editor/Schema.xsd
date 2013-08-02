@@ -1,0 +1,142 @@
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- attributes -->
+  <xs:attributeGroup name="defaultObjectPropertiesAttributes">
+    <xs:attribute name="Position">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="([0-9])+[ ]([0-9])+[ ]([0-9])+" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    
+    <xs:attribute name="Size" type="xs:double" />
+
+    <xs:attribute name="Rotation">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="([0-9])+[ ]([0-9])+[ ]([0-9])+" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="Color">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="#[0-9a-fA-F]{4}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute> 
+  </xs:attributeGroup>
+
+  <xs:attribute name="Name">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="([a-zA-Z])+" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+  
+  <xs:attribute name="SaveHistory" type="xs:boolean" />
+  
+  <xs:attribute name="Tokens" type="xs:nonNegativeInteger" />
+  <xs:attribute name="Level" type="xs:double" />
+  <xs:attribute name="Delay" type="xs:double" />
+  <xs:attribute name="Weight" type="xs:double" />
+  <xs:attribute name="Expectance" type="xs:double" />
+  <xs:attribute name="ActionCount" type="xs:double" />
+  <xs:attribute name="Guard" type="xs:boolean" />
+
+  <xs:attribute name="From" type="xs:string" />
+  <xs:attribute name="To" type="xs:string" />
+  
+  <!-- types -->
+  <xs:complexType name="discreteLocationType">
+    <xs:attributeGroup ref="defaultObjectPropertiesAttributes" />
+    <xs:attribute ref="Name" />
+    <xs:attribute ref="Tokens" />
+    <xs:attribute ref="SaveHistory" />
+  </xs:complexType>
+
+  <xs:complexType name="discreteTransitionType">
+    <xs:attributeGroup ref="defaultObjectPropertiesAttributes" />
+    <xs:attribute ref="Name" />
+    <xs:attribute ref="Delay" />
+    <xs:attribute ref="Guard" />
+    <xs:attribute ref="SaveHistory" />
+  </xs:complexType>
+
+  <xs:complexType name="continuousLocationType">
+    <xs:attributeGroup ref="defaultObjectPropertiesAttributes" />
+    <xs:attribute ref="Name" />
+    <xs:attribute ref="Level" />
+    <xs:attribute ref="SaveHistory" />
+  </xs:complexType>
+
+  <xs:complexType name="continuousTransitionType">
+    <xs:attributeGroup ref="defaultObjectPropertiesAttributes" />
+    <xs:attribute ref="Name" />
+    <xs:attribute ref="Expectance" />
+    <xs:attribute ref="Guard" />
+    <xs:attribute ref="SaveHistory" />
+  </xs:complexType>
+
+  <xs:complexType name="membraneType">
+    <xs:group ref="objectsList" minOccurs="0"/>    
+    <xs:attributeGroup ref="defaultObjectPropertiesAttributes" />
+    <xs:attribute ref="Name" />
+  </xs:complexType>
+
+  <xs:complexType name="structuralMembraneType">
+    <xs:group ref="objectsList" minOccurs="0"/>
+    <xs:attributeGroup ref="defaultObjectPropertiesAttributes" />
+    <xs:attribute ref="Name" />
+    <xs:attribute ref="ActionCount" />
+  </xs:complexType>
+
+  <xs:complexType name="arcType">
+    <xs:attributeGroup ref="defaultObjectPropertiesAttributes" />
+    <xs:attribute ref="Name" />
+    <xs:attribute ref="SaveHistory" />
+    <xs:attribute ref="From" />
+    <xs:attribute ref="To" />
+  </xs:complexType>
+  
+  <!-- elements group -->
+  <xs:group name="objectsList">
+    <xs:choice >
+      <xs:element ref="DiscreteLocation" />
+      <xs:element ref="ContinuousLocation" />
+      <xs:element ref="DiscreteTransition" />
+      <xs:element ref="ContinuousTransition" />
+      <xs:element ref="Membrane"/>
+      <xs:element ref="StructuralMembrane" />
+      <xs:element ref="DiscreteArc"/>
+      <xs:element ref="DiscreteInhibitorArc"/>
+      <xs:element ref="DiscreteTestArc"/>
+      <xs:element ref="ContinuousArc" />
+      <xs:element ref="ContinuousInhibitorArc" />
+      <xs:element ref="ContinuousTestArc" />
+      <xs:element ref="ContinuousFlowArc" />
+    </xs:choice>
+  </xs:group>
+  
+  <!-- elements -->
+
+  <xs:element name="DiscreteLocation" type="discreteLocationType" />
+  <xs:element name="ContinuousLocation" type="continuousLocationType" />
+  <xs:element name="DiscreteTransition" type="discreteTransitionType" />
+  <xs:element name="ContinuousTransition" type="continuousTransitionType" />
+  <xs:element name="Membrane" type="membraneType" />
+  <xs:element name="StructuralMembrane" type="structuralMembraneType" />
+  <xs:element name="DiscreteArc" type="arcType" />
+  <xs:element name="DiscreteInhibitorArc" type="arcType" />
+  <xs:element name="DiscreteTestArc" type="arcType" />
+  <xs:element name="ContinuousArc" type="arcType" />
+  <xs:element name="ContinuousInhibitorArc" type="arcType" />
+  <xs:element name="ContinuousTestArc" type="arcType" />
+  <xs:element name="ContinuousFlowArc" type="arcType" />
+  
+
+</xs:schema>

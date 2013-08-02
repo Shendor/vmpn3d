@@ -1,0 +1,180 @@
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Resources.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Resources.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Microsoft.Windows.Shell.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Microsoft.Windows.Shell.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Microsoft.Windows.Shell.xml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\ResolveAssemblyReference.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Border.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Button.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\CheckBox.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\ComboBox.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Expander.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\ListBox.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Menu.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\ProgressBar.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\RadioButton.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Reflections.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\ScrollBar.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\ScrollViewer.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Shared.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Slider.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\TextBlock.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\TextBox.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Window.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources_MarkupCompile.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources.g.resources
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources.Properties.Resources.resources
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\GenerateResource.read.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\GenerateResource.write.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Microsoft.Expression.Drawing.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Microsoft.Expression.Drawing.xml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Icons.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\bin\Debug\Resources.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\bin\Debug\Resources.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\bin\Debug\Microsoft.Expression.Drawing.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\bin\Debug\Microsoft.Expression.Drawing.xml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\Border.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\Button.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\CheckBox.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\ComboBox.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\Expander.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\Icons.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\ListBox.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\Menu.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\ProgressBar.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\RadioButton.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\Reflections.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\ScrollBar.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\ScrollViewer.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\Shared.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\Slider.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\TextBlock.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\TextBox.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\Window.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\Resources_MarkupCompile.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\Resources.g.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\Resources.Properties.Resources.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\Resources.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\Resources.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\obj\Debug\UIStyles\ToolTip.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\ToolTip.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\bin\Debug\Microsoft.Windows.Shell.xml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Resources.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Resources.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\ResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Border.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Button.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\CheckBox.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\ComboBox.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Expander.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\ListBox.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Menu.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\ProgressBar.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\RadioButton.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Reflections.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\ScrollBar.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\ScrollViewer.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Shared.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Slider.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\TextBlock.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\TextBox.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\ToolTip.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Window.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources.g.resources
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources.Properties.Resources.resources
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\GenerateResource.read.1.tlog
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\GenerateResource.write.1.tlog
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\bin\Debug\Resources.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\bin\Debug\Resources.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\Border.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\Button.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\CheckBox.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\ComboBox.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\Expander.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\ListBox.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\Menu.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\ProgressBar.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\RadioButton.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\Reflections.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\ScrollBar.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\ScrollViewer.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\Shared.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\Slider.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\TextBlock.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\TextBox.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\ToolTip.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\Window.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\Resources_MarkupCompile.cache
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\Resources.g.resources
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\Resources.Properties.Resources.resources
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\Resources.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\Resources.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\obj\Debug\UIStyles\PNBrushes.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\bin\Debug\Resources.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\bin\Debug\Resources.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\ResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\Border.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\Button.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\CheckBox.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\ComboBox.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\Expander.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\ListBox.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\Menu.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\PNBrushes.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\ProgressBar.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\RadioButton.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\Reflections.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\ScrollBar.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\ScrollViewer.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\Shared.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\Slider.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\TextBlock.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\TextBox.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\ToolTip.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\UIStyles\Window.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\Resources_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\Resources.g.resources
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\Resources.Properties.Resources.resources
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\GenerateResource.read.1.tlog
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\GenerateResource.write.1.tlog
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\Resources.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Resources\obj\Debug\Resources.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\PNBrushes.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\TabControl.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.Charting.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.GridView.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.Input.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.Navigation.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Data.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\ColorPicker.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.xml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.Charting.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.Charting.xml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.GridView.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.GridView.xml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.Input.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.Input.xml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Data.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Data.xml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\de\Telerik.Windows.Controls.resources.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\es\Telerik.Windows.Controls.resources.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\fr\Telerik.Windows.Controls.resources.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\it\Telerik.Windows.Controls.resources.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Panels.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\GridView.baml

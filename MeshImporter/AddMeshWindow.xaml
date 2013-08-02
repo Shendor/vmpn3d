@@ -1,0 +1,32 @@
+﻿<Window x:Class="MeshImporter.AddMeshWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:tree="clr-namespace:AnimatedGraph;assembly=AnimatedGraph"
+        xmlns:local="clr-namespace:MeshImporter" AllowsTransparency="False" Icon="/Resources;component/Content/Images/plus.png"
+        Background="White" WindowState="Maximized" WindowStyle="None" ResizeMode="NoResize">
+ 
+    <Grid>
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Add folder" Click="MenuItem_Click"/>
+                <MenuItem Header="Add file" Click="MenuItem_Click"/>
+                <MenuItem Header="Close" Click="MenuItem_Click"/>
+            </ContextMenu>
+        </Grid.ContextMenu>
+        <Border Style="{StaticResource SemiTransparentBorder}" />
+        <Popup x:Name="newNodePopup" AllowsTransparency="True"
+	                    Placement="Mouse" Width="180" Height="36" PopupAnimation="Fade">
+            <Border Style="{StaticResource ToolTipBorder}" Width="180" Height="36">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="5" Text="Name: " Style="{StaticResource DefaultLightTextStyle}" />
+                    <TextBox x:Name="meshNameTB" Margin="5" Width="85" KeyDown="TextBoxes_KeyDown"/>
+                </StackPanel>
+            </Border>
+        </Popup>
+        
+        <tree:AnimatedTreeViewer x:Name="treeViewer" NodeChanged="treeViewer_NodeChanged">
+
+        </tree:AnimatedTreeViewer>
+
+    </Grid>
+</Window>

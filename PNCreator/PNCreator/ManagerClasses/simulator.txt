@@ -1,0 +1,1150 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using PNCreator.PNObjectsIerarchy;
+using System.Threading;
+using System.Windows.Threading;
+using System.Windows.Media;
+using System.Windows.Media.Media3D;
+using WindowsControl;
+using PNCreator.Modules.Simulation;
+using PNCreator.Modules.FormulaBuilder;
+using PNCreator.ManagerClasses.FormulaManager;
+using PNCreator.ManagerClasses.Exception;
+using PNCreator.ManagerClasses.EventManager;
+using PNCreator.Properties;
+
+namespace PNCreator.ManagerClasses
+{
+    public class PNSimulator : IUiUpdate
+    {
+        private MainWindow mainWnd;
+
+        private UpdateUi updateUiHandler;
+        public short interrupter;
+        public double animationSpeed;
+        public Thread thread;
+        private double timer;
+        private double minTimeInterval;
+        private string simulationName;
+        private Dictionary<long, double> initialObjectValues;
+
+        public PNSimulator(MainWindow mainWnd)
+        {
+            this.mainWnd = mainWnd; 
+            initialObjectValues = new Dictionary<long, double>();
+        }
+
+        /// <summary>
+        /// Animation speed
+        /// </summary>
+        public double AnimationSpeed
+        {
+            get
+            {
+                return animationSpeed;
+            }
+        }
+
+
+        /// <summary>
+        /// Allow start or stop calculations and animation
+        /// </summary>
+        public void SimulationLauncher(string simulationName, Player player, SimulationType simType)
+        {
+            switch (player)
+            {
+                case Player.Play:
+                    {
+                        if (thread != null && thread.IsAlive.Equals(true))
+                            return;
+                        mainWnd.showAnimPanelBtn.IsEnabled = false;
+
+                        if (simulationName.Equals(""))
+                            simulationName = "Table" + PNProgramStorage.SimulationNumber.ToString();
+                        this.simulationName = simulationName;
+
+                        mainWnd.border.BorderBrush = Brushes.OrangeRed;
+                        if (simType == SimulationType.WithAnimation)
+                            thread = new Thread(RunSimulationWithAnimation);
+                        else if (simType == SimulationType.WithoutAnimation)
+                            thread = new Thread(RunSimulationWithoutAnimation);
+                        thread.Start();
+                        interrupter = 0;
+                    }
+                    break;
+                case Player.Stop:
+                    {
+                        mainWnd.showAnimPanelBtn.IsEnabled = true;
+                        mainWnd.border.BorderBrush = new SolidColorBrush(Color.FromRgb(63, 63, 63));
+                        if (thread != null)
+                            thread.Abort();
+                    }
+                    break;
+            }
+
+        }
+
+        #region Configuration
+
+        /// <summary>
+        /// Restore objects values after finishing of simulation
+        /// </summary>
+        public void ReInitNet()
+        {
+            if (initialObjectValues == null || initialObjectValues.Count == 0)
+                return;
+
+            foreach (PNObject pnObject in PNObjectRepository.PNObjects.Values)
+            {
+                long id = pnObject.ID;
+                if (pnObject.Type == PNObjectTypes.DiscreteLocation)
+                {
+                    ((DiscreteLocation)pnObject).IncomeArcsID.Clear();
+                    ((DiscreteLocation)pnObject).Tokens = (int)initialObjectValues[id];
+                }
+                else if (pnObject.Type == PNObjectTypes.ContinuousLocation)
+                {
+                    ((ContinuousLocation)pnObject).IncomeArcsID.Clear();
+                    ((ContinuousLocation)pnObject).Level = initialObjectValues[id];
+                }
+                else if (pnObject.Type == PNObjectTypes.DiscreteTransition)
+                {
+                    ((DiscreteTransition)pnObject).IncomeArcsID.Clear();
+                    ((DiscreteTransition)pnObject).DelayCounter = initialObjectValues[id];
+                    ((DiscreteTransition)pnObject).Delay = initialObjectValues[id];
+                }
+                else if (pnObject.Type == PNObjectTypes.ContinuousTransition)
+                {
+                    ((ContinuousTransition)pnObject).IncomeArcsID.Clear();
+                    ((ContinuousTransition)pnObject).Expectance = initialObjectValues[id];
+                }
+                else if (pnObject is Arc3D)
+                {
+                    ((Arc3D)pnObject).Weight = initialObjectValues[id];
+                    ((Arc3D)pnObject).Thickness = PNCreator.Modules.Properties.PNProperties.ArcsThickness;
+                }
+                pnObject.ValueInCanvas.Text = initialObjectValues[id].ToString();
+                pnObject.ResetMaterial();
+                updateUiHandler(this, null);
+            }
+        }
+
+        /// <summary>
+        /// Configure net before beginning of simulation process.
+        /// 1) Make up arrays with objects' id which have formula
+        /// 2) Save initial values of all objects
+        /// 3) Check connections between locations and transitions (and backward)
+        /// </summary>
+        private void ConfigureObjectsBeforeStart(string simulationName)
+        {
+            //PNProgramStorage.IsNeedToCompile = false;  // !!! MUST BE REMOVED !!!
+            IFormulaManager formulaManager = App.GetObject<IFormulaManager>();
+
+            int progress = 0;
+            IEnumerable<Arc3D> arcs = PNObjectRepository.GetPNObjects<Arc3D>();
+            initialObjectValues = new Dictionary<long, double>();
+
+            PNProgramStorage.SimulationNumber += 1;
+            PNProgramStorage.SimulationNames.Add(simulationName);
+
+            mainWnd.Dispatcher.BeginInvoke
+               (DispatcherPriority.Normal,
+               (ThreadStart)delegate()
+               {
+                   mainWnd.simWnd.configurePanel.Visibility = System.Windows.Visibility.Visible;
+                   mainWnd.simWnd.configuringProgress.Minimum = 0;
+                   mainWnd.simWnd.configuringProgress.Maximum = PNObjectRepository.PNObjects.Count;
+               });
+
+            try
+            {
+                formulaManager.GetObjectsWithFormula();
+            }
+            catch (FormatException e)
+            {
+                mainWnd.Dispatcher.BeginInvoke
+                    (DispatcherPriority.Normal,
+                    (ThreadStart)delegate()
+                    {
+                        ExceptionHandler.HandleException(e);
+                    });
+                thread.Abort();
+            }
+
+            foreach (PNObject pnObject in PNObjectRepository.PNObjects.Values)
+            {
+                long id = pnObject.ID;
+                initialObjectValues[id] = PNObjectRepository.PNObjects.DoubleValues[id];
+
+                if (pnObject.AllowSaveHistory == true)
+                {
+                    pnObject.AddNewHistoryTable(simulationName);
+                }
+                else if (pnObject.Type == PNObjectTypes.DiscreteLocation || pnObject.Type == PNObjectTypes.ContinuousLocation)
+                {
+                    Location loc = (Location)pnObject;
+                    foreach (Arc3D arc in arcs)
+                    {
+                        if (arc.EndID.Equals(id))
+                            loc.IncomeArcsID.Add(arc.ID);
+                    }
+                }
+                else if (pnObject.Type == PNObjectTypes.DiscreteTransition || pnObject.Type == PNObjectTypes.ContinuousTransition)
+                {
+                    Transition trans = (Transition)pnObject;
+                    if (trans.Type == PNObjectTypes.DiscreteTransition)
+                        ((DiscreteTransition)trans).DelayCounter = ((DiscreteTransition)trans).Delay;
+
+                    foreach (Arc3D arc in arcs)
+                    {
+                        if (arc.EndID.Equals(id))
+                            trans.IncomeArcsID.Add(arc.ID);
+                    }
+                }
+
+                mainWnd.Dispatcher.BeginInvoke
+                   (DispatcherPriority.ApplicationIdle,
+                   (ThreadStart)delegate()
+                   {
+                       if (!progress.Equals(id))
+                           mainWnd.simWnd.configuringProgress.Value = progress;
+                   });
+
+                progress++;
+
+            }
+
+            formulaManager.IsNeedToCompile = false;
+
+            mainWnd.Dispatcher.BeginInvoke
+               (DispatcherPriority.Normal,
+               (ThreadStart)delegate()
+               {
+                   mainWnd.simWnd.configurePanel.Visibility = System.Windows.Visibility.Collapsed;
+               });
+        }
+        /// <summary>
+        /// Clear some arrays which were filled in the method Window1.ConfigureObjectsBeforeStart(). 
+        /// Must be run after finishing of the simulation process 
+        /// </summary>
+        private void ClearTemporaryData()
+        {
+            foreach (PNObject pnObject in PNObjectRepository.PNObjects.Values)
+            {
+                if (pnObject.Type == PNObjectTypes.DiscreteLocation ||
+                    pnObject.Type == PNObjectTypes.ContinuousLocation)
+                {
+                    ((Location)pnObject).IncomeArcsID.Clear();
+                }
+                else if (pnObject.Type == PNObjectTypes.DiscreteTransition ||
+                    pnObject.Type == PNObjectTypes.ContinuousTransition)
+                {
+                    ((Transition)pnObject).IncomeArcsID.Clear();
+                }
+            }
+        }
+
+        #endregion
+
+        #region Algorithm
+
+        /// <summary>
+        /// Execute all formulas
+        /// </summary>
+        public void ExecuteAllFormulas(IFormulaManager formulaManager)
+        {
+            foreach (ObjectWithFormula obj in formulaManager.GetObjectsWithFormula())
+            {
+                ExecuteFormulaForModels(obj.Object, obj.FormulaType);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pnObject"></param>
+        /// <param name="formulaType"></param>
+        private void ExecuteFormulaForModels(PNObject pnObject, FormulaTypes formulaType)
+        {
+            if (formulaType == FormulaTypes.Guard)
+            {
+                ((IExtendedFormula)pnObject).ExecuteFormula();
+            }
+            else
+            {
+                ((IFormula)pnObject).ExecuteFormula();
+            }
+
+            if (pnObject.Type == PNObjectTypes.DiscreteTransition)
+            {
+                DiscreteTransition transition = (DiscreteTransition)pnObject;
+                if (!transition.Delay.Equals(PNObjectRepository.PNObjects.DoubleValues[pnObject.ID]))
+                    transition.DelayCounter = timer + transition.Delay;
+                minTimeInterval = transition.Delay;
+            }
+        }
+
+        /// <summary>
+        /// Run simulation with animation
+        /// </summary>
+        private void RunSimulationWithAnimation()
+        {
+            ConfigureObjectsBeforeStart(simulationName);
+
+            IFormulaManager formulaManager = App.GetObject<IFormulaManager>();
+            IEnumerable<Shape3D> shapes = PNObjectRepository.GetPNObjects<Shape3D>();
+            IEnumerable<Arc3D> arcs = PNObjectRepository.GetPNObjects<Arc3D>();
+            List<Token> tokens = new List<Token>();
+
+            DiscreteLocation location;
+            DiscreteTransition transition;
+            ContinuousLocation cLocation;
+            ContinuousTransition cTransition;
+            Token token;
+
+            int activeTransitionAmount = 0;
+            Location loc = null;
+            Transition trans = null;
+            Arc3D localArc = null;
+
+            timer = 0;
+            minTimeInterval = 1;
+            int step = 0;
+
+            double ACTIVE_ARC_THICKNESS = PNCreator.Modules.Properties.PNProperties.ArcsThickness / 2;
+
+            do
+            {
+                activeTransitionAmount = 0;
+
+                #region Execute formulas
+                ExecuteAllFormulas(formulaManager);
+                Thread.Sleep(100);
+                #endregion
+
+                #region First step
+                //------------------------------------------------
+                foreach (Shape3D shape in shapes)   // 1) Check all transitions
+                {
+                    if (shape.Type == PNObjectTypes.DiscreteLocation)
+                    {
+                        location = (DiscreteLocation)shape;
+                        if (location.AllowSaveHistory == true)
+                            location.AddNewRowOfHistory(simulationName, timer, location.Tokens);
+                    }
+                    else if (shape.Type == PNObjectTypes.ContinuousLocation)
+                    {
+                        cLocation = (ContinuousLocation)shape;
+                        if (cLocation.AllowSaveHistory == true)
+                            cLocation.AddNewRowOfHistory(simulationName, timer, cLocation.Level);
+                    }
+                    //********************* Check discrete transition *************************************
+                    #region CHECK DISCRETE TRANSITION
+                    else if (shape.Type == PNObjectTypes.DiscreteTransition)
+                    {
+                        transition = (DiscreteTransition)shape;
+                        if (transition.AllowSaveHistory == true)
+                            transition.AddNewRowOfHistory(simulationName, timer, transition.Delay);
+                        if (transition.Delay < minTimeInterval)
+                            minTimeInterval = transition.Delay;
+
+
+                        if (transition.Guard == true)
+                        {
+                            int activityCounter = 0;
+                            int iArcsAmount = 0;
+
+                            #region LOOP ABOUT ALL INCOME LOCATIONS AT THIS TRANSITION
+                            for (int j = 0; j < transition.IncomeLocationsID.Count; j++)    // ****** LOOP ABOUT ALL INCOME LOCATIONS AT THIS TRANSITION
+                            {
+                                loc = (Location)PNObjectRepository.GetByKey(transition.IncomeLocationsID[j]);
+                                localArc = (Arc3D)PNObjectRepository.GetByKey(transition.IncomeArcsID[j]);
+
+                                if (loc.Type == PNObjectTypes.DiscreteLocation) //------- IF INCOME LOCATION IS DISCRETE
+                                {
+                                    location = (DiscreteLocation)loc;
+
+                                    if (localArc.Type == PNObjectTypes.DiscreteArc ||
+                                        localArc.Type == PNObjectTypes.DiscreteTestArc)
+                                    {
+                                        if (location.Tokens >= localArc.Weight)
+                                            activityCounter += 1;
+                                    }
+                                    else if (localArc.Type == PNObjectTypes.DiscreteInhibitorArc)
+                                    {
+                                        iArcsAmount += 1;
+                                        if (location.Tokens >= localArc.Weight)
+                                            activityCounter -= 1;
+                                    }
+                                }
+                                else if (loc.Type == PNObjectTypes.ContinuousLocation)  //---------- IF INCOME LOCATION IS CONTINUOUS
+                                {
+                                    cLocation = (ContinuousLocation)loc;
+                                    if (localArc.Type == PNObjectTypes.ContinuousFlowArc ||
+                                        localArc.Type == PNObjectTypes.ContinuousTestArc)
+                                    {
+                                        if (cLocation.Level >= localArc.Weight)
+                                            activityCounter += 1;
+                                    }
+                                    else if (localArc.Type == PNObjectTypes.ContinuousInhibitorArc)
+                                    {
+                                        iArcsAmount += 1;
+                                        if (cLocation.Level >= localArc.Weight)
+                                            activityCounter -= 1;
+                                    }
+                                }
+                            }
+                            #endregion
+
+                            // if all income location of the transition have tokens then the transition is active
+                            #region MAKE THE TRANSITION ACTIVE
+                            if (activityCounter == transition.IncomeLocationsID.Count - iArcsAmount)
+                            {
+                                transition.IsActive = true;
+
+                                activeTransitionAmount += 1;
+                                for (int k = 0; k < transition.IncomeLocationsID.Count; k++)     // ****** LOOP ABOUT ALL INCOME LOCATIONS AT THIS TRANSITION
+                                {
+                                    loc = (Location)PNObjectRepository.GetByKey(transition.IncomeLocationsID[k]);
+                                    localArc = (Arc3D)PNObjectRepository.GetByKey(transition.IncomeArcsID[k]);
+
+                                    if (transition.DelayCounter <= timer)
+                                    {
+                                        if (loc.Type == PNObjectTypes.DiscreteLocation) //---------- IF INCOME LOCATION IS DISCRETE
+                                        {
+                                            location = (DiscreteLocation)loc;
+                                            if (localArc.Type == PNObjectTypes.DiscreteArc)
+                                                if (location.Tokens >= localArc.Weight)
+                                                    location.Tokens -= (Int32)localArc.Weight;
+
+                                        }
+                                        else if (loc.Type == PNObjectTypes.ContinuousLocation) //---------- IF INCOME LOCATION IS CONTINUOUS
+                                        {
+                                            cLocation = (ContinuousLocation)loc;
+                                            if (localArc.Type == PNObjectTypes.ContinuousFlowArc)
+                                                if (cLocation.Level >= localArc.Weight)
+                                                    cLocation.Level -= localArc.Weight;
+                                        }
+                                    }
+
+                                }
+                            }
+                            #endregion
+                            else
+                                transition.IsActive = false;
+                        }
+                        else
+                            transition.IsActive = false; // if guard was False;
+
+                    }
+                    #endregion
+
+                    //********************* Check continuous transition *************************************
+                    #region CHECK CONTINUOUS TRANSITION
+                    else if (shape.Type == PNObjectTypes.ContinuousTransition)
+                    {
+                        cTransition = (ContinuousTransition)shape;
+                        if (cTransition.AllowSaveHistory == true)
+                            cTransition.AddNewRowOfHistory(simulationName, timer, cTransition.Expectance);
+
+                        if (cTransition.Guard == true)
+                        {
+                            int activityCounter = 0;
+                            int iArcsAmount = 0;        // quantity of income inghibitor arcs
+
+                            #region LOOP ABOUT ALL INCOME LOCATIONS AT THIS TRANSITION
+                            for (int j = 0; j < cTransition.IncomeLocationsID.Count; j++)
+                            {
+                                loc = (Location)PNObjectRepository.GetByKey(cTransition.IncomeLocationsID[j]);       // select j-locationID in i-transitio
+                                localArc = (Arc3D)PNObjectRepository.GetByKey(cTransition.IncomeArcsID[j]);
+
+                                if (loc.Type == PNObjectTypes.DiscreteLocation) //------- IF INCOME LOCATION IS DISCRETE
+                                {
+                                    location = (DiscreteLocation)loc;
+                                    if (localArc.Type == PNObjectTypes.DiscreteTestArc)
+                                    {
+                                        if (location.Tokens >= localArc.Weight)
+                                            activityCounter += 1;
+                                    }
+                                    else if (localArc.Type == PNObjectTypes.DiscreteInhibitorArc)
+                                    {
+                                        iArcsAmount += 1;
+                                        if (location.Tokens >= localArc.Weight)
+                                            activityCounter -= 1;
+                                    }
+
+                                }
+                                else if (localArc.Type == PNObjectTypes.ContinuousLocation)  //---------- IF INCOME LOCATION IS CONTINUOUS
+                                {
+                                    cLocation = (ContinuousLocation)loc;
+                                    if (localArc.Type == PNObjectTypes.ContinuousArc ||
+                                        localArc.Type == PNObjectTypes.ContinuousTestArc)
+                                    {
+                                        if (cLocation.Level >= cTransition.Expectance * localArc.Weight)
+                                            activityCounter += 1;
+                                    }
+                                    else if (localArc.Type == PNObjectTypes.ContinuousInhibitorArc)
+                                    {
+                                        iArcsAmount += 1;
+                                        if (cLocation.Level >= cTransition.Expectance * localArc.Weight)
+                                            activityCounter -= 1;
+                                    }
+                                }
+                            }
+                            #endregion
+
+                            // if all income location of the transition have tokens then the transition is active
+                            #region MAKE THE TRANSITION ACTIVE
+                            if (activityCounter == cTransition.IncomeLocationsID.Count - iArcsAmount)
+                            {
+                                cTransition.IsActive = true;
+                                activeTransitionAmount += 1;
+                                for (int k = 0; k < cTransition.IncomeLocationsID.Count; k++)        // get low tokens amount from locations of this transition
+                                {
+                                    loc = (Location)PNObjectRepository.GetByKey(cTransition.IncomeLocationsID[k]);
+                                    localArc = (Arc3D)PNObjectRepository.GetByKey(cTransition.IncomeArcsID[k]);
+
+                                    if (loc.Type == PNObjectTypes.ContinuousLocation) //---------- IF INCOME LOCATION IS CONTINUOUS
+                                    {
+                                        cLocation = (ContinuousLocation)loc;
+                                        if (localArc.Type == PNObjectTypes.ContinuousArc)
+                                            if (cLocation.Level >= localArc.Weight)
+                                                cLocation.Level -= cTransition.Expectance * localArc.Weight;
+                                    }
+                                }
+                            }
+                            #endregion
+                            else
+                                cTransition.IsActive = false;
+                        }
+                        else
+                            cTransition.IsActive = false;
+                    }
+                    #endregion
+                }
+                //------------------------------------------------
+                #endregion
+
+                #region First animation
+
+                mainWnd.Dispatcher.BeginInvoke                   // launch animation at the thread
+                (DispatcherPriority.Normal,
+                (ThreadStart)delegate()
+                {
+                    foreach (Arc3D arc in arcs)
+                    {
+                        arc.ValueInCanvas.Text = arc.Weight.ToString("F4");
+                        arc.Thickness = PNCreator.Modules.Properties.PNProperties.ArcsThickness;
+                    }
+                    // animation: from location to transition   
+                    foreach (Shape3D shape in shapes)
+                    {
+                        if (shape.Type == PNObjectTypes.StructuralMembrane)   //---- FOR STRUCTURAL MEMBRANE
+                        {
+                            ((StructuralMembrane)shape).Animate(animationSpeed);
+                        }
+                        if (shape.Type == PNObjectTypes.DiscreteTransition)   //---- FOR DISCRETE TRANSITION
+                        {
+                            transition = (DiscreteTransition)shape;
+                            transition.ValueInCanvas.Text = transition.Delay.ToString();
+                            //if (transition.IsActive == true && transition.DelayCounter.Equals(timer))
+                            if (transition.IsActive == true && transition.DelayCounter <= timer)
+                            {
+                                shape.Geometry.Material = PNObjectMaterial.GetMaterial(Colors.OrangeRed);
+                                for (int j = 0; j < transition.IncomeLocationsID.Count; j++)
+                                {
+                                    loc = PNObjectRepository.GetByKey(transition.IncomeLocationsID[j]) as Location;
+                                    localArc = PNObjectRepository.GetByKey(transition.IncomeArcsID[j]) as Arc3D;
+
+                                    if (!transition.SALocations.Contains(loc.ID))
+                                    {
+                                        if (loc.Type == PNObjectTypes.DiscreteLocation)
+                                        {
+                                            location = (DiscreteLocation)loc;
+                                            location.ValueInCanvas.Text = location.Tokens.ToString();
+                                            token = new Token(localArc.StartPoint, localArc.MiddlePoint, localArc.EndPoint);
+                                            token.Seconds = animationSpeed;
+                                            mainWnd.trackball.Viewport3D.Children.Add(token.Model);
+                                            tokens.Add(token);
+                                            token.StartAnimation();
+                                        }
+                                    }
+                                    if (localArc.Type == PNObjectTypes.ContinuousFlowArc)
+                                        localArc.Thickness = ACTIVE_ARC_THICKNESS;
+                                }
+                            }
+                        }
+                        else if (shape.Type == PNObjectTypes.ContinuousTransition)    // FOR CONTINUOUS TRANSITION
+                        {
+                            cTransition = (ContinuousTransition)shape;
+                            cTransition.ValueInCanvas.Text = cTransition.Expectance.ToString("F");
+                            if (cTransition.IsActive == true)
+                            {
+                                shape.Geometry.Material = PNObjectMaterial.GetMaterial(Colors.OrangeRed);
+                                for (int j = 0; j < cTransition.IncomeLocationsID.Count; j++)
+                                {
+                                    loc = PNObjectRepository.GetByKey(cTransition.IncomeLocationsID[j]) as Location;
+                                    localArc = PNObjectRepository.GetByKey(cTransition.IncomeArcsID[j]) as Arc3D;
+                                    localArc.Thickness = ACTIVE_ARC_THICKNESS;
+                                    if (!cTransition.SALocations.Contains(loc.ID))
+                                    {
+                                        cLocation = (ContinuousLocation)loc;
+                                        loc.ValueInCanvas.Text = cLocation.Level.ToString("F4");
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                });
+                //------------------------------------------------
+                #endregion
+
+                #region Second step
+                Thread.Sleep(100);
+                if (activeTransitionAmount > 0)
+                {
+                    foreach (Shape3D shape in shapes)   // 2) Take accepted tokens from active transitions
+                    {
+
+                        #region DISCRETE LOCATION
+                        if (shape.Type == PNObjectTypes.DiscreteLocation)
+                        {
+                            location = (DiscreteLocation)shape;
+                            for (int j = 0; j < location.IncomeTransitionsID.Count; j++)
+                            {
+                                trans = (Transition)PNObjectRepository.GetByKey(location.IncomeTransitionsID[j]);
+                                localArc = (Arc3D)PNObjectRepository.GetByKey(location.IncomeArcsID[j]);
+                                transition = (DiscreteTransition)trans;
+
+                                if (transition.IsActive == true && transition.DelayCounter <= timer)
+                                    location.Tokens += (Int32)localArc.Weight;
+                            }
+                        }
+                        #endregion
+
+                        #region CONTINUOUS LOCATION
+                        else if (shape.Type == PNObjectTypes.ContinuousLocation)
+                        {
+                            cLocation = (ContinuousLocation)shape;
+                            for (int j = 0; j < cLocation.IncomeTransitionsID.Count; j++)
+                            {
+                                trans = (Transition)PNObjectRepository.GetByKey(cLocation.IncomeTransitionsID[j]);
+                                localArc = (Arc3D)PNObjectRepository.GetByKey(cLocation.IncomeArcsID[j]);
+
+                                if (trans.IsActive == true)
+                                {
+                                    if (trans.Type == PNObjectTypes.ContinuousTransition)
+                                        cLocation.Level += ((ContinuousTransition)trans).Expectance * localArc.Weight;
+                                    else if (trans.Type == PNObjectTypes.DiscreteTransition)
+                                    {
+                                        if (((DiscreteTransition)trans).DelayCounter <= timer)
+                                            cLocation.Level += localArc.Weight;
+                                    }
+                                }
+                            }
+                        }
+                        #endregion
+                    }
+                }
+                #endregion
+
+                #region Second animation
+
+                Thread.Sleep(TimeSpan.FromSeconds(animationSpeed));
+                mainWnd.Dispatcher.BeginInvoke                             // launch animation at the thread
+                (DispatcherPriority.Normal,
+                (ThreadStart)delegate()
+                {
+                    // animation: from transition to location
+                    if (activeTransitionAmount > 0)
+                    {
+                        foreach (Arc3D arc in arcs)
+                        {
+                            if (arc.AllowSaveHistory == true)
+                                arc.AddNewRowOfHistory(simulationName, timer, arc.Weight);
+                            arc.ValueInCanvas.Text = arc.Weight.ToString("F4");
+                            arc.Thickness = PNCreator.Modules.Properties.PNProperties.ArcsThickness;
+                        }
+                        foreach (Shape3D shape in shapes)
+                        {
+                            if (shape.Type == PNObjectTypes.DiscreteLocation)
+                            {
+                                location = (DiscreteLocation)shape;
+                                location.ValueInCanvas.Text = location.Tokens.ToString();
+                                for (int j = 0; j < location.IncomeTransitionsID.Count; j++)
+                                {
+                                    trans = PNObjectRepository.GetByKey(location.IncomeTransitionsID[j]) as Transition;
+                                    localArc = PNObjectRepository.GetByKey(location.IncomeArcsID[j]) as Arc3D;
+
+                                    transition = (DiscreteTransition)trans;
+                                    trans.Geometry.Material = PNObjectMaterial.GetMaterial(trans.MaterialColor);
+
+                                    if (transition.IsActive == true && transition.DelayCounter <= timer)
+                                    {
+                                        token = new Token((Point3D)transition.Position,
+                                            localArc.Position, (Point3D)location.Position);
+                                        token.Seconds = animationSpeed;
+                                        mainWnd.trackball.Viewport3D.Children.Add(token.Model);
+                                        tokens.Add(token);
+                                        token.StartAnimation();
+                                    }
+                                }
+                            }
+                            else if (shape.Type == PNObjectTypes.ContinuousLocation)
+                            {
+                                cLocation = (ContinuousLocation)shape;
+                                cLocation.ValueInCanvas.Text = cLocation.Level.ToString("F4");
+                                for (int j = 0; j < cLocation.IncomeTransitionsID.Count; j++)
+                                {
+                                    trans = PNObjectRepository.GetByKey(cLocation.IncomeTransitionsID[j]) as Transition;
+
+                                    if (trans.Type == PNObjectTypes.ContinuousTransition)
+                                    {
+                                        if (((Transition)trans).IsActive == true)
+                                        {
+                                            localArc = PNObjectRepository.GetByKey(cLocation.IncomeArcsID[j]) as Arc3D;
+                                            localArc.Thickness = ACTIVE_ARC_THICKNESS;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (((DiscreteTransition)trans).DelayCounter <= timer)
+                                        {
+                                            localArc = PNObjectRepository.GetByKey(cLocation.IncomeArcsID[j]) as Arc3D;
+                                            if (localArc.Type == PNObjectTypes.ContinuousFlowArc)
+                                                localArc.Thickness = ACTIVE_ARC_THICKNESS;
+                                        }
+                                    }
+                                    trans.Geometry.Material = PNObjectMaterial.GetMaterial(trans.MaterialColor);
+                                }
+                            }
+                        }
+
+                        foreach (Shape3D shape in shapes)
+                        {
+                            if (shape.Type == PNObjectTypes.DiscreteTransition)
+                            {
+                                if (((DiscreteTransition)shape).DelayCounter <= timer)
+                                    ((DiscreteTransition)shape).DelayCounter += ((DiscreteTransition)shape).Delay;
+                            }
+                        }
+                    }
+                });
+                //------------------------------------------------
+                #endregion
+
+                Thread.Sleep(TimeSpan.FromSeconds(animationSpeed));
+                timer += minTimeInterval;
+                ++step;
+
+                #region Clear tokens
+                mainWnd.Dispatcher.BeginInvoke
+                (DispatcherPriority.Normal,
+                (ThreadStart)delegate()
+                {
+                    mainWnd.timeTB.Text = timer.ToString();
+                    //timeIncTB.Text = minTimeInterval.ToString();
+                    for (int i = 0; i < tokens.Count; i++)
+                        mainWnd.trackball.Viewport3D.Children.RemoveAt(mainWnd.trackball.Viewport3D.Children.IndexOf(tokens[i].Model));
+                    tokens = null;
+                    updateUiHandler(this, null);
+                });
+                #endregion
+
+                if (interrupter.Equals(1) && step.Equals(2))
+                    thread.Abort();
+            }
+            while (activeTransitionAmount > 0);
+
+            mainWnd.Dispatcher.BeginInvoke
+                (DispatcherPriority.Normal,
+                (ThreadStart)delegate()
+                {
+                    foreach (Arc3D arc in arcs)
+                        arc.Thickness = PNCreator.Modules.Properties.PNProperties.ArcsThickness;
+                    mainWnd.border.BorderBrush = new SolidColorBrush(Color.FromRgb(63, 63, 63));
+                    mainWnd.showAnimPanelBtn.IsEnabled = true;
+                    //ClearDelayValue();
+                    DialogWindow.Alert(Messages.Default.SimulationFinished);
+                });
+        }
+        
+        /// <summary>
+        /// Run simulation without animation
+        /// </summary>
+        private void RunSimulationWithoutAnimation()
+        {
+            ConfigureObjectsBeforeStart(simulationName);
+
+            IFormulaManager formulaManager = App.GetObject<IFormulaManager>();
+            IEnumerable<Shape3D> shapes = PNObjectRepository.GetPNObjects<Shape3D>();
+            IEnumerable<Arc3D> arcs = PNObjectRepository.GetPNObjects<Arc3D>();
+
+            DiscreteLocation location;
+            DiscreteTransition transition;
+            ContinuousLocation cLocation;
+            ContinuousTransition cTransition;
+
+            int activeTransitionAmount = 0;
+            Location loc = null;
+            Transition trans = null;
+            Arc3D localArc = null;
+            timer = 0;
+            minTimeInterval = 1;
+            double finishTime = 0;
+            double previousTimer = 0;
+
+            mainWnd.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate()
+            {
+                try
+                {
+                    finishTime = Convert.ToDouble(mainWnd.simWnd.finishTimeTB.Text);
+                    mainWnd.simWnd.simulationProgress.Maximum = finishTime;
+                    mainWnd.simWnd.simulationProgress.Value = 0;
+                }
+                catch (FormatException)
+                {
+                    thread.Abort();
+                    return;
+                }
+
+            });
+            Thread.Sleep(10);
+            do
+            {
+                activeTransitionAmount = 0;
+
+                mainWnd.Dispatcher.BeginInvoke(DispatcherPriority.ApplicationIdle, (ThreadStart)delegate()
+                {
+                    if (!timer.Equals(previousTimer))
+                        mainWnd.simWnd.simulationProgress.Value = timer;
+                });
+
+                #region Execute formulas
+                ExecuteAllFormulas(formulaManager);
+                #endregion
+
+                #region First step
+                //------------------------------------------------
+                foreach (Shape3D shape in shapes)   // 1) Check all transitions
+                {
+                    if (shape.Type == PNObjectTypes.DiscreteLocation)
+                    {
+                        location = (DiscreteLocation)shape;
+                        if (location.AllowSaveHistory == true)
+                            location.AddNewRowOfHistory(simulationName, timer, location.Tokens);
+                    }
+                    else if (shape.Type == PNObjectTypes.ContinuousLocation)
+                    {
+                        cLocation = (ContinuousLocation)shape;
+                        if (cLocation.AllowSaveHistory == true)
+                            cLocation.AddNewRowOfHistory(simulationName, timer, cLocation.Level);
+                    }
+                    //********************* Check discrete transition *************************************
+                    #region CHECK DISCRETE TRANSITION
+                    else if (shape.Type == PNObjectTypes.DiscreteTransition)
+                    {
+                        transition = (DiscreteTransition)shape;
+                        if (transition.AllowSaveHistory == true)
+                            transition.AddNewRowOfHistory(simulationName, timer, transition.Delay);
+                        if (transition.Delay < minTimeInterval)
+                            minTimeInterval = transition.Delay;
+
+                        if (transition.Guard == true)
+                        {
+                            int activityCounter = 0;
+                            int iArcsAmount = 0;
+
+                            #region LOOP ABOUT ALL INCOME LOCATIONS AT THIS TRANSITION
+                            for (int j = 0; j < transition.IncomeLocationsID.Count; j++)    // ****** LOOP ABOUT ALL INCOME LOCATIONS AT THIS TRANSITION
+                            {
+                                loc = PNObjectRepository.GetByKey(transition.IncomeLocationsID[j]) as Location;
+                                localArc = PNObjectRepository.GetByKey(transition.IncomeArcsID[j]) as Arc3D;
+
+                                if (loc.Type == PNObjectTypes.DiscreteLocation) //------- IF INCOME LOCATION IS DISCRETE
+                                {
+                                    location = (DiscreteLocation)loc;
+
+                                    if (loc.Type == PNObjectTypes.DiscreteArc ||
+                                        localArc.Type == PNObjectTypes.DiscreteTestArc)
+                                    {
+                                        if (location.Tokens >= localArc.Weight)
+                                            activityCounter += 1;
+                                    }
+                                    else if (localArc.Type == PNObjectTypes.DiscreteInhibitorArc)
+                                    {
+                                        iArcsAmount += 1;
+                                        if (location.Tokens >= localArc.Weight)
+                                            activityCounter -= 1;
+                                    }
+                                }
+                                else if (loc.Type == PNObjectTypes.ContinuousLocation)  //---------- IF INCOME LOCATION IS CONTINUOUS
+                                {
+                                    cLocation = (ContinuousLocation)loc;
+                                    if (localArc.Type == PNObjectTypes.ContinuousFlowArc ||
+                                        localArc.Type == PNObjectTypes.ContinuousTestArc)
+                                    {
+                                        if (cLocation.Level >= localArc.Weight)
+                                            activityCounter += 1;
+                                    }
+                                    else if (localArc.Type == PNObjectTypes.ContinuousInhibitorArc)
+                                    {
+                                        iArcsAmount += 1;
+                                        if (cLocation.Level >= localArc.Weight)
+                                            activityCounter -= 1;
+                                    }
+                                }
+                            }
+                            #endregion
+
+                            // if all income location of the transition have tokens then the transition is active
+                            #region MAKE THE TRANSITION ACTIVE
+                            if (activityCounter == transition.IncomeLocationsID.Count - iArcsAmount)
+                            {
+                                transition.IsActive = true;
+
+                                activeTransitionAmount += 1;
+                                for (int k = 0; k < transition.IncomeLocationsID.Count; k++)     // ****** LOOP ABOUT ALL INCOME LOCATIONS AT THIS TRANSITION
+                                {
+                                    loc = PNObjectRepository.GetByKey(transition.IncomeLocationsID[k]) as Location;
+                                    localArc = PNObjectRepository.GetByKey(transition.IncomeArcsID[k]) as Arc3D;
+                                    //if (transition.DelayCounter.Equals(timer))
+                                    //MessageBox.Show(timer.ToString() + ";   " + transition.DelayCounter.ToString());
+                                    if (transition.DelayCounter <= timer)
+                                    {
+                                        //MessageBox.Show(transition.Name +" = "+ transition.DelayCounter.ToString());
+                                        if (loc.Type == PNObjectTypes.DiscreteLocation) //---------- IF INCOME LOCATION IS DISCRETE
+                                        {
+                                            location = (DiscreteLocation)loc;
+                                            if (localArc.Type == PNObjectTypes.DiscreteArc)// && transition.DelayCounter.Equals(timer))
+                                                if (location.Tokens >= localArc.Weight)
+                                                    location.Tokens -= (Int32)localArc.Weight;
+
+                                        }
+                                        else if (loc.Type == PNObjectTypes.ContinuousLocation) //---------- IF INCOME LOCATION IS CONTINUOUS
+                                        {
+                                            cLocation = (ContinuousLocation)loc;
+                                            if (localArc.Type == PNObjectTypes.ContinuousFlowArc)
+                                                if (cLocation.Level >= localArc.Weight)
+                                                    cLocation.Level -= localArc.Weight;
+                                        }
+                                    }
+
+                                }
+                            }
+                            #endregion
+                            else
+                                transition.IsActive = false;
+                        }
+                        else
+                            transition.IsActive = false; // if guard was False;
+
+                    }
+                    #endregion
+
+                    //********************* Check continuous transition *************************************
+                    #region CHECK CONTINUOUS TRANSITION
+                    else if (shape.Type == PNObjectTypes.ContinuousTransition)
+                    {
+                        cTransition = (ContinuousTransition)shape;
+                        if (cTransition.AllowSaveHistory == true)
+                            cTransition.AddNewRowOfHistory(simulationName, timer, cTransition.Expectance);
+
+                        if (cTransition.Guard == true)
+                        {
+                            int activityCounter = 0;
+                            int iArcsAmount = 0;        // quantity of income inghibitor arcs
+
+                            #region LOOP ABOUT ALL INCOME LOCATIONS AT THIS TRANSITION
+                            for (int j = 0; j < cTransition.IncomeLocationsID.Count; j++)
+                            {
+                                loc = PNObjectRepository.GetByKey(cTransition.IncomeLocationsID[j]) as Location;       // select j-locationID in i-transition
+                                localArc = PNObjectRepository.GetByKey(cTransition.IncomeArcsID[j]) as Arc3D;
+
+                                if (loc.Type == PNObjectTypes.DiscreteLocation) //------- IF INCOME LOCATION IS DISCRETE
+                                {
+                                    location = (DiscreteLocation)loc;
+                                    if (localArc.Type == PNObjectTypes.DiscreteTestArc)
+                                    {
+                                        if (location.Tokens >= localArc.Weight)
+                                            activityCounter += 1;
+                                    }
+                                    else if (localArc.Type == PNObjectTypes.DiscreteInhibitorArc)
+                                    {
+                                        iArcsAmount += 1;
+                                        if (location.Tokens >= localArc.Weight)
+                                            activityCounter -= 1;
+                                    }
+
+                                }
+                                else if (loc.Type == PNObjectTypes.ContinuousLocation)  //---------- IF INCOME LOCATION IS CONTINUOUS
+                                {
+                                    cLocation = (ContinuousLocation)loc;
+                                    if (localArc.Type == PNObjectTypes.ContinuousArc || localArc.Type == PNObjectTypes.ContinuousTestArc)
+                                    {
+                                        if (cLocation.Level >= cTransition.Expectance * localArc.Weight)
+                                            activityCounter += 1;
+                                    }
+                                    else if (localArc.Type == PNObjectTypes.ContinuousInhibitorArc)
+                                    {
+                                        iArcsAmount += 1;
+                                        if (cLocation.Level >= cTransition.Expectance * localArc.Weight)
+                                            activityCounter -= 1;
+                                    }
+                                }
+                            }
+                            #endregion
+
+                            // if all income location of the transition have tokens then the transition is active
+                            #region MAKE THE TRANSITION ACTIVE
+                            if (activityCounter == cTransition.IncomeLocationsID.Count - iArcsAmount)
+                            {
+                                cTransition.IsActive = true;
+                                activeTransitionAmount += 1;
+                                for (int k = 0; k < cTransition.IncomeLocationsID.Count; k++)        // get low tokens amount from locations of this transition
+                                {
+                                    loc = PNObjectRepository.GetByKey(cTransition.IncomeLocationsID[k]) as Location;
+                                    localArc = PNObjectRepository.GetByKey(cTransition.IncomeArcsID[k]) as Arc3D;
+
+                                    if (loc.Type == PNObjectTypes.ContinuousLocation) //---------- IF INCOME LOCATION IS CONTINUOUS
+                                    {
+                                        cLocation = (ContinuousLocation)loc;
+                                        if (localArc.Type == PNObjectTypes.ContinuousArc)
+                                            if (cLocation.Level >= localArc.Weight)
+                                                cLocation.Level -= cTransition.Expectance * localArc.Weight;
+                                    }
+                                }
+                            }
+                            #endregion
+                            else
+                                cTransition.IsActive = false;
+                        }
+                        else
+                            cTransition.IsActive = false;
+                    }
+                    #endregion
+                }
+                foreach (Arc3D arc in arcs)
+                {
+                    if (localArc.AllowSaveHistory == true)
+                        localArc.AddNewRowOfHistory(simulationName, timer, arc.Weight);
+                }
+                //------------------------------------------------
+                #endregion
+
+                #region Second step
+                if (activeTransitionAmount > 0)
+                {
+                    foreach (Shape3D shape in shapes)   // 2) Take accepted tokens from active transitions
+                    {
+
+                        #region DISCRETE LOCATION
+                        if (shape.Type == PNObjectTypes.DiscreteLocation)
+                        {
+                            location = (DiscreteLocation)shape;
+                            for (int j = 0; j < location.IncomeTransitionsID.Count; j++)
+                            {
+                                trans = PNObjectRepository.GetByKey(location.IncomeTransitionsID[j]) as Transition;
+                                localArc = PNObjectRepository.GetByKey(location.IncomeArcsID[j]) as Arc3D;
+                                transition = (DiscreteTransition)trans;
+
+                                if (transition.IsActive == true && transition.DelayCounter <= timer)
+                                    location.Tokens += (int)localArc.Weight;
+                            }
+                        }
+                        #endregion
+
+                        #region CONTINUOUS LOCATION
+                        else if (shape.Type == PNObjectTypes.ContinuousLocation)
+                        {
+                            cLocation = (ContinuousLocation)shape;
+                            for (int j = 0; j < cLocation.IncomeTransitionsID.Count; j++)
+                            {
+                                trans = PNObjectRepository.GetByKey(cLocation.IncomeTransitionsID[j]) as Transition;
+                                localArc = PNObjectRepository.GetByKey(cLocation.IncomeArcsID[j]) as Arc3D;
+
+                                if (trans.IsActive == true)
+                                {
+                                    if (trans.Type == PNObjectTypes.ContinuousTransition)
+                                        cLocation.Level += ((ContinuousTransition)trans).Expectance * localArc.Weight;
+                                    else if (trans.Type == PNObjectTypes.DiscreteTransition)
+                                    {
+                                        if (((DiscreteTransition)trans).DelayCounter <= timer)
+                                            cLocation.Level += localArc.Weight;
+                                    }
+                                }
+                            }
+                        }
+                        #endregion
+                    }
+                    foreach (Shape3D shape in shapes)
+                    {
+                        if (shape.Type == PNObjectTypes.DiscreteTransition)
+                        {
+                            if (((DiscreteTransition)shape).DelayCounter <= timer)
+                                ((DiscreteTransition)shape).DelayCounter += ((DiscreteTransition)shape).Delay;
+                        }
+                    }
+                }
+                #endregion
+
+                previousTimer = timer;
+                timer += minTimeInterval;
+
+                if (timer > finishTime)
+                    break;
+
+            }
+            while (activeTransitionAmount > 0);
+
+            mainWnd.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate()
+            {
+                mainWnd.border.BorderBrush = new SolidColorBrush(Color.FromRgb(63, 63, 63));
+                mainWnd.showAnimPanelBtn.IsEnabled = true;
+                mainWnd.simWnd.simulationProgress.Value = finishTime;
+                mainWnd.timeTB.Text = timer.ToString();
+
+                foreach (PNObject pnObject in PNObjectRepository.PNObjects.Values)
+                {
+                    string valueInCanvas = PNObjectRepository.PNObjects.DoubleValues[pnObject.ID].ToString();
+
+                    if (pnObject.Type == PNObjectTypes.DiscreteLocation ||
+                        pnObject.Type == PNObjectTypes.DiscreteTransition ||
+                        pnObject.Type == PNObjectTypes.DiscreteArc ||
+                        pnObject.Type == PNObjectTypes.DiscreteInhibitorArc ||
+                        pnObject.Type == PNObjectTypes.DiscreteTestArc)
+                    {
+                        pnObject.ValueInCanvas.Text = valueInCanvas;
+                    }
+                    else
+                    {
+                        pnObject.ValueInCanvas.Text = String.Format("{0:F3}", valueInCanvas);
+                    }
+                }
+                updateUiHandler(this, null);
+                DialogWindow.Alert(Messages.Default.SimulationFinished);
+            });
+
+        }
+        #endregion
+
+        #region IUiUpdate Members
+
+        public event UpdateUi UpdateUi
+        {
+            add
+            {
+                updateUiHandler += value;
+            }
+            remove
+            {
+                updateUiHandler -= value;
+            }
+        }
+
+        #endregion
+    }
+
+}

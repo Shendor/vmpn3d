@@ -1,0 +1,317 @@
+﻿<Window x:Class="PNCreator.Modules.FormulaBuilder.FormulaBuilder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Formula builder" Loaded="Window_Loaded" Background="Transparent"
+        WindowStyle="None" Unloaded="Window_Unloaded" Width="640" WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True" Icon="/Resources;component/Content/Images/calculator.png" >
+
+    <!--===================================================-->
+    <Grid>
+        <Border Style="{StaticResource SemiTransparentBorder}"/>
+
+        <Grid Margin="15">
+            <Grid.RowDefinitions >
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.RowSpan="3" Style="{StaticResource ShadowedBorder}"/>
+
+            <Border Grid.Row="0" Style="{StaticResource HeaderBorder}">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="checkBtn" Margin="0,0,5,0" Click="OtherButton_Click" Style="{StaticResource DefaultButtonStyle}">
+                        <Button.ToolTip>
+                            <ToolTip Content="Check formula" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/help.png" />
+                    </Button>
+                    <Button x:Name="clearBtn" Margin="0,0,5,0" Click="OtherButton_Click" Style="{StaticResource DefaultButtonStyle}">
+                        <Button.ToolTip>
+                            <ToolTip Content="Clear formula" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/trash.png" />
+                    </Button>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="1" Style="{StaticResource ViewportBorder}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="formulaTB" Grid.Row="0" FontSize="24" Margin="5"  />
+
+                    <!--******************* functions and didgits *************************-->
+                    <Grid Grid.Row="1" Margin="0,0,0,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition ></ColumnDefinition>
+                            <ColumnDefinition ></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <!-- Digits -->
+                        <Border Grid.Column="0"  Margin="2,2,2,0"  Style="{StaticResource InternContentBorder}" />
+                        <Grid Grid.Column="0" Margin="8,10,5,5" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="61" />
+                                <ColumnDefinition Width="61" />
+                                <ColumnDefinition Width="61" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="40" />
+                            </Grid.RowDefinitions>
+                            <Button Grid.Row="0" Grid.Column="0" Content="7" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}" />
+                            <Button Grid.Row="0" Grid.Column="1" Content="8" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}" />
+                            <Button Grid.Row="0" Grid.Column="2" Content="9" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}" />
+                            <Button Grid.Row="1" Grid.Column="0" Content="4" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}"/>
+                            <Button Grid.Row="1" Grid.Column="1" Content="5" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}"/>
+                            <Button Grid.Row="1" Grid.Column="2" Content="6" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}"/>
+                            <Button Grid.Row="2" Grid.Column="0" Content="1" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}"/>
+                            <Button Grid.Row="2" Grid.Column="1" Content="2" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}"/>
+                            <Button Grid.Row="2" Grid.Column="2" Content="3" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}"/>
+                            <Button Grid.Row="3" Grid.Column="0" Content="0" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}"/>
+                            <Button Grid.Row="3" Grid.Column="1" Content="." Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}"/>
+                        </Grid>
+                        <!-- Functions -->
+                        <Border Grid.Column="1" Margin="2,2,2,0"  Style="{StaticResource InternContentBorder}" />
+                        <Grid Grid.Column="1" Margin="8,10,5,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="61" />
+                                <ColumnDefinition Width="61" />
+                                <ColumnDefinition Width="61" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="40" />
+                            </Grid.RowDefinitions>
+                            <Button Grid.Column="0" Content="+" Margin="2" Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Addition</Button.ToolTip>
+                            </Button>
+                            <Button Grid.Column="1" Content="-" Margin="2" Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Subtraction</Button.ToolTip>
+                            </Button>
+                            <Button Grid.Column="2" Content="*" Margin="2" Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Multiplication</Button.ToolTip>
+                            </Button>
+                            <Button Grid.Row="1" Grid.Column="0" Content="/" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Division</Button.ToolTip>
+                            </Button>
+                            <Button Grid.Row="1" Grid.Column="1" Content="=" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Assignment (a single sign) / Equal (a double sign)</Button.ToolTip>
+                            </Button>
+                            <Button Grid.Row="1" Grid.Column="2" Content="!" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Negation</Button.ToolTip>
+                            </Button>
+                            <Button Grid.Row="2" Grid.Column="0" Content="||" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Logic OR</Button.ToolTip>
+                            </Button>
+                            <Button Grid.Row="2" Grid.Column="1" Content="&amp;&amp;" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Logic AND</Button.ToolTip>
+                            </Button>
+                            <Button Grid.Row="2" Grid.Column="2" Content=">" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Higher</Button.ToolTip>
+                            </Button>
+                            <Button Grid.Row="3" Grid.Column="0" Content="&lt;" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Less</Button.ToolTip>
+                            </Button>
+                            <Button Grid.Row="3" Grid.Column="1" Content="(" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Opening bracket</Button.ToolTip>
+                            </Button>
+                            <Button Grid.Row="3" Grid.Column="2" Content=")" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Closing bracket</Button.ToolTip>
+                            </Button>
+                            <Button Grid.Row="4" Grid.Column="0" Content="," Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Virgule</Button.ToolTip>
+                            </Button>
+                            <Button Grid.Row="4" Grid.Column="1" Content=":" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>:</Button.ToolTip>
+                            </Button>
+                            <Button Grid.Row="4" Grid.Column="2" Content="?" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>?</Button.ToolTip>
+                            </Button>
+                            <Button x:Name="trueBtn" Grid.Row="5" Grid.Column="0" Content="true" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Value 'True'</Button.ToolTip>
+                            </Button>
+                            <Button x:Name="falseBtn" Grid.Row="5" Grid.Column="1" Content="false" Margin="2"  Click="Buttons_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Value 'False'</Button.ToolTip>
+                            </Button>
+                            <Button x:Name="geometryBtn" Grid.Row="5" Grid.Column="2" Content="Geom." Margin="2" Click="OtherButton_Click" Style="{StaticResource OtherButtonStyle}">
+                                <Button.ToolTip>Paste a geometry result</Button.ToolTip>
+                            </Button>
+                        </Grid>
+                        <!-- List -->
+                        <Border Grid.Column="2" Margin="2,2,2,0" Style="{StaticResource InternContentBorder}" />
+                        <StackPanel Grid.Column="2" Margin="5,10,5,5">
+                            <Expander Header="Objects" Margin="1" FontSize="16">
+                                <StackPanel>
+                                    <TextBox x:Name="objectNameTB" Margin="2" KeyDown="objectNameTB_KeyDown"/>
+                                    <ListBox x:Name="objectsList" Height="185" Margin="2" MouseDoubleClick="objectsList_MouseDoubleClick" />
+                                </StackPanel>
+                            </Expander>
+
+                            <Expander Header="Math functions" Margin="1"  FontSize="16">
+                                <StackPanel >
+                                    <ListBox x:Name="functionsList" Margin="1.4" Height="215" MouseDoubleClick="functionsList_MouseDoubleClick">
+                                        <ListBoxItem Content="Abs">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Absolute value: Abs('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Sin">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Sinus: Sin('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Cos">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Cosine: Cos('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Tan">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Tangent: Tan('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Asin">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Arc sine: Asin('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Acos">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Arc cosine: Acos('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Atan">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Arc tangent: Atan('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Sinh">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Hyperbolic sinus: Sinh('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Cosh">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Hyperbolic cosine: Cosh('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Tanh">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Hyperbolic tangent: Tanh('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Exp">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Exponent: Exp('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Pow">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Power: Pow('Value','Power')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Sqrt">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Square root: Sqrt('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Log">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Logarithm: Log('Value') or Log('Value','Basis')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Log10">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Decimal logarithm: Log10('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Min">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Minimum: Min('X1,X2,X3,....,Xn')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Max">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Maximum: Max('X1,X2,X3,....,Xn')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="PI">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="PI()" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="E">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="E()" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Ceiling">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Ceiling('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Floor">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Floor('Value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="IEEERemainder">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="IEEERemainder('Divident','Divisor')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Round">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Round('value') or Round('value','decimal')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Truncate">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Truncate('value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                        <ListBoxItem Content="Sign">
+                                            <ListBoxItem.ToolTip>
+                                                <ToolTip Content="Sign('value')" />
+                                            </ListBoxItem.ToolTip>
+                                        </ListBoxItem>
+                                    </ListBox>
+                                </StackPanel>
+                            </Expander>
+                        </StackPanel>
+
+                    </Grid>
+                </Grid>
+            </Border>
+
+            <!--****************** Footer *******************-->
+            <Border x:Name="naBorder" VerticalAlignment="Top" Grid.Row="2" Style="{StaticResource FooterBorder}">
+                <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,0,7,2" HorizontalAlignment="Right">
+                    <Button x:Name="okBtn" Margin="2" Click="OtherButton_Click" >
+                        <Button.ToolTip>
+                            <ToolTip Content="Accept" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/ok.png" />
+                    </Button>
+                    <Button x:Name="cancelBtn" Margin="2"  Click="OtherButton_Click">
+                        <Button.ToolTip>
+                            <ToolTip Content="Cancel" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/close.png" />
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+
+</Window>

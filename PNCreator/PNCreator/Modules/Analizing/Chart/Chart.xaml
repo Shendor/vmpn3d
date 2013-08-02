@@ -1,0 +1,163 @@
+﻿<Window x:Class="PNCreator.Modules.Analizing.Chart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Microsoft.Windows.Shell"
+        xmlns:chart="clr-namespace:ChartControl;assembly=ChartControl"
+        Title="FunctionChart" MinHeight="400" Height="795" Width="1036" Background="Transparent" 
+        WindowState="Maximized"
+        Style="{StaticResource WindowStyle}" Icon="/Resources;component/Content/Images/chart_line.png">
+    <Window.CommandBindings>
+        <CommandBinding x:Name="closeCommand" Command="{x:Static shell:SystemCommands.CloseWindowCommand}" Executed="OnWindowClose"/>
+        <CommandBinding x:Name="maximizeCommand" Command="{x:Static shell:SystemCommands.MaximizeWindowCommand}" Executed="OnWindowMaximize"/>
+        <CommandBinding x:Name="minimizeCommand" Command="{x:Static shell:SystemCommands.MinimizeWindowCommand}" Executed="OnWindowMinimize"/>
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition />
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <!-- =========================================================== TOOL BAR =======================================================================-->
+        <Border Grid.Row="0" Style="{StaticResource HeaderBorder}">
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" >
+                <Button x:Name="enterAxisBtn" Margin="7,0,0,0" Style="{StaticResource DefaultButtonStyle}">
+                    <Button.Triggers>
+                        <EventTrigger SourceName="enterAxisBtn" RoutedEvent="Button.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                    Storyboard.TargetName="addChartPanel"
+                                    Storyboard.TargetProperty="Height" From="0" To="220" Duration="0:0:0.4" />
+                                    <DoubleAnimation
+                                    Storyboard.TargetName="addPanelTitle"
+                                    Storyboard.TargetProperty="Opacity" From="0" To="1"  BeginTime="0:0:0.4" Duration="0:0:0.4" />
+                                    <DoubleAnimation
+                                    Storyboard.TargetName="axisesPanel"
+                                    Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.4" From="0" To="1" Duration="0:0:0.4" />
+                                    <DoubleAnimation
+                                    Storyboard.TargetName="buttonsPanel"
+                                    Storyboard.TargetProperty="Opacity" BeginTime="0:0:0.4"  From="0" To="1" Duration="0:0:0.4" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                    <Button.ToolTip>
+                        <ToolTip Content="Add chart" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/plus.png" />
+                </Button>
+                <Button x:Name="exportBtn" Margin="7,0,0,0" Click="ButtonsClick" Style="{StaticResource DefaultButtonStyle}">
+                    <Button.ToolTip>
+                        <ToolTip Content="Export the chart to image file" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/save2.png" />
+                </Button>
+
+                <Button x:Name="printBtn" Margin="7,0,0,0" Click="ButtonsClick" Style="{StaticResource DefaultButtonStyle}">
+                    <Button.ToolTip>
+                        <ToolTip Content="Print chart" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/print.png" />
+                </Button>
+            </StackPanel>
+        </Border>
+       
+
+
+        <!--============================================================ MAIN SPACE ===================================================================-->
+        <Border Grid.Row="1" Style="{StaticResource ViewportBorder}">
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <!-- ================================================ CHART ===================================================-->
+                <chart:Chart x:Name="chart" LineThickness="0.8"
+                             LineColor="DodgerBlue" Background="Transparent" Grid.RowSpan="2">
+                </chart:Chart>
+                <!-- =========================================== CHART ADDING PANEL ===========================================-->
+                <Grid x:Name="addChartPanel" Grid.Row="0" Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition />
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.RowSpan="2" Style="{StaticResource ViewportBorder}" />
+                    <Border Grid.Row="3" Style="{StaticResource FooterBorder}" />
+                    <TextBlock x:Name="addPanelTitle" Text="Adding new chart mode" Grid.Row="0" Margin="5" FontSize="16" Opacity="0" TextAlignment="Center"/>
+
+                    <StackPanel x:Name="axisesPanel"  Grid.Row="1" Opacity="0" Margin="25,10,25,5" Orientation="Horizontal">
+                        <StackPanel Width="120" Margin="10,0,10,0">
+                            <TextBlock Text="Axis Х:"  />
+                            <ComboBox Margin="0,5,0,0" x:Name="axisXCB" Height="25" 
+                                     DisplayMemberPath="Name"
+                                      SelectionChanged="ObjectsListSelectionChanged" />
+                            <TextBlock Text="Simulation:"  />
+                            <ComboBox Margin="0,5,0,0" x:Name="simulationXList" Height="25"  />
+                            <TextBlock Text="Value:"  />
+                            <ComboBox Margin="0,5,0,0" x:Name="valueXList" Height="25" SelectedIndex="0">
+                                <ComboBoxItem Content="Time" />
+                                <ComboBoxItem Content="Value" />
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Width="120" Margin="10,0,10,0">
+                            <TextBlock Text="Axis Y:" />
+                            <ComboBox x:Name="axisYCB" Margin="0,5,0,0" Height="25"  DisplayMemberPath="Name"
+                                      SelectionChanged="ObjectsListSelectionChanged"/>
+                            <TextBlock Text="Simulation:"  />
+                            <ComboBox Margin="0,5,0,0" x:Name="simulationYList" Height="25"  />
+                            <TextBlock Text="Value:"  />
+                            <ComboBox Margin="0,5,0,0" x:Name="valueYList" Height="25" SelectedIndex="0">
+                                <ComboBoxItem Content="Time" />
+                                <ComboBoxItem Content="Value" />
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+                    
+                    <StackPanel x:Name="buttonsPanel" Opacity="0" Orientation="Horizontal" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Center">
+                        <Button x:Name="addChartBtn" Margin="2" Click="ButtonsClick">
+                            <Button.ToolTip>
+                                <ToolTip Content="Build" />
+                            </Button.ToolTip>
+                            <Image Source="/Resources;component/Content/Images/ok.png" />
+                        </Button>
+
+                        <Button x:Name="cancelBtn" Margin="2">
+                            <Button.Triggers>
+                                <EventTrigger SourceName="cancelBtn" RoutedEvent="Button.Click">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation
+                                    Storyboard.TargetName="addPanelTitle"
+                                    Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.4" />
+                                            <DoubleAnimation
+                                    Storyboard.TargetName="axisesPanel"
+                                    Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.4" />
+                                            <DoubleAnimation
+                                    Storyboard.TargetName="buttonsPanel"
+                                    Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.4" />
+                                            <DoubleAnimation
+                                    Storyboard.TargetName="addChartPanel"
+                                    Storyboard.TargetProperty="Height" BeginTime="0:0:0.4" From="220" To="0" Duration="0:0:0.4" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Button.Triggers>
+                            <Button.ToolTip>
+                                <ToolTip Content="Cancel" />
+                            </Button.ToolTip>
+                            <Image Source="/Resources;component/Content/Images/close.png" />
+                        </Button>
+                    </StackPanel>
+
+                </Grid>
+
+            </Grid>
+        </Border>
+
+        <Border x:Name="naBorder" Height="30" VerticalAlignment="Top" Grid.Row="2" Style="{StaticResource FooterBorder}">
+        </Border>
+    </Grid>
+</Window>

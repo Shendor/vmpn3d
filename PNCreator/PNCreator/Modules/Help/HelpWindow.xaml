@@ -1,0 +1,44 @@
+﻿<main:BaseWindow x:Class="PNCreator.Modules.Help.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:main="clr-namespace:PNCreator.Modules.Main"
+                                   AllowsTransparency="True" Background="Transparent"
+        Title="Simulation" Height="360" Width="578" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid MouseLeftButtonDown="WindowMouseLeftButtonDown">
+        <Border Grid.Row="0" Style="{StaticResource SemiTransparentBorder}"/>
+        <Grid Margin="15" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition />
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.RowSpan="3" Style="{StaticResource ShadowedBorder}"/>
+
+            <Border Style="{StaticResource HeaderBorder}" >
+            </Border>
+
+            <Border Grid.Row="1" Style="{StaticResource ViewportBorder}">
+                <WrapPanel>
+                    <Button Style="{StaticResource DefaultButtonStyle}">Item 1</Button>
+                    <Button Style="{StaticResource DefaultButtonStyle}">Item 1</Button>
+                    <Button Style="{StaticResource DefaultButtonStyle}">Item 1</Button>
+                    <Button Style="{StaticResource DefaultButtonStyle}">Item 1</Button>
+                    <Button Style="{StaticResource DefaultButtonStyle}">Item 1</Button>
+                    <Button Style="{StaticResource DefaultButtonStyle}">Item 1</Button>
+                    <Button Style="{StaticResource DefaultButtonStyle}">Item 1</Button>
+                    <Button Style="{StaticResource DefaultButtonStyle}">Item 1</Button>
+                    <Button Style="{StaticResource DefaultButtonStyle}">Item 1</Button>
+                    <Button Style="{StaticResource DefaultButtonStyle}">Item 1</Button>
+                    <Button Style="{StaticResource DefaultButtonStyle}">Item 1</Button>
+                    <Button Style="{StaticResource DefaultButtonStyle}">Item 1</Button>
+                    <Button Style="{StaticResource DefaultButtonStyle}">Item 1</Button>
+                    <Button Style="{StaticResource DefaultButtonStyle}">Item 1</Button>
+                </WrapPanel>
+            </Border>
+
+            <Border VerticalAlignment="Top" Grid.Row="2" Height="30" Style="{StaticResource FooterBorder}" >
+
+            </Border>
+        </Grid>
+    </Grid>
+</main:BaseWindow>

@@ -1,0 +1,12 @@
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Release\AddMeshWindow.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Release\App.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Release\AddMeshWindow.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Release\App.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Release\MeshImporter_MarkupCompile.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Release\MainWindow.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Release\MainWindow.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Release\MeshImporter.g.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Release\MeshImporter.Properties.Resources.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Release\GenerateResource.write.1.tlog

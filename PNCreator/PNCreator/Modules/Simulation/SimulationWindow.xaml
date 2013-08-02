@@ -1,0 +1,61 @@
+﻿<simulation:BaseSimulationWindow x:Class="PNCreator.Modules.Simulation.SimulationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:simulation="clr-namespace:PNCreator.Modules.Simulation"
+        xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Microsoft.Windows.Shell"
+        xmlns:numericBox="clr-namespace:NumericBox;assembly=NumericBox"
+        AllowsTransparency="True" Background="Transparent"
+        Title="Simulation" Height="150" Width="503" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid MouseLeftButtonDown="WindowMouseLeftButtonDown">
+        <Border Grid.Row="0" Style="{StaticResource SemiTransparentBorder}"/>
+        <Grid Margin="15" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition />
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.RowSpan="3" Style="{StaticResource ShadowedBorder}"/>
+
+            <Border Style="{StaticResource HeaderBorder}" >
+                <simulation:SimulationPlayerToolbar StartSimulation="StartSimulation" StopSimulation="StopSimulation"/>
+            </Border>
+
+            <Border Grid.Row="1" Style="{StaticResource ViewportBorder}">
+                <ProgressBar x:Name="simulationProgressBar" Minimum="0"/>
+            </Border>
+
+            <Border VerticalAlignment="Top" Grid.Row="2" Height="30" Style="{StaticResource FooterBorder}" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Popup x:Name="sectorOptionPanel" AllowsTransparency="True" Placement="MousePoint"
+                            IsOpen="{Binding IsChecked, ElementName=endTimeBtn}">
+                        <Border Style="{StaticResource LightContentBorder}" Grid.Column="1" Grid.Row="0" 
+                            VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="5" >
+                            <StackPanel Orientation="Horizontal" Margin="5,2,5,2" >
+                                <TextBlock Text="End time" Margin="2"/>
+                                <numericBox:NumericBox x:Name="endTimeNumericBox" Value="0" Minimum="0" Width="100">
+                                    <numericBox:NumericBox.ToolTip>
+                                        <TextBlock Text="End simulation time"/>
+                                    </numericBox:NumericBox.ToolTip>
+                                </numericBox:NumericBox>
+                            </StackPanel>
+                        </Border>
+                    </Popup>
+                    
+                    <ToggleButton x:Name="endTimeBtn" Margin="5,2,5,2" Style="{StaticResource OtherButtonStyle}">
+                        <ToggleButton.ToolTip>
+                            <ToolTip Content="Set animation speed" />
+                        </ToggleButton.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/pencil.png" />
+                    </ToggleButton>
+                    <Button x:Name="minimizeBtn" Margin="5,2,5,2" Command="shell:SystemCommands.MinimizeWindowCommand">
+                        <Button.ToolTip>
+                            <ToolTip Content="Hide" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/minus.png" />
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</simulation:BaseSimulationWindow>

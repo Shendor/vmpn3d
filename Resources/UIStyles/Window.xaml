@@ -1,0 +1,175 @@
+<ResourceDictionary 
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Microsoft.Windows.Shell">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Shared.xaml" />
+        <ResourceDictionary Source="Border.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="windowCommandButtons" TargetType="Button">
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="MinWidth" Value="25" />
+        <Setter Property="MinHeight" Value="25" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Border" CornerRadius="1" BorderThickness="1" Background="{StaticResource ButtonBackgroundBrush}" 
+                            BorderBrush="{StaticResource BorderBrush}">
+                        <ContentPresenter Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource HighlightBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource PressedBrush}" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource DisabledBackgroundBrush}" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource DisabledBorderBrush}" />
+                            <Setter Property="Foreground" Value="{StaticResource DisabledForegroundBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="WindowStyle" TargetType="Window">
+        <Setter Property="shell:WindowChrome.WindowChrome">
+            <Setter.Value>
+                <shell:WindowChrome GlassFrameThickness="-1" ResizeBorderThickness="4"
+                                        CaptionHeight="28" CornerRadius="0" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Window">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Row="0" Style="{StaticResource WindowHeaderBorder}" />
+
+                        <Border Grid.Row="1" Style="{StaticResource WindowContentBorder}" />
+
+                        <Border BorderThickness="1,0,1,1" Grid.Row="1" Background="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}, Path=Background}"
+                                BorderBrush="{StaticResource BorderBrush}" Opacity="1" CornerRadius="0,0,2,2" >
+
+                        </Border>
+
+
+                        <Grid Grid.Row="0">
+                            <StackPanel Orientation="Horizontal" Margin="10,7,0,0">
+                                <Image Source="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Icon}" Width="20" Height="20" HorizontalAlignment="Left"
+                                               shell:WindowChrome.IsHitTestVisibleInChrome="True"/>
+
+                                <TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title}" Margin="10,0,0,0" 
+                                               Foreground="{StaticResource LightTextBrush}" VerticalAlignment="Center" />
+
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,5,5,0" VerticalAlignment="Center">
+                                <Button Name="MinimizeBtn" shell:WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource windowCommandButtons}" 
+                                            Margin="2,0,0,0"
+                                             Command="{x:Static shell:SystemCommands.MinimizeWindowCommand}"
+                                            CommandTarget="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}, Path=TemplatedParent}">
+                                    <Image Source="/Resources;component/Content/Images/minus.png" Margin="4" />
+                                </Button>
+
+                                <Button shell:WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource windowCommandButtons}"
+                                            Margin="2,0,0,0"
+                                             Command="{x:Static shell:SystemCommands.MaximizeWindowCommand}"
+                                            CommandTarget="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}, Path=TemplatedParent}">
+                                    <Image Source="/Resources;component/Content/Images/rectangle.png" Margin="4" />
+
+                                </Button>
+
+                                <Button shell:WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource windowCommandButtons}" 
+                                            Margin="2,0,0,0"
+                                             Command="{x:Static shell:SystemCommands.CloseWindowCommand}"
+                                            CommandTarget="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}, Path=TemplatedParent}">
+                                    <Image Source="/Resources;component/Content/Images/close.png" Margin="4" />
+                                </Button>
+
+                            </StackPanel>
+                        </Grid>
+
+                        <ContentPresenter Content="{TemplateBinding Content}" Grid.Row="1" Margin="0"/>
+                    </Grid>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SmallWindowStyle" TargetType="Window">
+        <Setter Property="shell:WindowChrome.WindowChrome">
+            <Setter.Value>
+                <shell:WindowChrome GlassFrameThickness="-1" ResizeBorderThickness="0"
+                                        CaptionHeight="28" CornerRadius="0" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Window">
+                    <Grid>
+                        <ContentPresenter Content="{TemplateBinding Content}" />
+                    </Grid>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="SecondaryWindowTemplate" TargetType="{x:Type Window}">
+
+        <Grid Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+
+            <Border Style="{StaticResource SemiTransparentBorder}"/>
+
+
+            <Border Grid.RowSpan="3" Style="{StaticResource ShadowedBorder}"/>
+
+            <Border Grid.Row="0" Style="{StaticResource HeaderBorder}">
+                <ContentPresenter />
+            </Border>
+
+            <Border Grid.Row="1" Style="{StaticResource ViewportBorder}">
+                <ContentPresenter />
+            </Border>
+
+            <Border x:Name="naBorder" VerticalAlignment="Top" Grid.Row="2" Style="{StaticResource FooterBorder}">
+                <StackPanel Orientation="Horizontal" Margin="0,0,7,2" HorizontalAlignment="Right">
+
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <ControlTemplate.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ResizeMode" Value="NoResize"/>
+                    <Condition Property="WindowStyle" Value="Normal"/>
+                </MultiTrigger.Conditions>
+            </MultiTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+</ResourceDictionary>

@@ -1,0 +1,97 @@
+C:\Users\Shandor\Documents\Visual Studio 2008\Projects\Pro WPF\Chapter23\3DTools\bin\Debug\3DTools.dll
+C:\Users\Shandor\Documents\Visual Studio 2008\Projects\Pro WPF\Chapter23\3DTools\bin\Debug\3DTools.pdb
+C:\Users\Shandor\Documents\Visual Studio 2008\Projects\Pro WPF\Chapter23\3DTools\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Shandor\Documents\Visual Studio 2008\Projects\Pro WPF\Chapter23\3DTools\obj\Debug\Trackport3D.baml
+C:\Users\Shandor\Documents\Visual Studio 2008\Projects\Pro WPF\Chapter23\3DTools\obj\Debug\Trackport3D.g.cs
+C:\Users\Shandor\Documents\Visual Studio 2008\Projects\Pro WPF\Chapter23\3DTools\obj\Debug\3DTools_MarkupCompile.cache
+C:\Users\Shandor\Documents\Visual Studio 2008\Projects\Pro WPF\Chapter23\3DTools\obj\Debug\3DTools.g.resources
+C:\Users\Shandor\Documents\Visual Studio 2008\Projects\Pro WPF\Chapter23\3DTools\obj\Debug\_3DTools.Properties.Resources.resources
+C:\Users\Shandor\Documents\Visual Studio 2008\Projects\Pro WPF\Chapter23\3DTools\obj\Debug\3DTools.csproj.GenerateResource.Cache
+C:\Users\Shandor\Documents\Visual Studio 2008\Projects\Pro WPF\Chapter23\3DTools\obj\Debug\3DTools.dll
+C:\Users\Shandor\Documents\Visual Studio 2008\Projects\Pro WPF\Chapter23\3DTools\obj\Debug\3DTools.pdb
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\bin\Debug\3DTools.dll
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\bin\Debug\3DTools.pdb
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Debug\ResolveAssemblyReference.cache
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Debug\Trackport3D.baml
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Debug\Trackport3D.g.cs
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Debug\3DTools_MarkupCompile.cache
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Debug\3DTools.g.resources
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Debug\_3DTools.Properties.Resources.resources
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Debug\3DTools.dll
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Debug\3DTools.pdb
+D:\Program files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\3DTools\bin\Debug\3DTools.dll
+D:\Program files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\3DTools\bin\Debug\3DTools.pdb
+D:\Program files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\3DTools\obj\Debug\ResolveAssemblyReference.cache
+D:\Program files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\3DTools\obj\Debug\Trackport3D.baml
+D:\Program files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\3DTools\obj\Debug\Trackport3D.g.cs
+D:\Program files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\3DTools\obj\Debug\3DTools_MarkupCompile.cache
+D:\Program files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\3DTools\obj\Debug\3DTools.g.resources
+D:\Program files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\3DTools\obj\Debug\_3DTools.Properties.Resources.resources
+D:\Program files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\3DTools\obj\Debug\3DTools.csproj.GenerateResource.Cache
+D:\Program files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\3DTools\obj\Debug\3DTools.dll
+D:\Program files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\3DTools\obj\Debug\3DTools.pdb
+D:\Program Files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\Project3D\3DTools\bin\Debug\3DTools.dll
+D:\Program Files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\Project3D\3DTools\bin\Debug\3DTools.pdb
+D:\Program Files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\Project3D\3DTools\obj\Debug\ResolveAssemblyReference.cache
+D:\Program Files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\Project3D\3DTools\obj\Debug\Trackport3D.baml
+D:\Program Files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\Project3D\3DTools\obj\Debug\Trackport3D.g.cs
+D:\Program Files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\Project3D\3DTools\obj\Debug\3DTools_MarkupCompile.cache
+D:\Program Files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\Project3D\3DTools\obj\Debug\3DTools.g.resources
+D:\Program Files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\Project3D\3DTools\obj\Debug\_3DTools.Properties.Resources.resources
+D:\Program Files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\Project3D\3DTools\obj\Debug\3DTools.csproj.GenerateResource.Cache
+D:\Program Files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\Project3D\3DTools\obj\Debug\3DTools.dll
+D:\Program Files\Microsoft Visual Studio 9.0\Projects\C# projects\WPF\Project3D\3DTools\obj\Debug\3DTools.pdb
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Debug\ResGen.read.1.tlog
+D:\Manuals\WPF\Pro WPF\Chapter23\3DTools\obj\Debug\ResGen.write.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\bin\Debug\3DTools.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\bin\Debug\3DTools.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\ResolveAssemblyReference.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\Trackport3D.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\Trackport3D.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\3DTools_MarkupCompile.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\3DTools.g.resources
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\_3DTools.Properties.Resources.resources
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\ResGen.read.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\ResGen.write.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\3DTools.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\3DTools.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\bin\Debug\3DTools.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\bin\Debug\3DTools.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Debug\Trackport3D.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Debug\Trackport3D.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Debug\3DTools_MarkupCompile.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Debug\3DTools.g.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Debug\_3DTools.Properties.Resources.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Debug\3DTools.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Debug\3DTools.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Debug\ResGen.read.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\3DTools\obj\Debug\ResGen.write.1.tlog
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\bin\Debug\3DTools.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\bin\Debug\3DTools.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\ResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\Trackport3D.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\Trackport3D.g.cs
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\3DTools_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\3DTools.g.resources
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\_3DTools.Properties.Resources.resources
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\ResGen.read.1.tlog
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\ResGen.write.1.tlog
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\3DTools.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Debug\3DTools.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\3DTools\bin\Debug\3DTools.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\3DTools\bin\Debug\3DTools.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\3DTools\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\3DTools\obj\Debug\Trackport3D.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\3DTools\obj\Debug\Trackport3D.g.cs
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\3DTools\obj\Debug\3DTools_MarkupCompile.cache
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\3DTools\obj\Debug\3DTools.g.resources
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\3DTools\obj\Debug\_3DTools.Properties.Resources.resources
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\3DTools\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\3DTools\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\3DTools\obj\Debug\3DTools.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\3DTools\obj\Debug\3DTools.pdb

@@ -1,0 +1,78 @@
+<ResourceDictionary 
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" >
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Shared.xaml" />
+        <ResourceDictionary Source="Border.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- SimpleStyles: Expander -->
+
+    <Style  x:Key="ExpanderToggleButton" TargetType="ToggleButton">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border Name="Border" CornerRadius="2" Background="{StaticResource ButtonBackgroundBrush}" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1">
+                        <Path Height="10" x:Name="Arrow" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,7,0" Width="10"  
+                                  Fill="{StaticResource PathBrush}" Stretch="Fill" Stroke="{StaticResource BorderBrush}"
+                                  Data="M0.5,0.5 L9.5,0.5 L5.0625,9.5 L5.0625,9.5 z" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                            <Setter TargetName="Border" Property="Background"  Value="{StaticResource HighlightBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource PressedBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="Arrow" Property="Data"  Value="M 0 4 L 4 0 L 8 4 Z" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="2,2,0,0" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource DisabledBackgroundBrush}" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource DisabledBorderBrush}" />
+                            <Setter Property="Foreground" Value="{StaticResource DisabledForegroundBrush}"/>
+                            <Setter TargetName="Arrow" Property="Fill" Value="{StaticResource DisabledForegroundBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+
+    <Style TargetType="Expander">
+        <Setter Property="Foreground" Value="{StaticResource DarkTextBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Expander">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Name="ContentRow" Height="0"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+
+                            <ToggleButton x:Name="ToggleButton" Foreground="Yellow" OverridesDefaultStyle="True" Style="{StaticResource ExpanderToggleButton}"
+                                          IsChecked="{Binding Path=IsExpanded,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <ContentPresenter Margin="4" HorizontalAlignment="Center" ContentSource="Header" RecognizesAccessKey="True" IsHitTestVisible="False"/>
+                        </Grid>
+
+                        <Border Name="Content" Grid.Row="1" Style="{StaticResource ContentBorder}">
+                            <ContentPresenter Margin="4" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger SourceName="ToggleButton" Property="ToggleButton.IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{StaticResource LightTextBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsExpanded" Value="True">
+                            <Setter TargetName="ContentRow" Property="Height" Value="{Binding ElementName=Content,Path=DesiredHeight}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

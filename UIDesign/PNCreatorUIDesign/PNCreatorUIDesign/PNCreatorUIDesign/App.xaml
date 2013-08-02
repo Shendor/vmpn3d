@@ -1,0 +1,27 @@
+﻿<Application x:Class="PNCreatorUIDesign.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="UIStyles\Shared.xaml" />
+                <ResourceDictionary Source="UIStyles\Button.xaml" />
+                <ResourceDictionary Source="UIStyles\CheckBox.xaml" />
+                <ResourceDictionary Source="UIStyles\ComboBox.xaml" />
+                <ResourceDictionary Source="UIStyles\ListBox.xaml" />
+                <ResourceDictionary Source="UIStyles\Menu.xaml" />
+                <ResourceDictionary Source="UIStyles\ScrollBar.xaml" />
+                <ResourceDictionary Source="UIStyles\Expander.xaml" />
+                <ResourceDictionary Source="UIStyles\ProgressBar.xaml" />
+                <ResourceDictionary Source="UIStyles\Slider.xaml" />
+                <ResourceDictionary Source="UIStyles\TextBox.xaml" />
+                <ResourceDictionary Source="UIStyles\ScrollViewer.xaml" />
+                <ResourceDictionary Source="UIStyles\RadioButton.xaml" />
+                <ResourceDictionary Source="UIStyles\Border.xaml" />
+                <ResourceDictionary Source="UIStyles\TextBlock.xaml" />
+                <ResourceDictionary Source="UIStyles\Window.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

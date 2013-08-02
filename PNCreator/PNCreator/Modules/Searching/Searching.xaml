@@ -1,0 +1,48 @@
+﻿<Window x:Class="PNCreator.Modules.Searching.Searching"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" AllowsTransparency="True" Background="Transparent"
+        Title="Searching" Height="212" Width="321" WindowStyle="None" ResizeMode="NoResize" Icon="/Resources;component/Content/Images/zoom_in.png"
+        WindowStartupLocation="CenterOwner" KeyDown="Window_KeyDown">
+   
+    <Grid>
+        <Border Style="{StaticResource SemiTransparentBorder}"/>
+        <Grid Margin="15" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+
+            <Border Grid.RowSpan="3" Style="{StaticResource ShadowedBorder}"/>
+
+            <Border Grid.Row="0" Style="{StaticResource HeaderBorder}">
+            </Border>
+
+            <Border Grid.Row="1" Style="{StaticResource ViewportBorder}">
+                <Grid>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="Object name:" Margin="5" />
+                        <TextBox x:Name="searchedNameTB" Width="150" Height="23"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Border x:Name="naBorder" VerticalAlignment="Top" Grid.Row="2" Style="{StaticResource FooterBorder}">
+                <StackPanel Orientation="Horizontal" Margin="0,0,7,2" HorizontalAlignment="Right">
+                    <Button x:Name="searchBtn" Margin="2" Click="OtherButton_Click" >
+                        <Button.ToolTip>
+                            <ToolTip Content="Search" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/ok.png" />
+                    </Button>
+                    <Button x:Name="closeBtn" Margin="2"  Click="OtherButton_Click">
+                        <Button.ToolTip>
+                            <ToolTip Content="Close" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/close.png" />
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

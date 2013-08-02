@@ -1,0 +1,63 @@
+﻿<Window x:Class="PNCreator.Modules.ModelConfiguration.ModelConfiguration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:tables="clr-namespace:PNCreator.Modules.ModelConfiguration.Tables"
+        Icon="/Resources;component/Content/Images/pencil.png"
+        Title="ModelConfiguration" ResizeMode="CanResizeWithGrip" WindowStyle="None" WindowStartupLocation="CenterScreen"
+        Height="524" Width="760" Background="Transparent" AllowsTransparency="True">
+    <Grid>
+
+        <Border Grid.Row="0" Style="{StaticResource SemiTransparentBorder}"/>
+        <Grid Margin="15" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+
+            <Border Grid.RowSpan="3" Style="{StaticResource ShadowedBorder}"/>
+
+            <Border Grid.Row="0" Style="{StaticResource HeaderBorder}">
+            </Border>
+
+            <Border Grid.Row="1" Style="{StaticResource ViewportBorder}">
+                <Grid>
+                    <TabControl IsEnabled="{Binding Path=IsNotReadonly}" Template="{StaticResource VerticalTabControl}">
+                        <TabItem Header="Membranes">
+                            <tables:PNObjectsPropertiesTable x:Name="membranesTable" />
+                        </TabItem>
+                        <TabItem Header="Structural membranes">
+                            <tables:StructuralMembranesPropertiesTable x:Name="structuralMembranesTable" />
+                        </TabItem>
+                        <TabItem Header="Discrete locations">
+                            <tables:DiscreteLocationsPropertiesTable x:Name="discreteLocationsTable" />
+                        </TabItem>
+                        <TabItem Header="Continuous locations">
+                            <tables:ContinuousLocationsPropertiesTable x:Name="continuousLocationsTable" />
+                        </TabItem>
+                        <TabItem Header="Discrete transitions">
+                            <tables:DiscreteTransitionsPropertiesTable x:Name="discreteTransitionsTable" />
+                        </TabItem>
+                        <TabItem Header="Continuous transitions">
+                            <tables:ContinuousTransitionsPropertiesTable x:Name="continuousTransitionsTable" />
+                        </TabItem>
+                        <TabItem Header="Arcs">
+                            <tables:ArcsPropertiesTable x:Name="arcsTable" />
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </Border>
+
+            <Border x:Name="naBorder" VerticalAlignment="Top" Grid.Row="2" Style="{StaticResource FooterBorder}">
+                <StackPanel Orientation="Horizontal" Margin="0,0,7,2" HorizontalAlignment="Right">
+                    <Button x:Name="cancelBtn" Margin="2" Click="AcceptButtonsClick">
+                        <Button.ToolTip>
+                            <ToolTip Content="Cancel" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/close.png" />
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

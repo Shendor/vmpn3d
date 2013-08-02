@@ -1,0 +1,23 @@
+﻿<StackPanel x:Class="PNCreator.Modules.Main.PNObjectProperties.Panels.ShapePropertiesSetPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:panels="clr-namespace:PNCreator.Modules.Main.PNObjectProperties"
+            xmlns:transformationProperties="clr-namespace:PNCreator.Modules.Main.PNObjectProperties.TransformationProperties">
+
+    <Expander Header="Properties" Margin="3" IsExpanded="True">
+        <panels:CommonPropertiesPanel />
+    </Expander>
+
+    <Expander Header="Position" Margin="3">
+        <transformationProperties:PositionPropertiesPanel x:Name="positionPanel"/>
+    </Expander>
+    
+    <Expander Header="Size" Margin="3">
+        <transformationProperties:SizePropertiesPanel />
+    </Expander>
+    
+    <Expander Header="Rotation" Margin="3">
+        <transformationProperties:RotationPropertiesPanel />
+    </Expander>
+   
+</StackPanel>

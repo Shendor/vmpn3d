@@ -1,0 +1,38 @@
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\bin\Debug\NumericBox.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\bin\Debug\NumericBox.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Debug\ResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Debug\NumericBox.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Debug\NumericBox.g.cs
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Debug\NumericBox_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Debug\NumericBox.g.resources
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Debug\NumericBox.Properties.Resources.resources
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Debug\GenerateResource.read.1.tlog
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Debug\GenerateResource.write.1.tlog
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Debug\NumericBox.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Debug\NumericBox.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\NumericBox\NumericBox\bin\Debug\NumericBox.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\NumericBox\NumericBox\bin\Debug\NumericBox.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\NumericBox.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\NumericBox.g.cs
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\NumericBox_MarkupCompile.cache
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\NumericBox.g.resources
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\NumericBox.Properties.Resources.resources
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\NumericBox.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\NumericBox.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\NumericBox\NumericBox\bin\Debug\NumericBox.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\NumericBox\NumericBox\bin\Debug\NumericBox.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\ResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\NumericBox.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\NumericBox.g.cs
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\NumericBox_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\NumericBox.g.resources
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\NumericBox.Properties.Resources.resources
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\GenerateResource.read.1.tlog
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\GenerateResource.write.1.tlog
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\NumericBox.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\NumericBox\NumericBox\obj\Debug\NumericBox.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Debug\NumericBox_MarkupCompile.lref

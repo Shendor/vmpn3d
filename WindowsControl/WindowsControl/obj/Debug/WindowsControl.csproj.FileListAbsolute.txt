@@ -1,0 +1,86 @@
+D:\My Works\Programmes\C Sharp\WPF\Controls\WindowsControl\WindowsControl\bin\Debug\WindowsControl.dll
+D:\My Works\Programmes\C Sharp\WPF\Controls\WindowsControl\WindowsControl\bin\Debug\WindowsControl.pdb
+D:\My Works\Programmes\C Sharp\WPF\Controls\WindowsControl\WindowsControl\obj\Debug\ResolveAssemblyReference.cache
+D:\My Works\Programmes\C Sharp\WPF\Controls\WindowsControl\WindowsControl\obj\Debug\Alert.baml
+D:\My Works\Programmes\C Sharp\WPF\Controls\WindowsControl\WindowsControl\obj\Debug\Alert.g.cs
+D:\My Works\Programmes\C Sharp\WPF\Controls\WindowsControl\WindowsControl\obj\Debug\WindowsControl_MarkupCompile.cache
+D:\My Works\Programmes\C Sharp\WPF\Controls\WindowsControl\WindowsControl\obj\Debug\WindowsControl.g.resources
+D:\My Works\Programmes\C Sharp\WPF\Controls\WindowsControl\WindowsControl\obj\Debug\WindowsControl.Properties.Resources.resources
+D:\My Works\Programmes\C Sharp\WPF\Controls\WindowsControl\WindowsControl\obj\Debug\GenerateResource.read.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\Controls\WindowsControl\WindowsControl\obj\Debug\GenerateResource.write.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\Controls\WindowsControl\WindowsControl\obj\Debug\WindowsControl.dll
+D:\My Works\Programmes\C Sharp\WPF\Controls\WindowsControl\WindowsControl\obj\Debug\WindowsControl.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\bin\Debug\WindowsControl.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\bin\Debug\WindowsControl.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\ResolveAssemblyReference.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\Alert.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\Confirm.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\Error.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\Styles\Styles.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\Alert.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\Confirm.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\Error.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\WindowsControl_MarkupCompile.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\WindowsControl.g.resources
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\WindowsControl.Properties.Resources.resources
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\GenerateResource.read.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\GenerateResource.write.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\WindowsControl.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\WindowsControl.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\bin\Debug\WindowsControl.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\bin\Debug\WindowsControl.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\ResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\Alert.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\Confirm.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\Error.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\Styles\Styles.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\Alert.g.cs
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\Confirm.g.cs
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\Error.g.cs
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\WindowsControl_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\WindowsControl.g.resources
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\WindowsControl.Properties.Resources.resources
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\GenerateResource.read.1.tlog
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\GenerateResource.write.1.tlog
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\WindowsControl.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\obj\Debug\WindowsControl.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\bin\Debug\WindowsControl.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\bin\Debug\WindowsControl.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\Alert.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\Confirm.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\Error.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\Styles\Styles.baml
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\Alert.g.cs
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\Confirm.g.cs
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\Error.g.cs
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\WindowsControl_MarkupCompile.cache
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\WindowsControl.g.resources
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\WindowsControl.Properties.Resources.resources
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\WindowsControl.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\WindowsControl.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\bin\Debug\Resources.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\WindowsControl\WindowsControl\bin\Debug\Resources.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\bin\Debug\WindowsControl.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\bin\Debug\WindowsControl.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\bin\Debug\Resources.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\bin\Debug\Resources.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\ResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\Alert.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\Confirm.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\Error.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\Styles\Styles.baml
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\Alert.g.cs
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\Confirm.g.cs
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\Error.g.cs
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\WindowsControl_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\WindowsControl.g.resources
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\WindowsControl.Properties.Resources.resources
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\GenerateResource.read.1.tlog
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\GenerateResource.write.1.tlog
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\WindowsControl.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\WindowsControl\WindowsControl\obj\Debug\WindowsControl.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\bin\Debug\Resources.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\WindowsControl\WindowsControl\bin\Debug\Resources.pdb

@@ -1,0 +1,5 @@
+C:\Documents and Settings\crmd163\My Documents\Programes\Avalon3d\meshUtilities\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Programes\Avalon3d\meshUtilities\bin\Debug\MeshUtilities.dll
+C:\Documents and Settings\crmd163\My Documents\Programes\Avalon3d\meshUtilities\bin\Debug\MeshUtilities.pdb
+C:\Documents and Settings\crmd163\My Documents\Programes\Avalon3d\meshUtilities\obj\Debug\MeshUtilities.dll
+C:\Documents and Settings\crmd163\My Documents\Programes\Avalon3d\meshUtilities\obj\Debug\MeshUtilities.pdb

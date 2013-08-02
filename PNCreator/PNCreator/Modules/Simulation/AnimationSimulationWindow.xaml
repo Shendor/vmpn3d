@@ -1,0 +1,112 @@
+﻿<simulation:BaseSimulationWindow x:Class="PNCreator.Modules.Simulation.AnimationSimulationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:simulation="clr-namespace:PNCreator.Modules.Simulation"
+        xmlns:chart="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Chart"
+        xmlns:chartView="clr-namespace:Telerik.Windows.Controls.ChartView;assembly=Telerik.Windows.Controls.Chart"
+        Icon="/Resources;component/Content/Images/play.png" AllowsTransparency="True" Background="Transparent"
+        Title="Simulation" Height="150" Width="750" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid MouseLeftButtonDown="WindowMouseLeftButtonDown">
+        <Border Grid.Row="0" Style="{StaticResource SemiTransparentBorder}"/>
+        <Grid Margin="15" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition />
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.RowSpan="3" Style="{StaticResource ShadowedBorder}"/>
+
+            <Border Style="{StaticResource HeaderBorder}" >
+                <simulation:SimulationPlayerToolbar StartSimulation="StartSimulation" StopSimulation="StopSimulation"/>
+            </Border>
+
+            <Border Grid.Row="1" Style="{StaticResource ViewportBorder}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <ProgressBar x:Name="progressBar" Grid.Column="1" IsIndeterminate="False" Style="{StaticResource IndeterminateProgressBarStyle}"/>
+                        <TextBlock x:Name="timerTextBlock" Text="0 sec." HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                   Style="{StaticResource LargeLightTextStyle}"/>
+                    </Grid>
+
+                    <StackPanel Orientation="Horizontal" Grid.Row="1">
+                        <ComboBox x:Name="objectsList" Width="120" Margin="2" HorizontalAlignment="Left"
+                              DisplayMemberPath="Name" SelectionChanged="ObjectsListSelectionChanged"/>
+                        <Button x:Name="editChartBtn" Margin="5,2,5,2" Click="EditButtonClicked">
+                            <Button.ToolTip>
+                                <ToolTip Content="Edit chart" />
+                            </Button.ToolTip>
+                            <Image Source="/Resources;component/Content/Images/pencil.png" />
+                        </Button>
+                    </StackPanel>
+                   
+                    <chart:RadCartesianChart x:Name="liveChart" Margin="5" Grid.Row="2">
+                        <chartView:LineSeries Name="blueLine" CategoryBinding="Time" ValueBinding="Value" Stroke="DeepSkyBlue" 
+                                  ClipToPlotArea="False" ItemsSource="{Binding GoodData}">
+                            <chartView:LineSeries.PointTemplate>
+                                <DataTemplate>
+                                    <Ellipse Height="6" Width="6" Fill="DeepSkyBlue" />
+                                </DataTemplate>
+                            </chartView:LineSeries.PointTemplate>
+                        </chartView:LineSeries>
+
+                        <chartView:LineSeries Name="redLine" CategoryBinding="Time" ValueBinding="Value" Stroke="OrangeRed" 
+                                  ClipToPlotArea="False" ItemsSource="{Binding BadData}">
+                            <chartView:LineSeries.PointTemplate>
+                                <DataTemplate>
+                                    <Ellipse Height="6" Width="6" >
+                                        <Ellipse.Fill>
+                                            <SolidColorBrush x:Name="badDataBrush" Color="OrangeRed"/>
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+                                </DataTemplate>
+                            </chartView:LineSeries.PointTemplate>
+                        </chartView:LineSeries>
+
+                        <chart:RadCartesianChart.HorizontalAxis>
+                            <chartView:DateTimeContinuousAxis MajorStepUnit="Second" LabelInterval="1"
+                                                            LabelFormat="hh:mm:ss" LabelFitMode="Rotate" PlotMode="OnTicks"  />
+                        </chart:RadCartesianChart.HorizontalAxis>
+                        <chart:RadCartesianChart.VerticalAxis>
+                            <chartView:LinearAxis x:Name="yAxis" Minimum="{Binding Path=MinimumY}" MajorStep="{Binding Path=StepY}"
+                                                Maximum="{Binding Path=MaximumY}" />
+                        </chart:RadCartesianChart.VerticalAxis>
+                        <chart:RadCartesianChart.Grid>
+                            <chartView:CartesianChartGrid MajorLinesVisibility="Y" StripLinesVisibility="Y" />
+                        </chart:RadCartesianChart.Grid>
+
+                    </chart:RadCartesianChart>
+                </Grid>
+            </Border>
+
+            <Border VerticalAlignment="Top" Grid.Row="2" Height="30" Style="{StaticResource FooterBorder}" >
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+                    <Popup x:Name="sectorOptionPanel" AllowsTransparency="True" Placement="MousePoint"
+                            IsOpen="{Binding IsChecked, ElementName=speedBtn}">
+                        <Border Style="{StaticResource LightContentBorder}" Grid.Column="1" Grid.Row="0" 
+                            VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="5" >
+                            <StackPanel Orientation="Horizontal" Margin="5,2,5,2" >
+                                <TextBlock Text="Animation speed" Margin="0,0,5,0" />
+                                <Slider x:Name="speedSlider" Width="200" Minimum="0.3" Maximum="10" Value="2" ValueChanged="SpeedValueChanged"/>
+                            </StackPanel>
+                        </Border>
+                    </Popup>
+
+                    <ToggleButton x:Name="speedBtn" Margin="5,2,5,2" Style="{StaticResource OtherButtonStyle}">
+                        <ToggleButton.ToolTip>
+                            <ToolTip Content="Set animation speed" />
+                        </ToggleButton.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/speed.png" />
+                    </ToggleButton>
+                    <simulation:SimulationWindowManipulationToolbar />
+                </StackPanel>
+
+            </Border>
+        </Grid>
+    </Grid>
+</simulation:BaseSimulationWindow>

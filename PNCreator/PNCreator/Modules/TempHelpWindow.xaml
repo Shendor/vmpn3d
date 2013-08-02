@@ -1,0 +1,114 @@
+﻿<Window x:Class="PNCreator.Modules.TempHelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Help" WindowStyle="None" ResizeMode="NoResize" Background="Transparent"
+        WindowStartupLocation="CenterScreen" AllowsTransparency="True" Height="419" Width="442">
+    <Grid>
+        <Border Style="{StaticResource SemiTransparentBorder}"/>
+        <Grid Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+
+            <Border Grid.RowSpan="3" Style="{StaticResource ShadowedBorder}"/>
+
+            <Border Grid.Row="0" Style="{StaticResource HeaderBorder}">
+            </Border>
+
+            <Border Grid.Row="1" Style="{StaticResource ViewportBorder}">
+                <Grid>
+                    <FlowDocumentReader Background="Transparent">
+                        <FlowDocument>
+                            <Paragraph TextAlignment="Left">
+                                <TextBlock>
+                       Zoom In/Out -
+                                </TextBlock>
+                                <TextBlock Margin="50,0,0,0">
+                        <TextBlock.Text>
+                           Mouse wheel or +\- key
+                        </TextBlock.Text>
+                                </TextBlock>
+                            </Paragraph>
+
+                            <Paragraph TextAlignment="Left">
+                                <TextBlock>
+                       Rotate camera -
+                                </TextBlock>
+                                <TextBlock Margin="50,0,0,0">
+                        <TextBlock.Text>
+                           Hold Right Button and move
+                        </TextBlock.Text>
+                                </TextBlock>
+                            </Paragraph>
+
+                            <Paragraph TextAlignment="Left">
+                                <TextBlock>
+                       Switch to perspective view -
+                                </TextBlock>
+                                <TextBlock Margin="50,0,0,0">
+                        <TextBlock.Text>
+                           Ctrl+P
+                        </TextBlock.Text>
+                                </TextBlock>
+                            </Paragraph>
+
+                            <Paragraph TextAlignment="Left">
+                                <TextBlock>
+                       Switch to edit view -
+                                </TextBlock>
+                                <TextBlock Margin="50,0,0,0">
+                        <TextBlock.Text>
+                           Ctrl+E
+                        </TextBlock.Text>
+                                </TextBlock>
+                            </Paragraph>
+
+                            <Paragraph TextAlignment="Left">
+                                <TextBlock>
+                       Zoom to Object -
+                                </TextBlock>
+                                <TextBlock Margin="50,0,0,0">
+                        <TextBlock.Text>
+                           Z
+                        </TextBlock.Text>
+                                </TextBlock>
+                            </Paragraph>
+
+                            <Paragraph TextAlignment="Left">
+                                <TextBlock>
+                       Find object -
+                                </TextBlock>
+                                <TextBlock Margin="50,0,0,0">
+                        <TextBlock.Text>
+                           Ctrl + F
+                        </TextBlock.Text>
+                                </TextBlock>
+                            </Paragraph>
+
+                        </FlowDocument>
+                    </FlowDocumentReader>
+                </Grid>
+            </Border>
+
+            <Border x:Name="naBorder" VerticalAlignment="Top" Grid.Row="2" Style="{StaticResource FooterBorder}">
+                <StackPanel Orientation="Horizontal" Margin="0,0,7,2" HorizontalAlignment="Right">
+                    <Button x:Name="searchBtn" Margin="2" Click="OtherButton_Click" >
+                        <Button.ToolTip>
+                            <ToolTip Content="Ok" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/ok.png" />
+                    </Button>
+                    <Button x:Name="closeBtn" Margin="2"  Click="OtherButton_Click">
+                        <Button.ToolTip>
+                            <ToolTip Content="Close" />
+                        </Button.ToolTip>
+                        <Image Source="/Resources;component/Content/Images/close.png" />
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+    
+</Window>

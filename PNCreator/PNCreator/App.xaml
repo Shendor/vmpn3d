@@ -1,0 +1,32 @@
+﻿<Application x:Class="PNCreator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            StartupUri="MainWindow.xaml">
+    <!--StartupUri="/Modules/Formula Builder/Geometry Formula Builder/GeometryFormulaBuilder.xaml">-->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\Shared.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\ComboBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\ListBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\Menu.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\ScrollBar.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIstyles\Expander.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\ProgressBar.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\Slider.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\ToolTip.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\TextBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\ScrollViewer.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\RadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\Border.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\TextBlock.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\TabControl.xaml" />
+                <!--<ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\ColorPicker.xaml" />-->
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles\Window.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</Application>

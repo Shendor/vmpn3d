@@ -1,0 +1,84 @@
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\obj\x86\Debug\MainWindow.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\obj\x86\Debug\MainWindow.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\obj\x86\Debug\App.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\obj\x86\Debug\MeshImporter_MarkupCompile.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\obj\x86\Debug\MeshImporter.g.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\obj\x86\Debug\MeshImporter.Properties.Resources.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\bin\Debug\MeshImporter.exe
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\bin\Debug\MeshImporter.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\bin\Debug\Resources.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\bin\Debug\Resources.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\obj\x86\Debug\MeshImporter.exe
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\obj\x86\Debug\MeshImporter.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\obj\x86\Debug\App.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\bin\Debug\3DTools.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\bin\Debug\Meshes3D.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\bin\Debug\3DTools.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\bin\Debug\Meshes3D.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\obj\x86\Debug\AddMeshWindow.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\obj\x86\Debug\AddMeshWindow.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\PNCreator\MeshImporter\bin\Debug\Microsoft.Windows.Shell.xml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Debug\MeshImporter.exe
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Debug\MeshImporter.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Debug\3DTools.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Debug\Meshes3D.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Debug\Resources.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Debug\3DTools.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Debug\Meshes3D.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Debug\Resources.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Debug\Microsoft.Windows.Shell.xml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\AddMeshWindow.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\MainWindow.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\App.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\AddMeshWindow.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\MainWindow.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\App.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\MeshImporter_MarkupCompile.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\MeshImporter.g.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\MeshImporter.Properties.Resources.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\MeshImporter.exe
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\MeshImporter.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\MeshImporter_MarkupCompile.lref
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Debug\AnimatedGraph.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Debug\J832.Common.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\bin\Debug\AnimatedGraph.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\MeshImporter\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Debug\MeshImporter.exe
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Debug\MeshImporter.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Debug\3DTools.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Debug\AnimatedGraph.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Debug\Meshes3D.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Debug\Microsoft.Windows.Shell.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Debug\Resources.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Debug\J832.Common.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Debug\3DTools.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Debug\AnimatedGraph.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Debug\Meshes3D.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Debug\Resources.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Debug\Microsoft.Windows.Shell.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\bin\Debug\Microsoft.Windows.Shell.xml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\MainWindow.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\App.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\AddMeshWindow.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\MainWindow.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\App.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\MeshImporter_MarkupCompile.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\MeshImporter_MarkupCompile.lref
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\AddMeshWindow.baml
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\MeshImporter.g.resources
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\MeshImporter.Properties.Resources.resources
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\MeshImporter.exe
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\MeshImporter\obj\x86\Debug\MeshImporter.pdb

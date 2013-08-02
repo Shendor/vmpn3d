@@ -1,0 +1,24 @@
+D:\My Works\Programmes\C Sharp\WPF\Controls\NumericBox\NumericBox\bin\Release\NumericBox.dll
+D:\My Works\Programmes\C Sharp\WPF\Controls\NumericBox\NumericBox\bin\Release\NumericBox.pdb
+D:\My Works\Programmes\C Sharp\WPF\Controls\NumericBox\NumericBox\obj\Release\ResolveAssemblyReference.cache
+D:\My Works\Programmes\C Sharp\WPF\Controls\NumericBox\NumericBox\obj\Release\NumericBox_MarkupCompile.cache
+D:\My Works\Programmes\C Sharp\WPF\Controls\NumericBox\NumericBox\obj\Release\NumericBox.g.resources
+D:\My Works\Programmes\C Sharp\WPF\Controls\NumericBox\NumericBox\obj\Release\NumericBox.Properties.Resources.resources
+D:\My Works\Programmes\C Sharp\WPF\Controls\NumericBox\NumericBox\obj\Release\GenerateResource.read.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\Controls\NumericBox\NumericBox\obj\Release\GenerateResource.write.1.tlog
+D:\My Works\Programmes\C Sharp\WPF\Controls\NumericBox\NumericBox\obj\Release\NumericBox.dll
+D:\My Works\Programmes\C Sharp\WPF\Controls\NumericBox\NumericBox\obj\Release\NumericBox.pdb
+D:\My Works\Programmes\C Sharp\WPF\Controls\NumericBox\NumericBox\obj\Release\NumericBox.baml
+D:\My Works\Programmes\C Sharp\WPF\Controls\NumericBox\NumericBox\obj\Release\NumericBox.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\bin\Release\NumericBox.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\bin\Release\NumericBox.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.baml
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.g.cs
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox_MarkupCompile.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.g.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.Properties.Resources.resources
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\obj\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\obj\Release\GenerateResource.write.1.tlog
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.pdb

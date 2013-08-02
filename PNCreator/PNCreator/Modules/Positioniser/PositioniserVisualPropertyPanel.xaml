@@ -1,0 +1,31 @@
+﻿<Grid x:Class="PNCreator.Modules.Positioniser.PositioniserVisualPropertyPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:nb="clr-namespace:NumericBox;assembly=NumericBox"
+             xmlns:telerikInput="http://schemas.telerik.com/2008/xaml/presentation" 
+             Background="Transparent">
+    <Grid.RowDefinitions>
+        <RowDefinition />
+        <RowDefinition />
+    </Grid.RowDefinitions>
+    
+    <Grid Grid.Row="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Line color" Margin="10" />
+        <telerikInput:RadColorPicker Grid.Column="1" HorizontalAlignment="Right"
+                                     SelectedColor="{Binding Path=Color, Mode=TwoWay}" />
+    </Grid>
+
+    <Grid Grid.Row="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Line thickness" Margin="10" />
+        <nb:NumericBox x:Name="lineThicknessNB" Grid.Column="1" Increment="1" Minimum="0.1"
+                       Value="{Binding Path=Thickness, Mode=TwoWay}" HorizontalAlignment="Right"/>
+    </Grid>
+</Grid>

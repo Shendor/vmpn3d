@@ -1,0 +1,111 @@
+﻿<Window x:Class="PNCreator.Modules.ODLEditor.ODLEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:PNCreator.Modules.ODLEditor"
+        xmlns:controls="clr-namespace:PNCreator.Controls"
+        xmlns:editor="clr-namespace:ODLEditorControl;assembly=ODLEditor" Icon="/Resources;component/Content/Images/pencil.png"
+        Title="ODLEditorWindow" Height="600" Width="900" MinHeight="65" AllowsTransparency="True"
+        WindowStyle="None" ResizeMode="CanResize" Background="Transparent" Loaded="Window_Loaded">
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static local:ODLEditorWindow.FormatCommand}" Executed="FormatCommand_Executed" />
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Border Grid.RowSpan="3" Style="{StaticResource ShadowedBorder}"/>
+
+        <Border Grid.Row="0" Style="{StaticResource HeaderBorder}" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="formatBtn" Command="{x:Static local:ODLEditorWindow.FormatCommand}" Style="{StaticResource DefaultButtonStyle}">
+                    <Button.ToolTip>
+                        <ToolTip Content="Format document" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/pencil.png" />
+                </Button>
+                <Button x:Name="cutBtn" Style="{StaticResource DefaultButtonStyle}">
+                    <Button.ToolTip>
+                        <ToolTip Content="Cut selected text" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/cut.png" />
+                </Button>
+                <Button x:Name="copyBtn" Style="{StaticResource DefaultButtonStyle}">
+                    <Button.ToolTip>
+                        <ToolTip Content="Copy selected text" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/copy.png" />
+                </Button>
+                <Button x:Name="pasteBtn" Style="{StaticResource DefaultButtonStyle}">
+                    <Button.ToolTip>
+                        <ToolTip Content="Paste" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/paste.png" />
+                </Button>
+                <Button x:Name="undoBtn" Style="{StaticResource DefaultButtonStyle}">
+                    <Button.ToolTip>
+                        <ToolTip Content="Undo" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/undo.png" />
+                </Button>
+                <Button x:Name="redoBtn" Style="{StaticResource DefaultButtonStyle}">
+                    <Button.ToolTip>
+                        <ToolTip Content="Redo" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/redo.png" />
+                </Button>
+                <Button x:Name="zoomInBtn" Click="toolBarButtons_Click" Style="{StaticResource DefaultButtonStyle}">
+                    <Button.ToolTip>
+                        <ToolTip Content="Close" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/zoom_in.png" />
+                </Button>
+                <Button x:Name="zoomOutBtn" Click="toolBarButtons_Click" Style="{StaticResource DefaultButtonStyle}">
+                    <Button.ToolTip>
+                        <ToolTip Content="Close" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/zoom_out.png" />
+                </Button>
+
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="1" Style="{StaticResource ViewportBorder}">
+            <Grid Margin="10" Background="Transparent" IsHitTestVisible="True">
+                <!--<Popup x:Name="popup" Placement="RelativePoint" >
+                    <Border BorderBrush="Black" BorderThickness="2" Background="YellowGreen"
+                            Height="300" Width="150" MouseLeftButtonDown="Border_MouseLeftButtonDown_1">
+                        
+                    </Border>
+                </Popup>-->
+
+                <editor:ODLEditor Name="textEditor"
+				                  FontFamily="Consolas"
+				                  FontSize="12pt"
+				                  SyntaxHighlighting="XML"
+                                  ShowLineNumbers="True"                                  
+                                  KeyDown="Window_KeyDown" 
+                                  >
+                    <editor:ODLEditor.RenderTransform>
+                        <ScaleTransform x:Name="editorSize" />
+                    </editor:ODLEditor.RenderTransform>
+
+                </editor:ODLEditor>
+
+            </Grid>
+        </Border>
+
+        <Border x:Name="naBorder" Height="30" VerticalAlignment="Top" Grid.Row="2" Style="{StaticResource FooterBorder}">
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0" HorizontalAlignment="Right">
+                <Button x:Name="closeBtn" Margin="2"  Click="toolBarButtons_Click">
+                    <Button.ToolTip>
+                        <ToolTip Content="Cancel" />
+                    </Button.ToolTip>
+                    <Image Source="/Resources;component/Content/Images/close.png" />
+                </Button>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

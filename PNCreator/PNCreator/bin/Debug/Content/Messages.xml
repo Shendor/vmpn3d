@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Messages>
+  <Message id="0">You cannot connect these objects. Choose another ones</Message>
+<Message id="1">Object name not found: </Message>
+<Message id="2">The value is too small for this object</Message>
+<Message id="3">File not found</Message>
+<Message id="4">Missed file with recent opened models</Message>
+<Message id="5">Help not found</Message>
+<Message id="6">Simulation has been finished</Message>
+<Message id="7">This name already exist</Message>
+<Message id="8">Formula is correct. Calculated value = </Message>
+</Messages>

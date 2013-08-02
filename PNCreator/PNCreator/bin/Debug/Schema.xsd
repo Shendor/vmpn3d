@@ -1,0 +1,335 @@
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- attributes -->
+  <xs:attributeGroup name="defaultObjectPropertiesAttributes">
+    <xs:attribute name="Position" default="0 0 0">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+Set position for object. Indicate 3 coordinates (x,y,z) according this pattern: x.x y.y z.z.
+For example: 10.324 -45.2 10
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(\d*\.?\d*)[ ](\d*\.?\d*)[ ](\d*\.?\d*)" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="Size" type="xs:double" default="1">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+Set size of object. Provide it by one positive value. For example: 7
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+
+    <xs:attribute name="Rotation" default="0 0 0">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+Set ratation of object by 3 coordinates. Indicate 3 angles for each coordinate according
+this pattern: angleX angleY angelZ. For example: 45 0 -120
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="\d+[ ]\d+[ ]\d+" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="Color" default="#FFFFFFFF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+Set color using aRGB format according this pattern: #FFFFFFFF
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="#(([0-9][a-fA-F])|([a-fA-F][a-fA-F])|([a-fA-F][0-9])|([0-9][0-9])){4}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute> 
+  </xs:attributeGroup>
+
+  <xs:attributeGroup name="NameGroup">
+    <xs:attribute name="Name">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+Set name of object. This attribute is required
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="_*([a-z_*A-Z]\d*)+_*" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+
+  <xs:attribute name="SaveHistory" type="xs:boolean" default="false">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Set 'true' if you want to save data after simulation for this object
+      </xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  
+  <xs:attributeGroup name="TokensGroup">
+    <xs:attribute name="Tokens" default="0" type="xs:nonNegativeInteger">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+Set tokens quantity for Discrete location. Only positive integer values are permitted.
+If you set negative or double value it will be converted to positive integer.
+See the reference if you want to know more about this property.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  
+  <xs:attribute name="Level" default="0" type="xs:double">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Set Level property for Continuous location. Only positive double values are permitted.
+If you set negative double value it will be converted to positive one.
+See the reference if you want to know more about this property.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  
+  <xs:attribute name="Delay" default="1" type="xs:double">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Set delay time for Discrete transition. Only positive double values are permitted
+If you set negative double value it will be converted to positive one.
+See the reference if you want to know more about this property.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  
+  <xs:attribute name="Weight" default="1" type="xs:double" >
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Set Weight property for arc. For all Discrete arcs positive integers are permitted. For
+Continuous arcs positive double are permitted.
+If you set negative integer value for Discrete arcs or negative double value for Continuous arcs
+it will be converted to a correct value.
+See the reference if you want to know more about this property.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  
+  <xs:attribute name="Expectance" default="1" type="xs:double">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Set Expectance property for Continuous transition. Only positive double values are permitted.
+If you set negative double value it will be converted to positive one.
+See the reference if you want to know more about this property.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  
+  <xs:attribute name="ActionCount" default="1" type="xs:double" >
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Set ActionCount property for Structural membrane. Only positive double values are permitted.
+If you set negative double value it will be converted to positive one.
+See the reference if you want to know more about this property.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  
+  <xs:attribute name="Guard" default="true" type="xs:boolean" >
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Set Guard property for transitions. Set 'false' if you want to make this transition non active.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+
+  <xs:attribute name="From" type="xs:string" >
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Set start object which will be connected with start point of this arc.
+        Provide this property by indicating of name of object.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  
+  <xs:attribute name="To" type="xs:string" >
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Set end object which will be connected with end point of this arc.
+Provide this property by indicating of name of object.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  
+  <!-- types -->
+  <xs:complexType name="discreteLocationType">
+    <xs:attributeGroup ref="defaultObjectPropertiesAttributes" />
+    <xs:attributeGroup ref="NameGroup" />
+    <xs:attributeGroup ref="TokensGroup" />
+    <xs:attribute ref="SaveHistory" />
+  </xs:complexType>
+
+  <xs:complexType name="discreteTransitionType">
+    <xs:attributeGroup ref="defaultObjectPropertiesAttributes" />
+    <xs:attributeGroup ref="NameGroup" />
+    <xs:attribute ref="Delay" />
+    <xs:attribute ref="Guard" />
+    <xs:attribute ref="SaveHistory" />
+  </xs:complexType>
+
+  <xs:complexType name="continuousLocationType">
+    <xs:attributeGroup ref="defaultObjectPropertiesAttributes" />
+    <xs:attributeGroup ref="NameGroup" />
+    <xs:attribute ref="Level" />
+    <xs:attribute ref="SaveHistory" />
+  </xs:complexType>
+
+  <xs:complexType name="continuousTransitionType">
+    <xs:attributeGroup ref="defaultObjectPropertiesAttributes" />
+    <xs:attributeGroup ref="NameGroup" />
+    <xs:attribute ref="Expectance" />
+    <xs:attribute ref="Guard" />
+    <xs:attribute ref="SaveHistory" />
+  </xs:complexType>
+
+  <xs:complexType name="membraneType">
+    <xs:group ref="objectsList" minOccurs="0"/>    
+    <xs:attributeGroup ref="defaultObjectPropertiesAttributes" />
+    <xs:attributeGroup ref="NameGroup" />
+  </xs:complexType>
+
+  <xs:complexType name="structuralMembraneType">
+    <xs:group ref="objectsList" minOccurs="0"/>
+    <xs:attributeGroup ref="defaultObjectPropertiesAttributes" />
+    <xs:attributeGroup ref="NameGroup" />
+    <xs:attribute ref="ActionCount" />
+  </xs:complexType>
+
+  <xs:complexType name="arcType">
+    <xs:attributeGroup ref="defaultObjectPropertiesAttributes" />
+    <xs:attributeGroup ref="NameGroup" />
+    <xs:attribute ref="SaveHistory" />
+    <xs:attribute ref="From" />
+    <xs:attribute ref="To" />
+  </xs:complexType>
+  
+  <!-- elements group -->
+  <xs:group name="objectsList">
+    <xs:choice >
+      <xs:element ref="DiscreteLocation" />
+      <xs:element ref="ContinuousLocation" />
+      <xs:element ref="DiscreteTransition" />
+      <xs:element ref="ContinuousTransition" />
+      <xs:element ref="Membrane"/>
+      <xs:element ref="StructuralMembrane" />
+      <xs:element ref="DiscreteArc"/>
+      <xs:element ref="DiscreteInhibitorArc"/>
+      <xs:element ref="DiscreteTestArc"/>
+      <xs:element ref="ContinuousArc" />
+      <xs:element ref="ContinuousInhibitorArc" />
+      <xs:element ref="ContinuousTestArc" />
+      <xs:element ref="ContinuousFlowArc" />
+    </xs:choice>
+  </xs:group>
+  
+  <!-- elements -->
+
+  <xs:element name="DiscreteLocation" type="discreteLocationType" >
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Create Discrete location
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ContinuousLocation" type="continuousLocationType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Create Discrete transition
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DiscreteTransition" type="discreteTransitionType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Create Continuous location
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ContinuousTransition" type="continuousTransitionType" >
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Create Continuous transition
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Membrane" type="membraneType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Create Membrane
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="StructuralMembrane" type="structuralMembraneType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Create Structural membrane
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DiscreteArc" type="arcType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Create Discrete arc
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DiscreteInhibitorArc" type="arcType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Create Discrete inhibitor arc
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DiscreteTestArc" type="arcType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Create Discrete test arc
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ContinuousArc" type="arcType" >
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Create Continuous arc
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ContinuousInhibitorArc" type="arcType" >
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Create Continuous inhibitor arc
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ContinuousTestArc" type="arcType" >
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Create Continuous test arc
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ContinuousFlowArc" type="arcType" >
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+Create Continuous flow arc
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+
+</xs:schema>

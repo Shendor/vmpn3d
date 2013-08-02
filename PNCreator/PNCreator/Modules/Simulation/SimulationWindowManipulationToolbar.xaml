@@ -1,0 +1,46 @@
+﻿<StackPanel x:Class="PNCreator.Modules.Simulation.SimulationWindowManipulationToolbar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Microsoft.Windows.Shell"
+            HorizontalAlignment="Right" Orientation="Horizontal" Background="Transparent">
+
+    <Button x:Name="minimizeBtn" Margin="5,2,5,2" Command="shell:SystemCommands.MinimizeWindowCommand">
+        <Button.ToolTip>
+            <ToolTip Content="Hide" />
+        </Button.ToolTip>
+        <Image Source="/Resources;component/Content/Images/minus.png" />
+    </Button>
+
+    <Button x:Name="upBtn" Margin="5,2,5,2">
+        <Button.ToolTip>
+            <ToolTip Content="Minimize window" />
+        </Button.ToolTip>
+        <Button.Triggers>
+            <EventTrigger RoutedEvent="Button.Click">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.Target="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}" 
+                                         Storyboard.TargetProperty="Height" To="150" Duration="0:0:0.5"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Button.Triggers>
+        <Image Source="/Resources;component/Content/Images/arrow_up.png" />
+    </Button>
+    <Button x:Name="downBtn" Margin="5,2,5,2">
+        <Button.ToolTip>
+            <ToolTip Content="Maximize window" />
+        </Button.ToolTip>
+        <Button.Triggers>
+            <EventTrigger RoutedEvent="Button.Click">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.Target="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
+                                         Storyboard.TargetProperty="Height" To="530" Duration="0:0:0.5"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Button.Triggers>
+        <Image Source="/Resources;component/Content/Images/dArc.png" />
+    </Button>
+</StackPanel>

@@ -1,0 +1,40 @@
+﻿<Window x:Class="WindowsControl.Error"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Error" WindowStyle="None" WindowState="Maximized" Background="Transparent" AllowsTransparency="True">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles/Border.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles/TextBlock.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources;component/UIStyles/Button.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid MouseLeftButtonDown="RowDefinition_MouseLeftButtonDown">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="300"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Style="{StaticResource BackgroundDialogWindowBorder}" Grid.RowSpan="3"/>
+        <Border Style="{StaticResource ShadowedBorder}" Width="580" Height="180" Margin="5" Grid.Row="1">
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="35"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" VerticalAlignment="Center" Orientation="Horizontal">
+                    <Image Source="pack://application:,,,/Resources;component/Content/Images/error.png" Height="60" Width="60" />
+                    <TextBlock x:Name="message" Text="Message" TextWrapping="Wrap" VerticalAlignment="Center" Style="{StaticResource ColoredTextStyle}" />
+                </StackPanel>
+
+                <Button x:Name="obBtn" Grid.Row="1" Width="65" Margin="0,5,0,0"  HorizontalAlignment="Right"  Click="Button_Click" >
+                    OK
+                </Button>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>

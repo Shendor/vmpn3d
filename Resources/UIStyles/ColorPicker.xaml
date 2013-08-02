@@ -1,0 +1,412 @@
+﻿<ResourceDictionary 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls"
+        xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Primitives;assembly=Telerik.Windows.Controls" 
+        xmlns:telerikInput="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input" 
+        xmlns:animation="clr-namespace:Telerik.Windows.Controls.Animation;assembly=Telerik.Windows.Controls" 
+        xmlns:telerikChromes="clr-namespace:Telerik.Windows.Controls.Chromes;assembly=Telerik.Windows.Controls">
+
+    <LinearGradientBrush x:Key="ControlOuterBorder_Pressed" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FF282828"/>
+        <GradientStop Color="#FF5F5F5F" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ControlBackground_Pressed" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFFFDCAB" Offset="0"/>
+        <GradientStop Color="#FFFFD18F" Offset="0.5"/>
+        <GradientStop Color="#FFFE9227" Offset="0.5"/>
+        <GradientStop Color="#FFFFBA74" Offset="0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ControlInnerBorder_Pressed" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFB69A78"/>
+        <GradientStop Color="#FFFFE17A" Offset="0.126"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ControlElement_Normal" Color="#FF000000" />
+
+
+    <SolidColorBrush x:Key="ColorPicker_TitleBackground" Color="#FFDEDEDE" />
+    <SolidColorBrush x:Key="ColorPicker_TitleBorder" Color="#FF848484" />
+    <SolidColorBrush x:Key="ColorPicker_Background" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="ColorPicker_OuterBorder" Color="#FF848484" />
+    <SolidColorBrush x:Key="ColorPicker_InnerBorder" Color="#FFF5F5F5" />
+    <SolidColorBrush x:Key="ColorPicker_Foreground" Color="#FF000000" />
+    <LinearGradientBrush x:Key="ColorPicker_ButtonBackground_MouseOver" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFFFFBA3" Offset="1" />
+        <GradientStop Color="#FFFFFBDA" Offset="0" />
+        <GradientStop Color="#FFFFD25A" Offset="0.43" />
+        <GradientStop Color="#FFFEEBAE" Offset="0.42" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ColorPicker_ButtonInnerBorder_MouseOver" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="ColorPicker_ButtonBorder_MouseOver" Color="#FFFFC92B" />
+    <CornerRadius x:Key="ColorPicker_ButtonOuterBorder_LeftCornerRadius">1,0,0,1</CornerRadius>
+    <CornerRadius x:Key="ColorPicker_ButtonOuterBorder_RightCornerRadius">0,1,1,0</CornerRadius>
+
+    <SolidColorBrush x:Key="ColorPaletteViewItem_Border" Color="#FFC9C9CB" />
+    <SolidColorBrush x:Key="ColorPaletteViewItem_OuterBorder_MouseOver" Color="#FFFFC92B" />
+    <SolidColorBrush x:Key="ColorPaletteViewItem_InnerBorder_MouseOver" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="ColorPaletteViewItem_OuterBorder_Selected" Color="#FF5D5D5D" />
+    <LinearGradientBrush x:Key="ColorPaletteViewItem_InnerBorder_Selected" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFB69A78" />
+        <GradientStop Color="#FFFFE17A" Offset="0.126" />
+    </LinearGradientBrush>
+
+    <CornerRadius x:Key="ColorPicker_HeaderButtonOuterBorder_CornerRadius">1</CornerRadius>
+    <CornerRadius x:Key="ColorPicker_HeaderButtonInnerBorder_CornerRadius">0</CornerRadius>
+    <SolidColorBrush x:Key="ColorPicker_HeaderButtonBackground" Color="#FFDEDEDE" />
+    <SolidColorBrush x:Key="ColorPicker_HeaderButtonBorder" Color="#FF848484" />
+    <SolidColorBrush x:Key="ColorPicker_HeaderButtonOuterBorder_MouseOver" Color="#FFFFC92B" />
+    <SolidColorBrush x:Key="ColorPicker_HeaderButtonInnerBorder_MouseOver" Color="#FFFFFFFF" />
+    <LinearGradientBrush x:Key="ColorPicker_HeaderButtonInnerBackground_MouseOver" EndPoint="0.5,1" 
+            StartPoint="0.5,0">
+        <GradientStop Color="#FFFFFBA3" Offset="1" />
+        <GradientStop Color="#FFFFFBDA" Offset="0" />
+        <GradientStop Color="#FFFFD25A" Offset="0.43" />
+        <GradientStop Color="#FFFEEBAE" Offset="0.42" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ColorPicker_HeaderButtonOuterColorStroke" Color="#FFFFC92B" />
+    <SolidColorBrush x:Key="ColorPicker_HeaderButtonColorFill" Color="#FF000000" />
+    <SolidColorBrush x:Key="ColorPicker_HeaderButtonInnerColorStroke" Color="#FFBFBFBF" />
+
+
+    
+
+    <Style x:Key="ToggleButtonIconStyle" TargetType="ToggleButton">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Grid Height="25" Width="11">
+                       
+
+                        <Border x:Name="BackgroundChecked" BorderThickness="1" Height="25" 
+                                Width="11" Visibility="Collapsed" 
+                                CornerRadius="{StaticResource ColorPicker_ButtonOuterBorder_RightCornerRadius}" 
+                                BorderBrush="{StaticResource ControlOuterBorder_Pressed}" 
+                                Background="{StaticResource ControlBackground_Pressed}">
+                            <Border BorderThickness="1" 
+                                    BorderBrush="{StaticResource ControlInnerBorder_Pressed}" />
+                        </Border>
+
+                        <Path x:Name="Arrow" Fill="{StaticResource ControlElement_Normal}" 
+                                Stretch="Fill" 
+                                Data="M0,0 L5,0 5,1 4,1 4,2 3,2 3,3 2,3 2,2 1,2 1,1 0,1 0,0 z" 
+                                Width="5" Height="3" />
+
+                    </Grid>
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Visibility" TargetName="BackgroundChecked" 
+                                    Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="telerikInput:RadColorPaletteViewItem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikInput:RadColorPaletteViewItem">
+                    <Grid x:Name="RootElement" SnapsToDevicePixels="True">
+                        <Rectangle x:Name="color" MinHeight="11" MinWidth="11" Stretch="Fill" 
+                                Margin="2 0" Fill="{TemplateBinding Content}" />
+                        <Border MinHeight="13" MinWidth="13" 
+                                BorderBrush="{StaticResource ColorPaletteViewItem_Border}" 
+                                Margin="2 0" x:Name="borderContent" VerticalAlignment="Stretch" 
+                                BorderThickness="1">
+                            <Border BorderThickness="1" x:Name="InnerborderContent" />
+                        </Border>
+
+                        <Border MinHeight="13" MinWidth="13" 
+                                BorderBrush="{StaticResource ColorPaletteViewItem_OuterBorder_MouseOver}" 
+                                Margin="2 0" x:Name="border" VerticalAlignment="Stretch" 
+                                BorderThickness="1" Visibility="Collapsed">
+                            <Border BorderThickness="1" x:Name="Innerborder" 
+                                    BorderBrush="{StaticResource ColorPaletteViewItem_InnerBorder_MouseOver}" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected" Value="false" />
+                                <Condition Property="IsMouseOver" Value="true" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Visibility" TargetName="border" Value="Visible" />
+                            <Setter Property="BorderBrush" TargetName="border" 
+                                    Value="{StaticResource ColorPaletteViewItem_OuterBorder_MouseOver}" />
+                            <Setter Property="BorderBrush" TargetName="Innerborder" 
+                                    Value="{StaticResource ColorPaletteViewItem_InnerBorder_MouseOver}" />
+                        </MultiTrigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames 
+                                                Storyboard.TargetProperty="Visibility" 
+                                                Storyboard.TargetName="border">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames 
+                                                Storyboard.TargetProperty="Visibility" 
+                                                Storyboard.TargetName="border">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+
+                            <Setter Property="BorderBrush" TargetName="border" 
+                                    Value="{StaticResource ColorPaletteViewItem_OuterBorder_Selected}" />
+                            <Setter Property="BorderBrush" TargetName="Innerborder" 
+                                    Value="{StaticResource ColorPaletteViewItem_InnerBorder_Selected}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Visibility" TargetName="border">
+                                <Setter.Value>
+                                    <Visibility>Visible</Visibility>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="false">
+                            <Setter Property="Visibility" TargetName="border">
+                                <Setter.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Content" Value="Color" />
+        <Setter Property="Color" Value="Green" />
+    </Style>
+
+    <Style TargetType="telerikInput:RadColorPaletteView" >
+        <Setter Property="Background" Value="{StaticResource ColorPicker_Background}" />
+        <Setter Property="BorderBrush" Value="{StaticResource ColorPicker_OuterBorder}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikInput:RadColorPaletteView">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                            Background="{TemplateBinding Background}" 
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ItemsPresenter x:Name="ItemsPresenter" Margin="0,2,0,2" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <primitives:RadUniformGrid x:Name="uniformGrid" HorizontalAlignment="Stretch" 
+                            ChildrenFlow="Vertical" VerticalAlignment="Stretch" Columns="10">
+                    </primitives:RadUniformGrid>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Margin" Value="0" />
+    </Style>
+
+    <Style TargetType="telerikInput:RadColorSelector" >
+        <Setter Property="Background" Value="{StaticResource ColorPicker_Background}" />
+        <Setter Property="BorderBrush" Value="{StaticResource ColorPicker_OuterBorder}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Foreground" Value="{StaticResource ColorPicker_Foreground}" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontStyle" Value="Normal" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikInput:RadColorSelector">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="2" 
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Border BorderBrush="{StaticResource ColorPicker_InnerBorder}" 
+                                BorderThickness="1" CornerRadius="1">
+                            <Grid x:Name="RootElement" Margin="0" 
+                                    Background="{TemplateBinding Background}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Button Content="{TemplateBinding NoColorText}" 
+                                        x:Name="PaletteHeader" Grid.Row="0" 
+                                        Background="{TemplateBinding Background}" 
+                                        />
+                                <Border Margin="0 0 0 3" Grid.Row="1" 
+                                        Background="{StaticResource ColorPicker_TitleBackground}" 
+                                        BorderBrush="{StaticResource ColorPicker_TitleBorder}" 
+                                        BorderThickness="0 0 0 1">
+                                    <TextBlock Margin="10,2,2,2" x:Name="mainPaletteHeader" 
+                                            FontStyle="{TemplateBinding FontStyle}" 
+                                            FontWeight="{TemplateBinding FontWeight}" 
+                                            Foreground="{TemplateBinding Foreground}" 
+                                            Text="{TemplateBinding MainPaletteHeaderText}" />
+                                </Border>
+                                <telerikInput:RadColorPaletteView 
+                                        Background="{TemplateBinding Background}" Grid.Row="2" 
+                                        Margin="0,0,0,-3" VerticalAlignment="Center" 
+                                        x:Name="HeaderPalette" BorderBrush="Transparent" 
+                                        BorderThickness="0">
+                                    <telerikInput:RadColorPaletteView.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <primitives:RadUniformGrid Background="Transparent" 
+                                                    Columns="10">
+                                            </primitives:RadUniformGrid>
+                                        </ItemsPanelTemplate>
+                                    </telerikInput:RadColorPaletteView.ItemsPanel>
+                                </telerikInput:RadColorPaletteView>
+                                <telerikInput:RadColorPaletteView Grid.Row="3" Margin="0 5 0 2" 
+                                        x:Name="MainPalette" 
+                                        ItemContainerStyle="{TemplateBinding MainPaletteItemsStyle}" 
+                                        BorderBrush="Transparent" BorderThickness="0" 
+                                        Background="{TemplateBinding Background}" />
+                                <Border Margin="0 2 0 3" x:Name="StandardPaletteBorder" Grid.Row="4" 
+                                        Background="{StaticResource ColorPicker_TitleBackground}" 
+                                        BorderBrush="{StaticResource ColorPicker_TitleBorder}" 
+                                        BorderThickness="0 0 0 1">
+                                    <TextBlock Margin="10,2,2,2" x:Name="standardPaletteHeader" 
+                                            FontWeight="{TemplateBinding FontWeight}" 
+                                            Foreground="{TemplateBinding Foreground}" 
+                                            Text="{TemplateBinding StandardPaletteHeaderText}" />
+                                </Border>
+                                <telerikInput:RadColorPaletteView x:Name="StandartPalette" 
+                                        Margin="0 0 0 1" VerticalAlignment="Center" Grid.Row="5" 
+                                        BorderBrush="Transparent" BorderThickness="0" 
+                                        Background="{TemplateBinding Background}">
+                                    <telerikInput:RadColorPaletteView.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <primitives:RadUniformGrid Background="Transparent" 
+                                                    Columns="10">
+                                            </primitives:RadUniformGrid>
+                                        </ItemsPanelTemplate>
+                                    </telerikInput:RadColorPaletteView.ItemsPanel>
+                                </telerikInput:RadColorPaletteView>
+                            </Grid>
+                        </Border>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="telerikInput:RadColorPicker" >
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="telerikInput:RadColorPicker">
+                        <Grid x:Name="Root" 
+                                HorizontalAlignment="{TemplateBinding HorizontalAlignment}" 
+                                VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                            <Grid x:Name="Placement" Width="34">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="23" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <Border x:Name="Over_back" Opacity="0" Height="25" CornerRadius="1" 
+                                        Background="{StaticResource ColorPicker_ButtonBackground_MouseOver}" 
+                                        BorderBrush="{StaticResource ColorPicker_ButtonBorder_MouseOver}" 
+                                        BorderThickness="1" Width="34" Grid.ColumnSpan="2">
+                                    <Border CornerRadius="0" BorderThickness="1" 
+                                            BorderBrush="{StaticResource ColorPicker_ButtonInnerBorder_MouseOver}" />
+                                </Border>
+
+                                <Button x:Name="LeftButton" 
+                                        
+                                        HorizontalContentAlignment="Center" />
+
+                                <ToggleButton Grid.Column="1" x:Name="ToggleButtonElement" 
+                                    IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}" 
+                                    Style="{TemplateBinding ExpanderButtonStyle}" Cursor="Hand" />
+                            </Grid>
+
+                            <Popup x:Name="PART_Popup" 
+                                AllowsTransparency="True" StaysOpen="False" 
+                                IsOpen="{Binding Path=IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}" 
+                                PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}">
+                                <Grid>
+                                    <Border x:Name="DropDownBorder">
+                                        <telerikInput:RadColorSelector x:Name="ColorSelector" 
+                                                MainPaletteItemsStyle="{TemplateBinding MainPaletteItemsStyle}" 
+                                                MainPaletteColumnsCount="{TemplateBinding MainPaletteColumnsCount}" 
+                                                MainPaletteOrientation="{TemplateBinding MainPaletteOrientation}" 
+                                                MainPaletteHeaderText="{TemplateBinding MainPaletteHeaderText}" 
+                                                MainPalette="{TemplateBinding MainPalette}" 
+                                                HeaderPalette="{TemplateBinding HeaderPalette}" 
+                                                HeaderPaletteVisibility="{TemplateBinding HeaderPaletteVisibility}" 
+                                                StandardPalette="{TemplateBinding StandardPalette}" 
+                                                StandardPaletteVisibility="{TemplateBinding StandardPaletteVisibility}" 
+                                                StandardPaletteHeaderText="{TemplateBinding StandardPaletteHeaderText}" 
+                                                NoColorText="{TemplateBinding NoColorText}" 
+                                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                                NoColorVisibility="{TemplateBinding NoColorVisibility}" 
+                                                SelectedColor="{TemplateBinding SelectedColor}" 
+                                                Background="{TemplateBinding Background}" 
+                                                FontWeight="{TemplateBinding FontWeight}" 
+                                                FontStyle="{TemplateBinding FontStyle}" 
+                                                Foreground="{TemplateBinding Foreground}" />
+
+                                    </Border>
+                                </Grid>
+                            </Popup>
+
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" TargetName="Over_back" Value="1" />
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True" 
+                                    SourceName="ToggleButtonElement">
+                                <Setter Property="Opacity" TargetName="Over_back" Value="1" />
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True" />
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="MainPaletteColumnsCount" Value="10" />
+            <Setter Property="MainPaletteOrientation" Value="Vertical" />
+            <Setter Property="MainPalette" Value="Office" />
+            <Setter Property="HeaderPaletteVisibility" Value="Visible" />
+            <Setter Property="StandardPaletteVisibility" Value="Visible" />
+            <Setter Property="NoColorVisibility" Value="Visible" />
+            <Setter Property="SelectedColor" Value="Black" />
+            <Setter Property="StandardPalette" Value="Standard" />
+            <Setter Property="HeaderPalette" Value="Office" />
+            <!--<Setter Property="MainPaletteItemsStyle" Value="{StaticResource DefaultStyle}" />
+            <Setter Property="ColorButtonStyle" Value="{StaticResource ColorButtonDefaultStyle}" />-->
+            <Setter Property="ExpanderButtonStyle" Value="{StaticResource ToggleButtonIconStyle}" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Background" Value="{StaticResource ColorPicker_Background}" />
+            <Setter Property="BorderBrush" Value="{StaticResource ColorPicker_OuterBorder}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="FontStyle" Value="Normal" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="{StaticResource ColorPicker_Foreground}" />
+        </Style.Setters>
+    </Style>
+</ResourceDictionary>

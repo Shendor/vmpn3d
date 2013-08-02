@@ -1,0 +1,42 @@
+D:\Manuals\WPF\Pro WPF\Chapter23\PetriNets\Meshes3D\bin\Debug\Meshes3D.dll
+D:\Manuals\WPF\Pro WPF\Chapter23\PetriNets\Meshes3D\bin\Debug\Meshes3D.pdb
+D:\Manuals\WPF\Pro WPF\Chapter23\PetriNets\Meshes3D\obj\Debug\ResolveAssemblyReference.cache
+D:\Manuals\WPF\Pro WPF\Chapter23\PetriNets\Meshes3D\obj\Debug\Meshes3D.dll
+D:\Manuals\WPF\Pro WPF\Chapter23\PetriNets\Meshes3D\obj\Debug\Meshes3D.pdb
+D:\Manuals\WPF\Pro WPF\Chapter23\PetriNets\Meshes3D\bin\Debug\3DTools.dll
+D:\Manuals\WPF\Pro WPF\Chapter23\PetriNets\Meshes3D\bin\Debug\3DTools.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Debug\Meshes3D.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Debug\Meshes3D.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Debug\3DTools.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Debug\3DTools.pdb
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\obj\Debug\ResolveAssemblyReference.cache
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\obj\Debug\Meshes3D.dll
+D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\obj\Debug\Meshes3D.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Meshes3D\bin\Debug\Meshes3D.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Meshes3D\bin\Debug\Meshes3D.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Meshes3D\bin\Debug\3DTools.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Meshes3D\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Meshes3D\obj\Debug\Meshes3D.dll
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Meshes3D\obj\Debug\Meshes3D.pdb
+C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Meshes3D\bin\Debug\3DTools.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Debug\Meshes3D.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Debug\Meshes3D.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Debug\3DTools.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Debug\3DTools.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Meshes3D\obj\Debug\ResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Meshes3D\obj\Debug\Meshes3D.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Meshes3D\obj\Debug\Meshes3D.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Meshes3D\bin\Debug\Meshes3D.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Meshes3D\bin\Debug\Meshes3D.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Meshes3D\bin\Debug\3DTools.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Meshes3D\bin\Debug\3DTools.pdb
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Meshes3D\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Meshes3D\obj\Debug\Meshes3D.dll
+C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Meshes3D\obj\Debug\Meshes3D.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Meshes3D\bin\Debug\Meshes3D.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Meshes3D\bin\Debug\Meshes3D.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Meshes3D\bin\Debug\3DTools.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Meshes3D\bin\Debug\3DTools.pdb
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Meshes3D\obj\Debug\ResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Meshes3D\obj\Debug\Meshes3D.dll
+D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Meshes3D\obj\Debug\Meshes3D.pdb
