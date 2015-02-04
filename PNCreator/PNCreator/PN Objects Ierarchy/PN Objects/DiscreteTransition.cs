@@ -22,6 +22,7 @@ namespace PNCreator.PNObjectsIerarchy
         private double delay;
         private double delayCounter;
         private int acceptedTokens;
+        private bool isValid;
 
         public DiscreteTransition(Point3D position = new Point3D())
             : base(position,PNObjectTypes.DiscreteTransition)
@@ -34,6 +35,16 @@ namespace PNCreator.PNObjectsIerarchy
             SetMaterial(MaterialColor);
             SetMesh(PNCreator.Modules.Properties.PNProperties.DiscreteTransitionsForm);
         }
+
+        /// <summary>
+        /// Indicate if transition can obtain marker from location but cannot be active due to its delay time
+        /// </summary>
+        public bool IsValid
+        {
+            get { return isValid; }
+            set { isValid = value; }
+        }
+
         /// <summary>
         /// Set or get delay time (seconds)
         /// </summary>
@@ -81,6 +92,18 @@ namespace PNCreator.PNObjectsIerarchy
                 Delay = 1;
             }
             return Delay;
+        }
+
+
+        public void ResetDelayCounter()
+        {
+            DelayCounter = -1;
+        }
+
+
+        public bool CanBeActivatedForTime(double time)
+        {
+            return DelayCounter != -1 && DelayCounter <= time;
         }
     }
 }

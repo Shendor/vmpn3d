@@ -4,17 +4,17 @@
 library
 C#
 .cs
-D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Resources\obj\x86\Debug\
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\x86\Debug\
 Resources
 none
 false
 DEBUG;TRACE
 
-17-2094245533
+231363335342
 
 4-1000824346
-14938659550
-UIStyles\Border.xaml;UIStyles\Button.xaml;UIStyles\CheckBox.xaml;UIStyles\ComboBox.xaml;UIStyles\Expander.xaml;UIStyles\ListBox.xaml;UIStyles\Menu.xaml;UIStyles\ProgressBar.xaml;UIStyles\RadioButton.xaml;UIStyles\Reflections.xaml;UIStyles\ScrollBar.xaml;UIStyles\ScrollViewer.xaml;UIStyles\Shared.xaml;UIStyles\Slider.xaml;UIStyles\TextBlock.xaml;UIStyles\TextBox.xaml;UIStyles\Window.xaml;
+21-779100924
+UIStyles\Border.xaml;UIStyles\Button.xaml;UIStyles\CheckBox.xaml;UIStyles\ColorPicker.xaml;UIStyles\ComboBox.xaml;UIStyles\Expander.xaml;UIStyles\GridView.xaml;UIStyles\ListBox.xaml;UIStyles\Menu.xaml;UIStyles\Panels.xaml;UIStyles\PNBrushes.xaml;UIStyles\ProgressBar.xaml;UIStyles\RadioButton.xaml;UIStyles\Reflections.xaml;UIStyles\ScrollBar.xaml;UIStyles\ScrollViewer.xaml;UIStyles\Shared.xaml;UIStyles\Slider.xaml;UIStyles\TabControl.xaml;UIStyles\TextBlock.xaml;UIStyles\TextBox.xaml;UIStyles\ToolTip.xaml;UIStyles\Window.xaml;
 
 False
 

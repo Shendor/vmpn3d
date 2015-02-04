@@ -4,6 +4,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Threading;
 using PNCreator.ManagerClasses.EventManager;
 using PNCreator.ManagerClasses.EventManager.Events;
+using PNCreator.ManagerClasses.FormulaManager;
 
 namespace PNCreator.Modules.Simulation
 {
@@ -13,7 +14,10 @@ namespace PNCreator.Modules.Simulation
         {
             InitializeComponent();
             App.GetObject<EventPublisher>().Register((SimulationFinishedEventArgs args) =>
-              Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)(() => EnablePlay(true))));
+              Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)(() =>{
+                  EnablePlay(true);
+                  App.GetObject<FormulaManager>().AllowToUpdateObjectsWithFormula = true; 
+              })));
         }
 
         public StartSimulationDelegate StartSimulation

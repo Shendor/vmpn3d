@@ -22,7 +22,6 @@ D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\Animate
 D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph.g.resources
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\bin\Debug\AnimatedGraph.dll
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\bin\Debug\AnimatedGraph.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\ResolveAssemblyReference.cache
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedTreeViewer.g.cs
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph_MarkupCompile.cache
@@ -53,3 +52,4 @@ D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\o
 D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedGraph.g.resources
 D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedGraph.dll
 D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\AnimatedGraph\obj\Debug\AnimatedGraph.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Debug\AnimatedGraph.csprojResolveAssemblyReference.cache

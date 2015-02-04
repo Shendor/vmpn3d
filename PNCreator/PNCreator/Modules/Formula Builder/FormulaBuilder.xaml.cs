@@ -266,31 +266,13 @@ namespace PNCreator.Modules.FormulaBuilder
             {
                 var formulaMng = App.GetObject<FormulaManager>();
             
-
                 SetFormula(formulaTB.Text, pnObject, true);
                 formulaMng.IsNeedToCompile = true;
-                int progress = 0;
-                foreach (ObjectWithFormula objWithFormula in formulaMng.GetObjectsWithFormula())
+
+                var result = UpdateObjectsWithFormula(formulaMng);
+                if (result != null)
                 {
-                    if (objWithFormula.FormulaType == FormulaTypes.Guard)
-                    {
-                        bool booleanResult = ((IExtendedFormula)objWithFormula.Object).ExecuteGuardFormula();
-                        if (pnObject.Equals(objWithFormula.Object))
-                        {
-                            boolResult = booleanResult;
-                            DialogWindow.Alert(Messages.Default.CorrectFormula + boolResult.ToString());
-                        }
-                    }
-                    else
-                    {
-                        double doubleResult =((IFormula)objWithFormula.Object).ExecuteFormula();
-                        if (pnObject.Equals(objWithFormula.Object))
-                        {
-                            result = doubleResult;
-                            DialogWindow.Alert(Messages.Default.CorrectFormula + result.ToString());
-                        }
-                    }
-//                    eventPublisher.ExecuteEvents(new ProgressEventArgs(progress++));
+                    DialogWindow.Alert(result);
                 }
 
                 formulaMng.IsNeedToCompile = false;
@@ -299,6 +281,33 @@ namespace PNCreator.Modules.FormulaBuilder
             eventPublisher.UnRegister(typeof(ProgressEventArgs));*/
             eventPublisher.ExecuteEvents(new PNObjectChangedEventArgs(pnObject));
             Close();
+        }
+
+        private string UpdateObjectsWithFormula(FormulaManager formulaMng)
+        {
+            foreach (ObjectWithFormula objWithFormula in formulaMng.GetObjectsWithFormula())
+            {
+                if (objWithFormula.FormulaType == FormulaTypes.Guard)
+                {
+                    bool booleanResult = ((IExtendedFormula)objWithFormula.Object).ExecuteGuardFormula();
+                    if (pnObject.Equals(objWithFormula.Object))
+                    {
+                        boolResult = booleanResult;
+                        return Messages.Default.CorrectFormula + boolResult.ToString();
+                    }
+                }
+                else
+                {
+                    double doubleResult = ((IFormula)objWithFormula.Object).ExecuteFormula();
+                    if (pnObject.Equals(objWithFormula.Object))
+                    {
+                        result = doubleResult;
+                        return Messages.Default.CorrectFormula + result.ToString();
+                    }
+                }
+                // eventPublisher.ExecuteEvents(new ProgressEventArgs(progress++));
+            }
+            return null;
         }
 
         /// <summary>

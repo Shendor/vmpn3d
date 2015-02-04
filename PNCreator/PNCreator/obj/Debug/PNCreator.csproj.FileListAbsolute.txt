@@ -212,7 +212,6 @@ D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Ch
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\FormulaCompiler.pdb
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\NumericBox.pdb
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\WindowsControl.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\ResolveAssemblyReference.cache
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Controls\PopupHelp.baml
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\MainWindow.baml
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Modules\About\About.baml
@@ -252,8 +251,6 @@ D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Mo
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Modules\NavigationMap\NavigationMap.baml
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\PNCreator.g.resources
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\PNCreator.Properties.Resources.resources
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\GenerateResource.read.1.tlog
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\PNCreator\PNCreator\bin\Debug\PNCreator.exe.config
 C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\PNCreator\PNCreator\obj\Debug\PNCreator.exe
 C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\PNCreator\PNCreator\obj\Debug\PNCreator.pdb
@@ -390,30 +387,6 @@ D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Co
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Controls\OptionExpander.g.cs
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Modules\TempHelpWindow.baml
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Modules\TempHelpWindow.g.cs
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.Chart.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.Charting.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.GridView.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.Input.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Data.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.xml
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.Chart.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.Chart.xml
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.Charting.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.Charting.xml
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.GridView.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.GridView.xml
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.Input.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Controls.Input.xml
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Data.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\Telerik.Windows.Data.xml
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\de\Telerik.Windows.Controls.resources.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\es\Telerik.Windows.Controls.resources.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\fr\Telerik.Windows.Controls.resources.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\it\Telerik.Windows.Controls.resources.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Modules\Positioniser\PositioniserSizePropertyPanel.baml
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Modules\Positioniser\PositioniserTranslationPropertyPanel.baml
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Modules\Positioniser\PositioniserVisualPropertyPanel.baml
@@ -472,3 +445,5 @@ D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Mo
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Modules\Main\PNObjectProperties\Panels\MultipleObjectPositionPanel.baml
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Modules\Simulation\EditLiveChartWindow.baml
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\Modules\Simulation\EditLiveChartWindow.g.cs
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\PNCreator.csprojResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\PNCreator.csproj.GenerateResource.Cache

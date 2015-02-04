@@ -29,11 +29,12 @@ namespace PNCreator
 
             InitializeComponent();
 
-            RegisterObject(new EventPublisher());
+            var eventPublisher = new EventPublisher();
+            RegisterObject(eventPublisher);
             RegisterObject(new WindowsFactory());
             RegisterObject(new PNDocument());
             RegisterObject(new PNObjectManager());
-            RegisterObject(new FormulaManager(new FormulaManagerCalculator()));
+            RegisterObject(new FormulaManager(new FormulaManagerCalculator(eventPublisher)));
 
             //            var binding = new CommandBinding(MyCommands.DoSomethingCommand, DoSomething, CanDoSomething);
 

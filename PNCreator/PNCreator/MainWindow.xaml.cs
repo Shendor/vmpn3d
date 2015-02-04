@@ -22,6 +22,7 @@ using PNCreator.Controls;
 using PNCreator.ManagerClasses.MeshPicker;
 using PNCreator.ManagerClasses.EventManager;
 using PNCreator.Controls.Positioniser;
+using PNCreator.Controls.Progress;
 
 namespace PNCreator
 {
@@ -39,11 +40,14 @@ namespace PNCreator
         private SelectionRectangle selectionRectangle;
         private PNObjectPositioniser positioniser;
         private bool isMultiselectionMode;
+        private ProgressWindow progressWindow;
+        private List<SelectionRectangle> drawnSelectionRectangles;
 
         #endregion
 
         public MainWindow()
         {
+            drawnSelectionRectangles = new List<SelectionRectangle>();
             pnObjectPicker = new PNObjectPicker();
             objectManager = App.GetObject<PNObjectManager>();
             windowsFactory = App.GetObject<WindowsFactory>();
@@ -96,7 +100,8 @@ namespace PNCreator
         {
             if (isMultiselectionMode)
             {
-                selectionRectangle.Draw(e.GetPosition(pnViewport.Viewport3D));
+                var drawPoint = e.GetPosition(pnViewport.Viewport3D);
+                selectionRectangle.Draw(drawPoint);
             }
         }
 
@@ -142,6 +147,7 @@ namespace PNCreator
                 selectionRectangle = new SelectionRectangle(e.GetPosition(pnViewport.Viewport3D));
                 isMultiselectionMode = true;
                 pnViewport.Content2D.Children.Add(selectionRectangle.Rectangle);
+                drawnSelectionRectangles.Add(selectionRectangle);
             }
 
             if (objectManager.IsNotReadonly)
@@ -161,7 +167,7 @@ namespace PNCreator
                         case PNObjectTypes.ContinuousTransition:
                             {
                                 if (pnObjectPicker.HitPoint != null)
-                                    newPnObject = objectManager.BuildShape((Point3D) pnObjectPicker.HitPoint);
+                                    newPnObject = objectManager.BuildShape((Point3D)pnObjectPicker.HitPoint);
                                 break;
                             }
 
@@ -202,7 +208,11 @@ namespace PNCreator
                     pnObjectPicker.SelectMultipleMeshes(selectionRectangle.Bound, pnViewport.Viewport3D);
                     ShowSelectedObjectProperties(pnObjectPicker.SelectedObjects);
                 }
-                pnViewport.Content2D.Children.Remove(selectionRectangle.Rectangle);
+                foreach (var rectangle in drawnSelectionRectangles)
+                {
+                    pnViewport.Content2D.Children.Remove(rectangle.Rectangle);
+                }
+                drawnSelectionRectangles.Clear();
                 selectionRectangle = null;
                 isMultiselectionMode = false;
                 pnViewport.Trackball.Focus();
@@ -275,9 +285,9 @@ namespace PNCreator
 
             eventPublisher.Register((MeshAddedEventArgs<Token> args) => pnViewport.Viewport3D.Children.Add(args.Mesh.Model));
 
-            eventPublisher.Register((MeshesRemovedEventArgs<Token> args) => 
+            eventPublisher.Register((MeshesRemovedEventArgs<Token> args) =>
                 Dispatcher.BeginInvoke(DispatcherPriority.Normal,
-                    (ThreadStart) delegate
+                    (ThreadStart)delegate
                         {
                             foreach (Token token in args.Meshes)
                             {
@@ -324,8 +334,34 @@ namespace PNCreator
                 pnViewport.AddMesh(positioniser);
             });
 
-            eventPublisher.Register((MeshTransformChangedEventArgs args) => 
+            eventPublisher.Register((MeshTransformChangedEventArgs args) =>
                 selectionBox.BuildBoundingBox(args.Meshes));
+
+            eventPublisher.Register((PNObjectsValuesChangedEventArgs args) =>
+            {
+                Dispatcher.BeginInvoke(DispatcherPriority.Normal,
+                    (ThreadStart)(() =>
+                    {
+                        foreach (var pnObject in args.PNObjects)
+                        {
+                            pnObject.ValueInCanvas.Text = string.Format(PNObject.DOUBLE_FORMAT, PNObjectRepository.PNObjects.GetDoubleValue(pnObject));
+                        }
+                    }));
+            });
+
+            eventPublisher.Register((FormulaProgressEventArgs progressArgs) =>
+                                        Dispatcher.BeginInvoke(DispatcherPriority.Normal,
+                                            (ThreadStart)(() =>
+                                            {
+                                                if (progressWindow == null || !progressWindow.IsVisible)
+                                                {
+                                                    progressWindow = new ProgressWindow();
+                                                    progressWindow.ShowDialog();
+                                                }
+                                                progressWindow.Minimum = progressArgs.MinimumProgress;
+                                                progressWindow.Maximum = progressArgs.MaximumProgress;
+                                                progressWindow.Progress = progressArgs.Progress;
+                                            })));
         }
 
         #endregion

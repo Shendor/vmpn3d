@@ -18,3 +18,8 @@ D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\FormulaCompiler\FormulaCompiler
 D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\FormulaCompiler\FormulaCompiler\obj\Release\ResolveAssemblyReference.cache
 D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\FormulaCompiler\FormulaCompiler\obj\Release\FormulaCompiler.dll
 D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\FormulaCompiler\FormulaCompiler\obj\Release\FormulaCompiler.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\FormulaCompiler\FormulaCompiler\bin\Release\FormulaCompiler.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\FormulaCompiler\FormulaCompiler\bin\Release\FormulaCompiler.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\FormulaCompiler\FormulaCompiler\obj\Release\FormulaCompiler.csprojResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\FormulaCompiler\FormulaCompiler\obj\Release\FormulaCompiler.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\FormulaCompiler\FormulaCompiler\obj\Release\FormulaCompiler.pdb

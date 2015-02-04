@@ -1,14 +1,11 @@
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\bin\Debug\ChartControl.dll
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\bin\Debug\ChartControl.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Debug\ResolveAssemblyReference.cache
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Debug\Chart.baml
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Debug\Styles\Styles.baml
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Debug\Chart.g.cs
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Debug\ChartControl_MarkupCompile.cache
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Debug\ChartControl.g.resources
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Debug\ChartControl.Properties.Resources.resources
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Debug\GenerateResource.read.1.tlog
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Debug\GenerateResource.write.1.tlog
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Debug\ChartControl.dll
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Debug\ChartControl.pdb
 C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\ChartControl\ChartControl\bin\Debug\ChartControl.dll
@@ -37,3 +34,5 @@ D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\ChartControl\Ch
 D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\ChartControl\ChartControl\obj\Debug\GenerateResource.write.1.tlog
 D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\ChartControl\ChartControl\obj\Debug\ChartControl.dll
 D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\ChartControl\ChartControl\obj\Debug\ChartControl.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Debug\ChartControl.csprojResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Debug\ChartControl.csproj.GenerateResource.Cache

@@ -14,12 +14,14 @@ namespace PNCreator.ManagerClasses
         private Dictionary<K, V> pnObjects;
         private Dictionary<K, double> doubleValues;
         private Dictionary<K, bool> booleanValues;
+        private FormulaManager.FormulaManager formulaManager;
 
         public PNObjectDictionary()
         {
             pnObjects = new Dictionary<K, V>();
             doubleValues = new Dictionary<K, double>();
             booleanValues = new Dictionary<K, bool>();
+            formulaManager = App.GetObject<FormulaManager.FormulaManager>();
         }
 
         /// <summary>
@@ -31,7 +33,10 @@ namespace PNCreator.ManagerClasses
         {
             double v = value;
             if (doubleValues.TryGetValue(key, out v))
+            {
                 doubleValues[key] = value;
+                formulaManager.UpdateObjectsWithFormula(null);
+            }
         }
 
         /// <summary>
@@ -43,7 +48,10 @@ namespace PNCreator.ManagerClasses
         {
             bool v = value;
             if (booleanValues.TryGetValue(key, out v))
+            {
                 booleanValues[key] = value;
+                formulaManager.UpdateObjectsWithFormula(null);
+            }
         }
         /// <summary>
         /// Find object by key and updates its double and boolean values if possible
@@ -89,7 +97,7 @@ namespace PNCreator.ManagerClasses
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        private double GetDoubleValue(V value)
+        public double GetDoubleValue(V value)
         {
             PNObject obj = value;
 

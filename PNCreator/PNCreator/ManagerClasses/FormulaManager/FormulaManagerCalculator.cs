@@ -5,11 +5,19 @@ using PNCreator.PNObjectsIerarchy;
 using PNCreator.Modules.FormulaBuilder;
 using System;
 using PNCreator.Properties;
+using System.Threading.Tasks;
 
 namespace PNCreator.ManagerClasses.FormulaManager
 {
     public class FormulaManagerCalculator : IFormulaManager
     {
+        private EventPublisher eventPublisher;
+
+        public FormulaManagerCalculator(EventPublisher eventPublisher)
+        {
+            this.eventPublisher = eventPublisher;
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -41,7 +49,7 @@ namespace PNCreator.ManagerClasses.FormulaManager
                         }
                     }
                 }
-                eventPublisher.ExecuteEvents(new ProgressEventArgs(progress++));
+                eventPublisher.ExecuteEvents(new FormulaProgressEventArgs(progress++, PNObjectRepository.PNObjects.Values.Count));
             }
             return pnObjectsWithFormula;
         }
@@ -180,6 +188,26 @@ namespace PNCreator.ManagerClasses.FormulaManager
         }
 
         #endregion
+
+
+        public void UpdateObjectsWithFormula(List<ObjectWithFormula> objectsWithFormula)
+        {
+
+            int progress = 0;
+            foreach (ObjectWithFormula objWithFormula in objectsWithFormula)
+            {
+                if (objWithFormula.FormulaType == FormulaTypes.Guard)
+                {
+                    ((IExtendedFormula)objWithFormula.Object).ExecuteGuardFormula();
+                }
+                else
+                {
+                    var result = ((IFormula)objWithFormula.Object).ExecuteFormula();
+                }
+                eventPublisher.ExecuteEvents(new FormulaProgressEventArgs(progress++, objectsWithFormula.Count));
+            }
+            eventPublisher.ExecuteEvents(new PNObjectsValuesChangedEventArgs(PNObjectRepository.PNObjects.Values));
+        }
     }
 
     public class ObjectWithFormula

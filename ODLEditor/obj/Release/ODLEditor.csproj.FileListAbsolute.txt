@@ -13,3 +13,8 @@ D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\ODLEditor\bin\Release\ODLEditor
 D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\ODLEditor\obj\Release\ResolveAssemblyReference.cache
 D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\ODLEditor\obj\Release\ODLEditor.dll
 D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\ODLEditor\obj\Release\ODLEditor.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ODLEditor\bin\Release\ODLEditor.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ODLEditor\bin\Release\ODLEditor.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ODLEditor\obj\Release\ODLEditor.csprojResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ODLEditor\obj\Release\ODLEditor.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ODLEditor\obj\Release\ODLEditor.pdb

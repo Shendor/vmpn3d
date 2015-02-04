@@ -67,7 +67,6 @@ C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\bi
 C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\Resources\bin\Debug\Microsoft.Windows.Shell.xml
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Resources.dll
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Resources.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\ResolveAssemblyReference.cache
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Border.baml
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Button.baml
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\CheckBox.baml
@@ -89,8 +88,6 @@ D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Win
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources_MarkupCompile.cache
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources.g.resources
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources.Properties.Resources.resources
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\GenerateResource.read.1.tlog
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\GenerateResource.write.1.tlog
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources.dll
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources.pdb
 C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\Resources\bin\Debug\Resources.dll
@@ -160,21 +157,9 @@ D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Wind
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.Navigation.dll
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Data.dll
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\ColorPicker.baml
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.xml
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.Charting.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.Charting.xml
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.GridView.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.GridView.xml
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.Input.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Controls.Input.xml
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Data.pdb
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Telerik.Windows.Data.xml
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\de\Telerik.Windows.Controls.resources.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\es\Telerik.Windows.Controls.resources.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\fr\Telerik.Windows.Controls.resources.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\it\Telerik.Windows.Controls.resources.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\Panels.baml
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\UIStyles\GridView.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Microsoft.Expression.Drawing.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\bin\Debug\Microsoft.Expression.Drawing.xml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources.csprojResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\Resources.csproj.GenerateResource.Cache

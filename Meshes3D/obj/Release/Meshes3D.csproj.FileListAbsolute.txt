@@ -10,3 +10,9 @@ D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\obj\Release\Meshes3D.p
 D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Release\Meshes3D.dll
 D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Release\Meshes3D.pdb
 D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Release\3DTools.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Release\Meshes3D.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Release\Meshes3D.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Meshes3D\bin\Release\3DTools.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Meshes3D\obj\Release\Meshes3D.csprojResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Meshes3D\obj\Release\Meshes3D.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Meshes3D\obj\Release\Meshes3D.pdb

@@ -18,7 +18,6 @@ D:\My Works\Programmes\C Sharp\WPF\PN 3D Creator\ODLEditor\obj\Debug\ODLEditor.p
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ODLEditor\bin\Debug\ODLEditor.dll
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ODLEditor\bin\Debug\ODLEditor.pdb
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ODLEditor\bin\Debug\ICSharpCode.AvalonEdit.dll
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ODLEditor\obj\Debug\ResolveAssemblyReference.cache
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ODLEditor\obj\Debug\ODLEditor.dll
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ODLEditor\obj\Debug\ODLEditor.pdb
 C:\Users\crmd177\Documents\Diplom\MPN 3D Builder\ODLEditor\bin\Debug\ODLEditor.dll
@@ -33,3 +32,4 @@ D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\ODLEditor\bin\D
 D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\ODLEditor\obj\Debug\ResolveAssemblyReference.cache
 D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\ODLEditor\obj\Debug\ODLEditor.dll
 D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\ODLEditor\obj\Debug\ODLEditor.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ODLEditor\obj\Debug\ODLEditor.csprojResolveAssemblyReference.cache

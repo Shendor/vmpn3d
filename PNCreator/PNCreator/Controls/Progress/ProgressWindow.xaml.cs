@@ -37,8 +37,9 @@ namespace PNCreator.Controls.Progress
             set
             {
                 progressBar.Value = value;
-                if (progressBar.Value >= Maximum)
+                if (progressBar.Value >= Maximum - 1)
                 {
+                    progressBar.Value = Maximum;
                     Close();
                 }
             }
@@ -51,8 +52,8 @@ namespace PNCreator.Controls.Progress
 
         private void MenuItemClick(object sender, RoutedEventArgs e)
         {
-//            Thread.Abort();
-//            Close();
+             //Thread.Abort();
+             Close();
         }
     }
 }

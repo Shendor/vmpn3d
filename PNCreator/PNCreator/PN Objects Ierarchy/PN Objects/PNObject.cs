@@ -16,6 +16,8 @@ namespace PNCreator.PNObjectsIerarchy
 {
     public class PNObject : Meshes3D.Mesh3D, IDisposable, IEquatable<PNObject>, IEqualityComparer<PNObject>
     {
+        public static readonly string DOUBLE_FORMAT = "{0:0.####}";
+
         protected bool isReadOnly;
         protected string name;
         protected long id;

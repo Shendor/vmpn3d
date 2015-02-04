@@ -157,7 +157,7 @@ namespace PNCreator.PNObjectsIerarchy
             }
             set
             {
-                if (value.Equals(""))
+                if (string.IsNullOrEmpty(value))
                     doubleFormula.Expression = null;
                 else
                     doubleFormula.Expression = value;

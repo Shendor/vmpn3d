@@ -117,41 +117,55 @@ namespace PNCreator.ManagerClasses.Simulation
                         #region MAKE THE TRANSITION ACTIVE
                         if (activityCounter == transition.IncomeLocationsID.Count - iArcsAmount)
                         {
-                            transition.IsActive = true;
-
+                            transition.IsValid = true; //TODO: looks like irrelevant
                             args.ActiveTransitionQuantity += 1;
-                            foreach (long incomeLocationId in transition.IncomeLocationsID)
+                            if (transition.DelayCounter == -1)
                             {
-                                localLocation = PNObjectRepository.GetByKey(incomeLocationId) as Location;
-                                localArc = PNObjectRepository.GetByKey(transition.IncomeArcsID[incomeLocationId]) as Arc3D;
-
-                                //if (transition.DelayCounter.Equals(timer))
-                                if (transition.DelayCounter <= args.Timer)
+                                transition.DelayCounter = transition.Delay + args.Timer - 1;
+                            }
+                            if (transition.CanBeActivatedForTime(args.Timer))
+                            {
+                                transition.IsActive = true;
+                                foreach (long incomeLocationId in transition.IncomeLocationsID)
                                 {
+                                    localLocation = PNObjectRepository.GetByKey(incomeLocationId) as Location;
+                                    localArc = PNObjectRepository.GetByKey(transition.IncomeArcsID[incomeLocationId]) as Arc3D;
+
                                     if (localLocation.Type == PNObjectTypes.DiscreteLocation)
                                     {
                                         location = (DiscreteLocation)localLocation;
-                                        if (localArc.Type == PNObjectTypes.DiscreteArc)// && transition.DelayCounter.Equals(timer))
-                                            if (location.Tokens - location.MinCapacity >= localArc.Weight)
-                                                location.Tokens -= (Int32)localArc.Weight;
+                                        if (localArc.Type == PNObjectTypes.DiscreteArc &&
+                                            location.Tokens - location.MinCapacity >= localArc.Weight)
+                                        {
+                                            location.Tokens -= (Int32)localArc.Weight;
+                                        }
 
                                     }
                                     else if (localLocation.Type == PNObjectTypes.ContinuousLocation)
                                     {
                                         cLocation = (ContinuousLocation)localLocation;
-                                        if (localArc.Type == PNObjectTypes.ContinuousFlowArc)
-                                            if (cLocation.Level - cLocation.MinCapacity >= localArc.Weight)
-                                                cLocation.Level -= localArc.Weight;
+                                        if (localArc.Type == PNObjectTypes.ContinuousFlowArc &&
+                                            cLocation.Level - cLocation.MinCapacity >= localArc.Weight)
+                                        {
+                                            cLocation.Level -= localArc.Weight;
+                                        }
                                     }
                                 }
+                                transition.ResetDelayCounter();
                             }
+
                         }
                         #endregion
                         else
+                        {
                             transition.IsActive = false;
+                        }
                     }
                     else
-                        transition.IsActive = false; // if guard was False;
+                    {
+                        transition.IsActive = false;
+                        transition.IsValid = false;
+                    }
 
                 }
                 #endregion
@@ -267,15 +281,15 @@ namespace PNCreator.ManagerClasses.Simulation
                 foreach (var outcomeLocation in outcomeLocationList)
                 {
                     long arcId = incomeArcs[new KeyValuePair<long, long>(transition.ID, outcomeLocation.ID)];
-                    Arc3D incomeArc = (Arc3D) PNObjectRepository.GetByKey(arcId);
+                    Arc3D incomeArc = (Arc3D)PNObjectRepository.GetByKey(arcId);
                     double value = 0;
                     if (outcomeLocation.Type == PNObjectTypes.DiscreteLocation)
                     {
-                        value = ((DiscreteLocation) outcomeLocation).Tokens;
+                        value = ((DiscreteLocation)outcomeLocation).Tokens;
                     }
                     else if (outcomeLocation.Type == PNObjectTypes.ContinuousLocation)
                     {
-                        value = ((ContinuousLocation) outcomeLocation).Level;
+                        value = ((ContinuousLocation)outcomeLocation).Level;
                     }
 
                     if (transition.Type == PNObjectTypes.DiscreteTransition)
@@ -288,7 +302,7 @@ namespace PNCreator.ManagerClasses.Simulation
                     else
                     {
                         if (outcomeLocation.MaxCapacity <
-                            ((ContinuousTransition) transition).Expectance*incomeArc.Weight + value)
+                            ((ContinuousTransition)transition).Expectance * incomeArc.Weight + value)
                         {
                             isCapacityOverflow = true;
                         }
@@ -301,7 +315,7 @@ namespace PNCreator.ManagerClasses.Simulation
 
         private void CalculateMinTimeInterval(SimulationArgs args)
         {
-            args.MinimumTimeInterval = Double.MaxValue;
+            args.MinimumTimeInterval = 1;
             foreach (Shape3D shape in args.Shapes)
             {
                 if (shape.Type == PNObjectTypes.DiscreteTransition)
@@ -312,10 +326,6 @@ namespace PNCreator.ManagerClasses.Simulation
                         args.MinimumTimeInterval = transition.Delay;
                     }
                 }
-            }
-            if (args.MinimumTimeInterval.Equals(Double.MaxValue))
-            {
-                args.MinimumTimeInterval = 1;
             }
         }
 
@@ -392,17 +402,21 @@ namespace PNCreator.ManagerClasses.Simulation
         {
             AddHistoryData(args);
 
-            if (args.HasDiscreteTransitions)
+            /*if (args.HasDiscreteTransitions)
             {
                 foreach (Shape3D shape in args.Shapes)
                 {
                     if (shape.Type == PNObjectTypes.DiscreteTransition)
                     {
-                        if (((DiscreteTransition)shape).DelayCounter <= args.Timer)
-                            ((DiscreteTransition)shape).DelayCounter += ((DiscreteTransition)shape).Delay;
+                        DiscreteTransition t = (DiscreteTransition)shape;
+                        if (t.IsActive && t.IsValid && t.DelayCounter <= args.Timer)
+                        {
+                            //t.DelayCounter += ((DiscreteTransition)shape).Delay;
+                            t.DelayCounter = t.Delay + args.Timer;
+                        }
                     }
                 }
-            }
+            }*/
         }
 
         /// <summary>
@@ -508,6 +522,10 @@ namespace PNCreator.ManagerClasses.Simulation
                         }
                         outcomeLocations[transitionId].Add(location);
                     }
+                }
+                else if (shape.Type == PNObjectTypes.DiscreteTransition)
+                {
+                    ((DiscreteTransition)shape).ResetDelayCounter();
                 }
             }
 

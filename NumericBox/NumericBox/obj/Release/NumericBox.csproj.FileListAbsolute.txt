@@ -22,3 +22,15 @@ C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\N
 C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\obj\Release\GenerateResource.write.1.tlog
 C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.dll
 C:\Documents and Settings\crmd163\My Documents\Diplom\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\bin\Release\NumericBox.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\bin\Release\NumericBox.pdb
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.g.cs
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox_MarkupCompile.lref
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.baml
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.g.resources
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.Properties.Resources.resources
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.csproj.GenerateResource.Cache
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.dll
+D:\My works\Programes\C Sharp\WPF\PN 3D Creator\NumericBox\NumericBox\obj\Release\NumericBox.pdb

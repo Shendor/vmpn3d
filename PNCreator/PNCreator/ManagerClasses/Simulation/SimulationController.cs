@@ -99,6 +99,7 @@ namespace PNCreator.ManagerClasses.Simulation
         {
             if (args.Thread != null)
             {
+                App.GetObject<FormulaManager.FormulaManager>().AllowToUpdateObjectsWithFormula = true;
                 args.Thread.Abort();
             }
         }
@@ -164,7 +165,7 @@ namespace PNCreator.ManagerClasses.Simulation
 //            PNProgramStorage.SimulationNumber++;
 //            PNProgramStorage.SimulationNames.Add(simulationName);
 
-            if (formulaManager.IsNeedToCompile)
+            /*if (formulaManager.IsNeedToCompile)
             {
                 eventPublisher.Register((ProgressEventArgs progressArgs) =>
                                         args.Dispatcher.BeginInvoke
@@ -182,7 +183,7 @@ namespace PNCreator.ManagerClasses.Simulation
                                                      progressWindow.Maximum = PNObjectRepository.Count;
                                                      progressWindow.Progress = progressArgs.Progress;
                                                  })));
-            }
+            }*/
             try
             {
                 formulaManager.GetObjectsWithFormula();
@@ -279,11 +280,13 @@ namespace PNCreator.ManagerClasses.Simulation
             args.Shapes = PNObjectRepository.GetPNObjects<Shape3D>();
             args.Arcs = PNObjectRepository.GetPNObjects<Arc3D>();
             args.HasDiscreteTransitions = PNObjectRepository.GetPNObjectsByType(PNObjectTypes.DiscreteTransition).Any();
+            App.GetObject<FormulaManager.FormulaManager>().AllowToUpdateObjectsWithFormula = false; // to prvent update formula after value of a PN object is set
 
             simulator.Run(args);
 
             ClearTemporaryData();
 
+            App.GetObject<FormulaManager.FormulaManager>().AllowToUpdateObjectsWithFormula = true;
             /*   Random r = new Random();
                for (int i = 0; i <= 10000; i++)
                {

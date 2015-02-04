@@ -141,8 +141,10 @@
     <Compile Include="Commands\SetMeshCommand.cs" />
     <Compile Include="Controls\BoundingBox.cs" />
     <Compile Include="Controls\CarcassControl\Carcasses\CircleCarcass.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\FormulaProgressEventArgs.cs" />
     <Compile Include="ManagerClasses\EventManager\Events\HistoryDataAddedEventArgs.cs" />
     <Compile Include="ManagerClasses\EventManager\Events\MeshTransformChangedEventArgs.cs" />
+    <Compile Include="ManagerClasses\EventManager\Events\PNObjectsValuesChangedEventArgs.cs" />
     <Compile Include="Modules\Help\HelpWindow.xaml.cs">
       <DependentUpon>HelpWindow.xaml</DependentUpon>
     </Compile>

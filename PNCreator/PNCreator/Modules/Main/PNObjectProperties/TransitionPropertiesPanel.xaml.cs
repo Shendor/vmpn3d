@@ -27,7 +27,9 @@ namespace PNCreator.Modules.Main.PNObjectProperties
 
         public void SetPNObject(PNObject pnObject)
         {
-            var binding = new Binding
+            DataContext = null;
+            DataContext = pnObject;
+            var bindingValue = new Binding
             {
                 Mode = BindingMode.TwoWay
             };
@@ -35,14 +37,14 @@ namespace PNCreator.Modules.Main.PNObjectProperties
             {
                 case PNObjectTypes.DiscreteTransition:
                     valueLabel.Text = "Delay";
-                    binding.Path = new PropertyPath("Delay");
+                    bindingValue.Path = new PropertyPath("Delay");
                     break;
                 case PNObjectTypes.ContinuousTransition:
                     valueLabel.Text = "Expectance";
-                    binding.Path = new PropertyPath("Expectance");
+                    bindingValue.Path = new PropertyPath("Expectance");
                     break;
             }
-            valueTB.SetBinding(TextBox.TextProperty, binding);
+            valueTB.SetBinding(TextBox.TextProperty, bindingValue);
         }
     }
 }

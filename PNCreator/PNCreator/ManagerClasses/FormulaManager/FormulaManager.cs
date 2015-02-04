@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace PNCreator.ManagerClasses.FormulaManager
 {
@@ -25,9 +26,16 @@ namespace PNCreator.ManagerClasses.FormulaManager
             }
         }
 
+        public bool AllowToUpdateObjectsWithFormula
+        {
+            get;
+            set;
+        }
+
         public FormulaManager(IFormulaManager formulaManager)
         {
             this.formulaManager = formulaManager;
+            AllowToUpdateObjectsWithFormula = true;
         }
 
         #region IFormulaManager Members
@@ -42,6 +50,25 @@ namespace PNCreator.ManagerClasses.FormulaManager
             return objectsWithFormula;
         }
 
+        public void UpdateObjectsWithFormula(List<ObjectWithFormula> objectsWithFormula)
+        {
+            if (AllowToUpdateObjectsWithFormula)
+            {
+                AllowToUpdateObjectsWithFormula = false;
+                Task.Factory.StartNew(() =>
+                {
+                    if (objectsWithFormula == null)
+                    {
+                         GetObjectsWithFormula();
+                    }
+                    formulaManager.UpdateObjectsWithFormula(this.objectsWithFormula);
+
+                    AllowToUpdateObjectsWithFormula = true;
+                    IsNeedToCompile = false;
+                });
+            }
+        }
         #endregion
+
     }
 }

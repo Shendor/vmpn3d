@@ -10,6 +10,7 @@ using PNCreator.ManagerClasses.Simulation;
 using PNCreator.PNObjectsIerarchy;
 using PNCreator.Properties;
 using WindowsControl;
+using PNCreator.ManagerClasses.FormulaManager;
 
 namespace PNCreator.Modules.Simulation
 {
@@ -77,6 +78,7 @@ namespace PNCreator.Modules.Simulation
                                 arc.Thickness = Properties.PNProperties.ArcsThickness;
                             //ClearDelayValue();
                             StopSimulation();
+                            App.GetObject<FormulaManager>().AllowToUpdateObjectsWithFormula = true; 
                             DialogWindow.Alert(Messages.Default.SimulationFinished);
                         }));
 
