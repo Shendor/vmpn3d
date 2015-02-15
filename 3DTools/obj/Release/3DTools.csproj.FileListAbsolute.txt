@@ -39,3 +39,12 @@ D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Release\3DTools.g.re
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Release\_3DTools.Properties.Resources.resources
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Release\3DTools.csproj.GenerateResource.Cache
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\3DTools\obj\Release\3DTools.dll
+D:\My works\Programes\C Sharp\WPF\vmpn3d\3DTools\bin\Release\3DTools.dll
+D:\My works\Programes\C Sharp\WPF\vmpn3d\3DTools\obj\Release\3DTools.csprojResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\vmpn3d\3DTools\obj\Release\Trackport3D.baml
+D:\My works\Programes\C Sharp\WPF\vmpn3d\3DTools\obj\Release\Trackport3D.g.cs
+D:\My works\Programes\C Sharp\WPF\vmpn3d\3DTools\obj\Release\3DTools_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\vmpn3d\3DTools\obj\Release\3DTools.g.resources
+D:\My works\Programes\C Sharp\WPF\vmpn3d\3DTools\obj\Release\_3DTools.Properties.Resources.resources
+D:\My works\Programes\C Sharp\WPF\vmpn3d\3DTools\obj\Release\3DTools.csproj.GenerateResource.Cache
+D:\My works\Programes\C Sharp\WPF\vmpn3d\3DTools\obj\Release\3DTools.dll

@@ -40,3 +40,10 @@ D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Meshes3D\obj\De
 D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Meshes3D\obj\Debug\Meshes3D.dll
 D:\My works\Programes\C Sharp\WPF\Petri Nets\12.2\MPN 3D Builder\Meshes3D\obj\Debug\Meshes3D.pdb
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Meshes3D\obj\Debug\Meshes3D.csprojResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\vmpn3d\Meshes3D\bin\Debug\Meshes3D.dll
+D:\My works\Programes\C Sharp\WPF\vmpn3d\Meshes3D\bin\Debug\Meshes3D.pdb
+D:\My works\Programes\C Sharp\WPF\vmpn3d\Meshes3D\bin\Debug\3DTools.dll
+D:\My works\Programes\C Sharp\WPF\vmpn3d\Meshes3D\bin\Debug\3DTools.pdb
+D:\My works\Programes\C Sharp\WPF\vmpn3d\Meshes3D\obj\Debug\Meshes3D.csprojResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\vmpn3d\Meshes3D\obj\Debug\Meshes3D.dll
+D:\My works\Programes\C Sharp\WPF\vmpn3d\Meshes3D\obj\Debug\Meshes3D.pdb

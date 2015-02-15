@@ -23,3 +23,15 @@ D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Re
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Release\ChartControl.csproj.GenerateResource.Cache
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Release\ChartControl.dll
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\ChartControl\ChartControl\obj\Release\ChartControl.pdb
+D:\My works\Programes\C Sharp\WPF\vmpn3d\ChartControl\ChartControl\bin\Release\ChartControl.dll
+D:\My works\Programes\C Sharp\WPF\vmpn3d\ChartControl\ChartControl\bin\Release\ChartControl.pdb
+D:\My works\Programes\C Sharp\WPF\vmpn3d\ChartControl\ChartControl\obj\Release\ChartControl.csprojResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\vmpn3d\ChartControl\ChartControl\obj\Release\Chart.baml
+D:\My works\Programes\C Sharp\WPF\vmpn3d\ChartControl\ChartControl\obj\Release\Styles\Styles.baml
+D:\My works\Programes\C Sharp\WPF\vmpn3d\ChartControl\ChartControl\obj\Release\Chart.g.cs
+D:\My works\Programes\C Sharp\WPF\vmpn3d\ChartControl\ChartControl\obj\Release\ChartControl_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\vmpn3d\ChartControl\ChartControl\obj\Release\ChartControl.g.resources
+D:\My works\Programes\C Sharp\WPF\vmpn3d\ChartControl\ChartControl\obj\Release\ChartControl.Properties.Resources.resources
+D:\My works\Programes\C Sharp\WPF\vmpn3d\ChartControl\ChartControl\obj\Release\ChartControl.csproj.GenerateResource.Cache
+D:\My works\Programes\C Sharp\WPF\vmpn3d\ChartControl\ChartControl\obj\Release\ChartControl.dll
+D:\My works\Programes\C Sharp\WPF\vmpn3d\ChartControl\ChartControl\obj\Release\ChartControl.pdb

@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\Resources\obj\Debug\
+D:\My works\Programes\C Sharp\WPF\vmpn3d\Resources\obj\Debug\
 Resources
 none
 false
@@ -13,7 +13,7 @@ DEBUG;TRACE
 231363335342
 
 3-630027162
-21-779100924
+21-316829443
 UIStyles\Border.xaml;UIStyles\Button.xaml;UIStyles\CheckBox.xaml;UIStyles\ColorPicker.xaml;UIStyles\ComboBox.xaml;UIStyles\Expander.xaml;UIStyles\GridView.xaml;UIStyles\ListBox.xaml;UIStyles\Menu.xaml;UIStyles\Panels.xaml;UIStyles\PNBrushes.xaml;UIStyles\ProgressBar.xaml;UIStyles\RadioButton.xaml;UIStyles\Reflections.xaml;UIStyles\ScrollBar.xaml;UIStyles\ScrollViewer.xaml;UIStyles\Shared.xaml;UIStyles\Slider.xaml;UIStyles\TabControl.xaml;UIStyles\TextBlock.xaml;UIStyles\TextBox.xaml;UIStyles\ToolTip.xaml;UIStyles\Window.xaml;
 
 False

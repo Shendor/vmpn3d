@@ -10,3 +10,15 @@ D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Release\Animat
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Release\AnimatedGraph.g.resources
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Release\AnimatedGraph.dll
 D:\My works\Programes\C Sharp\WPF\PN 3D Creator\AnimatedGraph\obj\Release\AnimatedGraph.pdb
+D:\My works\Programes\C Sharp\WPF\vmpn3d\AnimatedGraph\bin\Release\AnimatedGraph.dll
+D:\My works\Programes\C Sharp\WPF\vmpn3d\AnimatedGraph\bin\Release\AnimatedGraph.pdb
+D:\My works\Programes\C Sharp\WPF\vmpn3d\AnimatedGraph\bin\Release\J832.Common.dll
+D:\My works\Programes\C Sharp\WPF\vmpn3d\AnimatedGraph\obj\Release\AnimatedGraph.csprojResolveAssemblyReference.cache
+D:\My works\Programes\C Sharp\WPF\vmpn3d\AnimatedGraph\obj\Release\AnimatedTreeViewer.g.cs
+D:\My works\Programes\C Sharp\WPF\vmpn3d\AnimatedGraph\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\My works\Programes\C Sharp\WPF\vmpn3d\AnimatedGraph\obj\Release\AnimatedGraph_MarkupCompile.cache
+D:\My works\Programes\C Sharp\WPF\vmpn3d\AnimatedGraph\obj\Release\AnimatedGraph_MarkupCompile.lref
+D:\My works\Programes\C Sharp\WPF\vmpn3d\AnimatedGraph\obj\Release\AnimatedTreeViewer.baml
+D:\My works\Programes\C Sharp\WPF\vmpn3d\AnimatedGraph\obj\Release\AnimatedGraph.g.resources
+D:\My works\Programes\C Sharp\WPF\vmpn3d\AnimatedGraph\obj\Release\AnimatedGraph.dll
+D:\My works\Programes\C Sharp\WPF\vmpn3d\AnimatedGraph\obj\Release\AnimatedGraph.pdb
