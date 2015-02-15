@@ -116,35 +116,38 @@ namespace PNCreator.ManagerClasses.Simulation
 
             foreach (PNObject pnObject in PNObjectRepository.PNObjects.Values)
             {
-                long id = pnObject.ID;
-                if (pnObject.Type == PNObjectTypes.DiscreteLocation)
+                if (pnObject.Type != PNObjectTypes.Membrane)
                 {
-                    ((DiscreteLocation)pnObject).IncomeArcsID.Clear();
-                    ((DiscreteLocation)pnObject).Tokens = (int)initialObjectValues[id];
+                    long id = pnObject.ID;
+                    if (pnObject.Type == PNObjectTypes.DiscreteLocation)
+                    {
+                        ((DiscreteLocation)pnObject).IncomeArcsID.Clear();
+                        ((DiscreteLocation)pnObject).Tokens = (int)initialObjectValues[id];
+                    }
+                    else if (pnObject.Type == PNObjectTypes.ContinuousLocation)
+                    {
+                        ((ContinuousLocation)pnObject).IncomeArcsID.Clear();
+                        ((ContinuousLocation)pnObject).Level = initialObjectValues[id];
+                    }
+                    else if (pnObject.Type == PNObjectTypes.DiscreteTransition)
+                    {
+                        ((DiscreteTransition)pnObject).IncomeArcsID.Clear();
+                        ((DiscreteTransition)pnObject).DelayCounter = initialObjectValues[id];
+                        ((DiscreteTransition)pnObject).Delay = initialObjectValues[id];
+                    }
+                    else if (pnObject.Type == PNObjectTypes.ContinuousTransition)
+                    {
+                        ((ContinuousTransition)pnObject).IncomeArcsID.Clear();
+                        ((ContinuousTransition)pnObject).Expectance = initialObjectValues[id];
+                    }
+                    else if (pnObject is Arc3D)
+                    {
+                        ((Arc3D)pnObject).Weight = initialObjectValues[id];
+                        ((Arc3D)pnObject).Thickness = Modules.Properties.PNProperties.ArcsThickness;
+                    }
+                    pnObject.ValueInCanvas.Text = initialObjectValues[id].ToString();
+                    pnObject.ResetMaterial();
                 }
-                else if (pnObject.Type == PNObjectTypes.ContinuousLocation)
-                {
-                    ((ContinuousLocation)pnObject).IncomeArcsID.Clear();
-                    ((ContinuousLocation)pnObject).Level = initialObjectValues[id];
-                }
-                else if (pnObject.Type == PNObjectTypes.DiscreteTransition)
-                {
-                    ((DiscreteTransition)pnObject).IncomeArcsID.Clear();
-                    ((DiscreteTransition)pnObject).DelayCounter = initialObjectValues[id];
-                    ((DiscreteTransition)pnObject).Delay = initialObjectValues[id];
-                }
-                else if (pnObject.Type == PNObjectTypes.ContinuousTransition)
-                {
-                    ((ContinuousTransition)pnObject).IncomeArcsID.Clear();
-                    ((ContinuousTransition)pnObject).Expectance = initialObjectValues[id];
-                }
-                else if (pnObject is Arc3D)
-                {
-                    ((Arc3D)pnObject).Weight = initialObjectValues[id];
-                    ((Arc3D)pnObject).Thickness = Modules.Properties.PNProperties.ArcsThickness;
-                }
-                pnObject.ValueInCanvas.Text = initialObjectValues[id].ToString();
-                pnObject.ResetMaterial();
             }
         }
 

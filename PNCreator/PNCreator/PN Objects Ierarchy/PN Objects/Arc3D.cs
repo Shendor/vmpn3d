@@ -319,12 +319,15 @@ namespace PNCreator.PNObjectsIerarchy
         {
             try
             {
-                if (Type == PNObjectTypes.DiscreteArc || Type == PNObjectTypes.DiscreteInhibitorArc || Type == PNObjectTypes.DiscreteTestArc)
-                    Weight = (int)doubleFormula.ExecuteFormula(PNCreator.ManagerClasses.PNObjectRepository.PNObjects.DoubleValues,
-                    PNCreator.ManagerClasses.PNObjectRepository.PNObjects.BooleanValues);
-                else
-                    Weight = doubleFormula.ExecuteFormula(PNCreator.ManagerClasses.PNObjectRepository.PNObjects.DoubleValues,
-                        PNCreator.ManagerClasses.PNObjectRepository.PNObjects.BooleanValues);
+                if (doubleFormula.Expression != null)
+                {
+                    if (Type == PNObjectTypes.DiscreteArc || Type == PNObjectTypes.DiscreteInhibitorArc || Type == PNObjectTypes.DiscreteTestArc)
+                        Weight = (int)doubleFormula.ExecuteFormula(PNCreator.ManagerClasses.PNObjectRepository.PNObjects.DoubleValues,
+                                                                    PNCreator.ManagerClasses.PNObjectRepository.PNObjects.BooleanValues);
+                    else
+                        Weight = doubleFormula.ExecuteFormula(PNCreator.ManagerClasses.PNObjectRepository.PNObjects.DoubleValues,
+                            PNCreator.ManagerClasses.PNObjectRepository.PNObjects.BooleanValues);
+                }
             }
             catch (Exception)
             {

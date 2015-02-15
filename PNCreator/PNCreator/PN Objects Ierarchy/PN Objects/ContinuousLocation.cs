@@ -43,7 +43,10 @@ namespace PNCreator.PNObjectsIerarchy
         {
             try
             {
-                Level = doubleFormula.ExecuteFormula(PNObjectRepository.PNObjects.DoubleValues, PNObjectRepository.PNObjects.BooleanValues);
+                if (Formula != null)
+                {
+                    Level = doubleFormula.ExecuteFormula(PNObjectRepository.PNObjects.DoubleValues, PNObjectRepository.PNObjects.BooleanValues);
+                }
             }
             catch (Exception)
             {

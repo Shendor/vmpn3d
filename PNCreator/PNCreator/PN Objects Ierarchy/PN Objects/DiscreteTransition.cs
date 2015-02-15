@@ -85,7 +85,10 @@ namespace PNCreator.PNObjectsIerarchy
         {
             try
             {
-                Delay = doubleFormula.ExecuteFormula(PNObjectRepository.PNObjects.DoubleValues, PNObjectRepository.PNObjects.BooleanValues);
+                if (Formula != null)
+                {
+                    Delay = doubleFormula.ExecuteFormula(PNObjectRepository.PNObjects.DoubleValues, PNObjectRepository.PNObjects.BooleanValues);
+                }
             }
             catch (Exception)
             {

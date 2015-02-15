@@ -113,6 +113,7 @@ namespace PNCreator.ManagerClasses
                     return ((ContinuousTransition)obj).Expectance;
                 case PNObjectTypes.StructuralMembrane:
                     return ((StructuralMembrane)obj).Speed;
+                case PNObjectTypes.Membrane: return 0.0;
                 default:
                     return ((Arc3D)obj).Weight;
             }

@@ -208,7 +208,10 @@ namespace PNCreator.PNObjectsIerarchy
         {
             try
             {
-                Guard = booleanFormula.ExecuteBooleanFormula(PNObjectRepository.PNObjects.DoubleValues, PNObjectRepository.PNObjects.BooleanValues);
+                if (TransitionGuardFormula != null)
+                {
+                    Guard = booleanFormula.ExecuteBooleanFormula(PNObjectRepository.PNObjects.DoubleValues, PNObjectRepository.PNObjects.BooleanValues);
+                }
             }
             catch (Exception)
             {

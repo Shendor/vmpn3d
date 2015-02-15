@@ -52,7 +52,10 @@ namespace PNCreator.PNObjectsIerarchy
             try
             {
                 //Expectance = formula(objectsValues, arcsValues);
-                Expectance = doubleFormula.ExecuteFormula(PNObjectRepository.PNObjects.DoubleValues, PNObjectRepository.PNObjects.BooleanValues);
+                if (Formula != null)
+                {
+                    Expectance = doubleFormula.ExecuteFormula(PNObjectRepository.PNObjects.DoubleValues, PNObjectRepository.PNObjects.BooleanValues);
+                }
             }
             catch (Exception)
             {

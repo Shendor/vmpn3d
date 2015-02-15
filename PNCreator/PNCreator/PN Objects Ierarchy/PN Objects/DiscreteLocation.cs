@@ -50,7 +50,10 @@ namespace PNCreator.PNObjectsIerarchy
         {
             try
             {
-                Tokens = (int)doubleFormula.ExecuteFormula(PNObjectRepository.PNObjects.DoubleValues, PNObjectRepository.PNObjects.BooleanValues);
+                if (Formula != null)
+                {
+                    Tokens = (int)doubleFormula.ExecuteFormula(PNObjectRepository.PNObjects.DoubleValues, PNObjectRepository.PNObjects.BooleanValues);
+                }
             }
             catch (Exception)
             {

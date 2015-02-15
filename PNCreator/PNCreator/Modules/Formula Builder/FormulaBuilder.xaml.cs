@@ -257,12 +257,12 @@ namespace PNCreator.Modules.FormulaBuilder
                     progressWindow.Progress = progressArgs.Progress;
                 });*/
 
-            if (formulaTB.Text.Equals(""))
-            {
-                SetFormula(formulaTB.Text, pnObject, false);
-                this.Close();
-            }
-            else if (CheckFormula())
+            //if (formulaTB.Text.Equals(""))
+            //{
+            //    SetFormula(formulaTB.Text, pnObject, false);
+            //    this.Close();
+            //}
+             if (CheckFormula())
             {
                 var formulaMng = App.GetObject<FormulaManager>();
             

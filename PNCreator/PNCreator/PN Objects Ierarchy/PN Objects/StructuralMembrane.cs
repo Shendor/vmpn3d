@@ -78,7 +78,10 @@ namespace PNCreator.PNObjectsIerarchy
         {
             try
             {
-                Speed = doubleFormula.ExecuteFormula(PNObjectRepository.PNObjects.DoubleValues, PNObjectRepository.PNObjects.BooleanValues);
+                if (Formula != null)
+                {
+                    Speed = doubleFormula.ExecuteFormula(PNObjectRepository.PNObjects.DoubleValues, PNObjectRepository.PNObjects.BooleanValues);
+                }
             }
             catch 
             {

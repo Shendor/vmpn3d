@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\obj\Debug\
+D:\My works\Programes\C Sharp\WPF\vmpn3d\PNCreator\PNCreator\obj\Debug\
 PNCreator
 none
 false
 
-D:\My works\Programes\C Sharp\WPF\PN 3D Creator\PNCreator\PNCreator\App.xaml
+D:\My works\Programes\C Sharp\WPF\vmpn3d\PNCreator\PNCreator\App.xaml
 47103935569
 
 2102051157882
-37883426973
+37-76220415
 Controls\OptionExpander.xaml;Controls\PopupHelp.xaml;Controls\Progress\ProgressWindow.xaml;Controls\TextBox\TipTextBox.xaml;MainWindow.xaml;Modules\About\About.xaml;Modules\Analizing\Chart\Chart.xaml;Modules\Analizing\Diagram\Diagram.xaml;Modules\Analizing\Diagram\HistoryExport.xaml;Modules\Formula Builder\FormulaBuilder.xaml;Modules\Formula Builder\Geometry Formula Builder\GeometryFormulaBuilder.xaml;Modules\Help\HelpWindow.xaml;Modules\Main\Menu\MainMenu.xaml;Modules\Main\PNObjectProperties\ArcPropertiesPanel.xaml;Modules\Main\PNObjectProperties\CommonPropertiesPanel.xaml;Modules\Main\PNObjectProperties\LocationPropertiesPanel.xaml;Modules\Main\PNObjectProperties\MembranePropertiesPanel.xaml;Modules\Main\PNObjectProperties\Panels\ArcPropertiesSetPanel.xaml;Modules\Main\PNObjectProperties\Panels\MultipleObjectPositionPanel.xaml;Modules\Main\PNObjectProperties\Panels\ShapePropertiesSetPanel.xaml;Modules\Main\PNObjectProperties\PNObjectPropertiesPanel.xaml;Modules\Main\PNObjectProperties\TransformationProperties\PositionPropertiesPanel.xaml;Modules\Main\PNObjectProperties\TransformationProperties\RotationPropertiesPanel.xaml;Modules\Main\PNObjectProperties\TransformationProperties\SizePropertiesPanel.xaml;Modules\Main\PNObjectProperties\TransitionPropertiesPanel.xaml;Modules\Main\Toolbar\PNDocumentToolBar.xaml;Modules\Main\Toolbar\PNObjectsToolBar.xaml;Modules\ModelConfiguration\ModelConfiguration.xaml;Modules\ModelConfiguration\Tables\PNPropertiesTable.xaml;Modules\ModelInformation\ModelInfo.xaml;Modules\NavigationMap\NavigationMap.xaml;Modules\ODL Editor\ODLEditorWindow.xaml;Modules\Positioniser\PositioniserProperty.xaml;Modules\Positioniser\PositioniserSizePropertyPanel.xaml;Modules\Positioniser\PositioniserTranslationPropertyPanel.xaml;Modules\Positioniser\PositioniserVisualPropertyPanel.xaml;Modules\Properties\Properties.xaml;Modules\Searching\Searching.xaml;Modules\ServerConnection\ServerProperties.xaml;Modules\Simulation\AnimationSimulationWindow.xaml;Modules\Simulation\EditLiveChartWindow.xaml;Modules\Simulation\Simulation.xaml;Modules\Simulation\SimulationChooserWindow.xaml;Modules\Simulation\SimulationPlayerToolbar.xaml;Modules\Simulation\SimulationWindow.xaml;Modules\Simulation\SimulationWindowManipulationToolbar.xaml;Modules\TempHelpWindow.xaml;
 content\logoblue.png
 False
